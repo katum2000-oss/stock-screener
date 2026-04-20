@@ -42,8 +42,8 @@ jobs:
       # ④ スクリーナー実行
       - name: Run screener
         env:
-          JQUANTS_REFRESH_TOKEN: ${{ secrets.JQUANTS_REFRESH_TOKEN }}
-          # 手動実行時はパラメータを上書き可能
+          JQUANTS_MAIL:     ${{ secrets.JQUANTS_MAIL }}
+          JQUANTS_PASSWORD: ${{ secrets.JQUANTS_PASSWORD }}
           MIN_YIELD: ${{ github.event.inputs.min_yield || '3.5' }}
           MAX_PBR:   ${{ github.event.inputs.max_pbr   || '1.0' }}
         run: python screener.py
