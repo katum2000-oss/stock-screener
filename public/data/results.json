@@ -1,0 +1,13 @@
+{
+  "updatedAt": "2026/04/20 11:43 JST",
+  "filters": {
+    "min_yield": 3.5,
+    "max_pbr": 1.0,
+    "min_roe": 5.0,
+    "min_equity_ratio": 25.0,
+    "min_div_years": 3,
+    "max_payout_ratio": 80.0
+  },
+  "count": 0,
+  "stocks": []
+}
