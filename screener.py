@@ -46,17 +46,19 @@ class JQuantsClient:
     def __init__(self):
         self.id_token = self._get_id_token()
 
-    def _get_id_token(self):
-        refresh_token = os.environ["JQUANTS_REFRESH_TOKEN"]
-        log.info("J-Quants API: トークン認証中...")
-        r = requests.post(
-            f"{self.BASE}/token/auth_refresh",
-            params={"refreshtoken": refresh_token},
-            timeout=15
-        )
-        r.raise_for_status()
-        log.info("認証成功")
-        return r.json()["idToken"]
+def _get_id_token(self):
+    mail = os.environ["JQUANTS_MAIL"]
+    pw   = os.environ["JQUANTS_PASSWORD"]
+    log.info("J-Quants API: 認証中...")
+    r = requests.post(f"{self.BASE}/token/auth_user",
+                      json={"mailaddress": mail, "password": pw}, timeout=15)
+    r.raise_for_status()
+    refresh = r.json()["refreshToken"]
+    r = requests.post(f"{self.BASE}/token/auth_refresh",
+                      params={"refreshtoken": refresh}, timeout=15)
+    r.raise_for_status()
+    log.info("認証成功")
+    return r.json()["idToken"]
 
     def _get(self, path, params=None):
         headers = {"Authorization": f"Bearer {self.id_token}"}
