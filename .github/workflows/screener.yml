@@ -37,7 +37,7 @@ jobs:
 
       # ③ 依存ライブラリのインストール
       - name: Install dependencies
-        run: pip install requests pandas
+        run: pip install --no-cache-dir -r requirements.txt
 
       # ④ スクリーナー実行
       - name: Run screener
