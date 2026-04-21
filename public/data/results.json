@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026/04/21 07:20 JST",
+  "updatedAt": "2026/04/21 07:42 JST",
   "filters": {
     "min_yield": 3.5,
     "max_pbr": 1.0,
@@ -8,24 +8,8 @@
     "min_div_years": 1,
     "max_payout_ratio": 99.0
   },
-  "count": 9,
+  "count": 14,
   "stocks": [
-    {
-      "code": "9022",
-      "name": "CENTRAL JAPAN RAILWA",
-      "sector": "産業機械",
-      "price": 4213,
-      "dividendYield": 75.0,
-      "annualDividend": 32.0,
-      "pbr": 0.81,
-      "per": 7.9,
-      "roe": 11.4,
-      "equityRatio": 0,
-      "payoutRatio": 6.0,
-      "continuousDividendYears": 25,
-      "isFinancial": false,
-      "score": 75
-    },
     {
       "code": "7267",
       "name": "HONDA MOTOR CO",
@@ -43,6 +27,54 @@
       "score": 67
     },
     {
+      "code": "8750",
+      "name": "DAIICHI LIFE GROUP I",
+      "sector": "金融サービス",
+      "price": 1444,
+      "dividendYield": 3.56,
+      "annualDividend": 52.0,
+      "pbr": 1.29,
+      "per": 13.1,
+      "roe": 11.2,
+      "equityRatio": 0,
+      "payoutRatio": 38.9,
+      "continuousDividendYears": 16,
+      "isFinancial": true,
+      "score": 64
+    },
+    {
+      "code": "1928",
+      "name": "SEKISUI HOUSE",
+      "sector": "一般消費財",
+      "price": 3484,
+      "dividendYield": 4.15,
+      "annualDividend": 146.0,
+      "pbr": 1.06,
+      "per": 9.7,
+      "roe": 11.2,
+      "equityRatio": 0,
+      "payoutRatio": 40.2,
+      "continuousDividendYears": 25,
+      "isFinancial": false,
+      "score": 62
+    },
+    {
+      "code": "7202",
+      "name": "ISUZU MOTORS",
+      "sector": "一般消費財",
+      "price": 2367,
+      "dividendYield": 3.91,
+      "annualDividend": 92.0,
+      "pbr": 1.12,
+      "per": 12.8,
+      "roe": 10.6,
+      "equityRatio": 0,
+      "payoutRatio": 49.9,
+      "continuousDividendYears": 17,
+      "isFinancial": false,
+      "score": 57
+    },
+    {
       "code": "7270",
       "name": "SUBARU CORPORATION",
       "sector": "一般消費財",
@@ -57,6 +89,22 @@
       "continuousDividendYears": 17,
       "isFinancial": false,
       "score": 57
+    },
+    {
+      "code": "3231",
+      "name": "NOMURA REAL ESTATE H",
+      "sector": "不動産",
+      "price": 1036,
+      "dividendYield": 3.86,
+      "annualDividend": 40.0,
+      "pbr": 1.19,
+      "per": 14.0,
+      "roe": 7.6,
+      "equityRatio": 0,
+      "payoutRatio": 48.0,
+      "continuousDividendYears": 20,
+      "isFinancial": false,
+      "score": 55
     },
     {
       "code": "4042",
@@ -153,6 +201,38 @@
       "continuousDividendYears": 6,
       "isFinancial": false,
       "score": 47
+    },
+    {
+      "code": "4502",
+      "name": "TAKEDA PHARMACEUTICA",
+      "sector": "医薬品・医療",
+      "price": 5488,
+      "dividendYield": 3.59,
+      "annualDividend": 200.0,
+      "pbr": 1.13,
+      "per": 77.5,
+      "roe": 1.5,
+      "equityRatio": 0,
+      "payoutRatio": 280.2,
+      "continuousDividendYears": 25,
+      "isFinancial": false,
+      "score": 46
+    },
+    {
+      "code": "9434",
+      "name": "SOFTBANK CORP.",
+      "sector": "通信・メディア",
+      "price": 222,
+      "dividendYield": 3.86,
+      "annualDividend": 8.6,
+      "pbr": 3.71,
+      "per": 19.8,
+      "roe": 17.6,
+      "equityRatio": 0,
+      "payoutRatio": 76.4,
+      "continuousDividendYears": 8,
+      "isFinancial": false,
+      "score": 45
     }
   ]
 }
