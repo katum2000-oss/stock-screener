@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026/04/20 11:43 JST",
+  "updatedAt": "2026/04/21 07:01 JST",
   "filters": {
     "min_yield": 3.5,
     "max_pbr": 1.0,
@@ -8,6 +8,23 @@
     "min_div_years": 3,
     "max_payout_ratio": 80.0
   },
-  "count": 0,
-  "stocks": []
+  "count": 1,
+  "stocks": [
+    {
+      "code": "8253",
+      "name": "CREDIT SAISON CO",
+      "sector": "金融サービス",
+      "price": 4405,
+      "dividendYield": 296.0,
+      "annualDividend": 130.0,
+      "pbr": 0.85,
+      "per": 10.2,
+      "roe": 7.8,
+      "equityRatio": 0,
+      "payoutRatio": 27.8,
+      "continuousDividendYears": 25,
+      "isFinancial": true,
+      "score": 76
+    }
+  ]
 }
