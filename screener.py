@@ -1,6 +1,5 @@
 """
-国内株式 高配当・低PBR・安定スクリーナー（yfinance版・フィルター最小化）
-PBR・ROEが取得できない場合はスキップせず、配当利回りを主軸にスクリーニング
+国内株式 高配当・低PBR・安定スクリーナー（yfinance版・最終版）
 """
 
 import os, json, time, logging
@@ -13,9 +12,9 @@ log = logging.getLogger(__name__)
 
 FILTERS = {
     "min_yield":        float(os.environ.get("MIN_YIELD",   "2.0")),
-    "max_pbr":          float(os.environ.get("MAX_PBR",     "99.0")),  # PBR条件を撤廃
-    "min_roe":          float(os.environ.get("MIN_ROE",     "0.0")),
-    "min_equity_ratio": float(os.environ.get("MIN_EQUITY",  "0.0")),
+    "max_pbr":          float(os.environ.get("MAX_PBR",     "99.0")),  # PBR条件は撤廃（ダッシュボードで調整）
+    "min_roe":          float(os.environ.get("MIN_ROE",     "0.0")),   # ダッシュボードで調整
+    "min_equity_ratio": float(os.environ.get("MIN_EQUITY",  "0.0")),   # ダッシュボードで調整
     "min_div_years":    int(os.environ.get("MIN_DIV_YEARS", "1")),
     "max_payout_ratio": float(os.environ.get("MAX_PAYOUT",  "99.0")),
 }
@@ -59,27 +58,29 @@ def safe_float(v, default=0.0):
         return default
 
 def get_div_yield(info, price):
-    """配当利回りを複数の方法で取得"""
-    # 方法1: dividendYield フィールド
+    """配当利回りを複数の方法で取得（10%超は異常値として除外）"""
+    # 方法1: dividendYield
     dy = safe_float(info.get("dividendYield"))
     if 0 < dy <= 1.0:
-        return dy * 100   # 小数→%
-    if 1.0 < dy <= 20.0:
-        return dy         # すでに%
+        val = dy * 100        # 小数→% (0.04→4%)
+        if 0 < val <= 10.0:
+            return val
+    elif 1.0 < dy <= 10.0:
+        return dy             # すでに%表示
 
     # 方法2: dividendRate / price
     dr = safe_float(info.get("dividendRate"))
     if dr > 0 and price > 0:
-        calc = dr / price * 100
-        if 0 < calc <= 20.0:
-            return calc
+        val = dr / price * 100
+        if 0 < val <= 10.0:
+            return val
 
-    # 方法3: trailingAnnualDividendRate
+    # 方法3: trailingAnnualDividendRate / price
     tr = safe_float(info.get("trailingAnnualDividendRate"))
     if tr > 0 and price > 0:
-        calc = tr / price * 100
-        if 0 < calc <= 20.0:
-            return calc
+        val = tr / price * 100
+        if 0 < val <= 10.0:
+            return val
 
     return 0.0
 
@@ -104,18 +105,15 @@ def calc_score(s):
     roe_score = min(s["roe"] / 15 * 20, 20) if s["roe"] > 0 else 5
     return round(
         min(s["dividendYield"] / 6 * 30, 30) +
-        pbr_score +
-        roe_score +
+        pbr_score + roe_score +
         min(s["continuousDividendYears"] / 20 * 15, 15) +
         (10 if s["isFinancial"] else min(s["equityRatio"] / 60 * 10, 10))
     )
 
 def screen():
     results = []
+    skipped_no_price = skipped_no_div = skipped_filter = 0
     total = len(CODES)
-    skipped_no_price = 0
-    skipped_no_div   = 0
-    skipped_filter   = 0
     log.info(f"対象銘柄数: {total}")
 
     for i, code in enumerate(CODES):
@@ -125,19 +123,16 @@ def screen():
             t    = yf.Ticker(f"{code}.T")
             info = t.info
 
-            # 株価
             price = safe_float(info.get("currentPrice") or info.get("regularMarketPrice"))
             if price <= 0:
                 skipped_no_price += 1
                 continue
 
-            # 配当利回り（複数方法で取得）
             div_yield = get_div_yield(info, price)
             if div_yield <= 0:
                 skipped_no_div += 1
                 continue
 
-            # 各指標（取得できない場合は0）
             pbr      = safe_float(info.get("priceToBook"))
             per      = safe_float(info.get("trailingPE"))
             roe      = safe_float(info.get("returnOnEquity")) * 100
@@ -148,7 +143,6 @@ def screen():
             name     = (info.get("shortName") or info.get("longName") or code)[:20]
             fin      = sector_en in FIN_SECTORS
 
-            # 自己資本比率
             total_assets = safe_float(info.get("totalAssets"))
             book_val     = safe_float(info.get("bookValue"))
             shares       = safe_float(info.get("sharesOutstanding"))
@@ -157,9 +151,8 @@ def screen():
             div_years = count_div_years(t)
 
             # フィルター（最小限）
-            if div_yield < FILTERS["min_yield"]:             skipped_filter += 1; continue
-            if pbr > 0 and pbr > FILTERS["max_pbr"]:         skipped_filter += 1; continue
-            if div_years < FILTERS["min_div_years"]:         skipped_filter += 1; continue
+            if div_yield < FILTERS["min_yield"]:  skipped_filter += 1; continue
+            if div_years < FILTERS["min_div_years"]: skipped_filter += 1; continue
 
             row = {
                 "code":                  code,
@@ -185,12 +178,7 @@ def screen():
         finally:
             time.sleep(0.4)
 
-    log.info(f"\n--- 統計 ---")
-    log.info(f"株価なし: {skipped_no_price}件")
-    log.info(f"配当なし: {skipped_no_div}件")
-    log.info(f"フィルター除外: {skipped_filter}件")
-    log.info(f"ヒット: {len(results)}件")
-
+    log.info(f"--- 統計 --- 株価なし:{skipped_no_price} 配当なし:{skipped_no_div} フィルター除外:{skipped_filter} ヒット:{len(results)}")
     results.sort(key=lambda x: x["score"], reverse=True)
     return results
 
