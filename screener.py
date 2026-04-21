@@ -1,5 +1,6 @@
 """
-国内株式 高配当・低PBR・安定スクリーナー（yfinance版・改善版）
+国内株式 高配当・低PBR・安定スクリーナー（yfinance版・フィルター最小化）
+PBR・ROEが取得できない場合はスキップせず、配当利回りを主軸にスクリーニング
 """
 
 import os, json, time, logging
@@ -11,12 +12,12 @@ logging.basicConfig(level=logging.INFO, format="%(asctime)s %(levelname)s %(mess
 log = logging.getLogger(__name__)
 
 FILTERS = {
-    "min_yield":        float(os.environ.get("MIN_YIELD",   "2.5")),
-    "max_pbr":          float(os.environ.get("MAX_PBR",     "1.2")),
-    "min_roe":          float(os.environ.get("MIN_ROE",     "3.0")),
-    "min_equity_ratio": float(os.environ.get("MIN_EQUITY",  "20.0")),
-    "min_div_years":    int(os.environ.get("MIN_DIV_YEARS", "2")),
-    "max_payout_ratio": float(os.environ.get("MAX_PAYOUT",  "85.0")),
+    "min_yield":        float(os.environ.get("MIN_YIELD",   "2.0")),   # 最低限の条件のみ
+    "max_pbr":          float(os.environ.get("MAX_PBR",     "2.0")),   # 広めに
+    "min_roe":          float(os.environ.get("MIN_ROE",     "0.0")),   # 今回は無効化
+    "min_equity_ratio": float(os.environ.get("MIN_EQUITY",  "0.0")),   # 今回は無効化
+    "min_div_years":    int(os.environ.get("MIN_DIV_YEARS", "1")),     # 最低1年
+    "max_payout_ratio": float(os.environ.get("MAX_PAYOUT",  "99.0")),  # ほぼ無効化
 }
 
 OUTPUT_PATH = Path("public/data/results.json")
@@ -37,7 +38,7 @@ CODES = [
     "7186","7004","7012","7013","6504","6506","6841","6857","6674","7733",
     "7762","7205","7211","7272","2269","2281","2282","2502","2801","2871",
     "4506","4507","2670","2678","2685","2730","2778","3099","8270","8273",
-    "8282","8905","9726","9706","9532","4385","6366","1963","1721","9064",
+    "8282","8905","9726","9706","9532","4385","6366","1963","1721",
 ]
 CODES = sorted(set(c for c in CODES if c.isdigit() and len(c) == 4))
 
@@ -57,6 +58,31 @@ def safe_float(v, default=0.0):
     except Exception:
         return default
 
+def get_div_yield(info, price):
+    """配当利回りを複数の方法で取得"""
+    # 方法1: dividendYield フィールド
+    dy = safe_float(info.get("dividendYield"))
+    if 0 < dy <= 1.0:
+        return dy * 100   # 小数→%
+    if 1.0 < dy <= 20.0:
+        return dy         # すでに%
+
+    # 方法2: dividendRate / price
+    dr = safe_float(info.get("dividendRate"))
+    if dr > 0 and price > 0:
+        calc = dr / price * 100
+        if 0 < calc <= 20.0:
+            return calc
+
+    # 方法3: trailingAnnualDividendRate
+    tr = safe_float(info.get("trailingAnnualDividendRate"))
+    if tr > 0 and price > 0:
+        calc = tr / price * 100
+        if 0 < calc <= 20.0:
+            return calc
+
+    return 0.0
+
 def count_div_years(ticker_obj):
     try:
         divs = ticker_obj.dividends
@@ -74,10 +100,12 @@ def count_div_years(ticker_obj):
         return 0
 
 def calc_score(s):
+    pbr_score = max(0, (2.0 - s["pbr"]) / 2.0 * 25) if s["pbr"] > 0 else 5
+    roe_score = min(s["roe"] / 15 * 20, 20) if s["roe"] > 0 else 5
     return round(
         min(s["dividendYield"] / 6 * 30, 30) +
-        max(0, (1.5 - s["pbr"]) / 1.5 * 25) +
-        min(s["roe"] / 15 * 20, 20) +
+        pbr_score +
+        roe_score +
         min(s["continuousDividendYears"] / 20 * 15, 15) +
         (10 if s["isFinancial"] else min(s["equityRatio"] / 60 * 10, 10))
     )
@@ -85,65 +113,53 @@ def calc_score(s):
 def screen():
     results = []
     total = len(CODES)
+    skipped_no_price = 0
+    skipped_no_div   = 0
+    skipped_filter   = 0
     log.info(f"対象銘柄数: {total}")
 
     for i, code in enumerate(CODES):
         if i % 20 == 0:
-            log.info(f"[{i}/{total}] 処理中...")
+            log.info(f"[{i}/{total}] 処理中... (取得済み:{len(results)}件)")
         try:
             t    = yf.Ticker(f"{code}.T")
             info = t.info
 
+            # 株価
             price = safe_float(info.get("currentPrice") or info.get("regularMarketPrice"))
             if price <= 0:
+                skipped_no_price += 1
                 continue
 
-            pbr       = safe_float(info.get("priceToBook"))
-            per       = safe_float(info.get("trailingPE"))
-            roe       = safe_float(info.get("returnOnEquity")) * 100
-            payout    = safe_float(info.get("payoutRatio")) * 100
-            div_rate  = safe_float(info.get("dividendRate"))
-            sector_en = info.get("sector") or ""
-            sector    = SECTOR_MAP.get(sector_en, sector_en or "その他")
-            name      = (info.get("shortName") or info.get("longName") or code)[:20]
-            fin       = sector_en in FIN_SECTORS
-
-            # 配当利回り（yfinanceは小数で返す: 0.04 = 4%）
-            dy_raw = safe_float(info.get("dividendYield"))
-            if dy_raw <= 0:
-                # dividendRate と price から計算
-                if div_rate > 0 and price > 0:
-                    div_yield = div_rate / price * 100
-                else:
-                    continue
-            elif dy_raw > 1.0:
-                div_yield = dy_raw        # すでに%表示
-            else:
-                div_yield = dy_raw * 100  # 小数→%変換
-
-            # 異常値除外
-            if div_yield > 20.0 or div_yield <= 0:
+            # 配当利回り（複数方法で取得）
+            div_yield = get_div_yield(info, price)
+            if div_yield <= 0:
+                skipped_no_div += 1
                 continue
 
-            # 自己資本比率（概算）
+            # 各指標（取得できない場合は0）
+            pbr      = safe_float(info.get("priceToBook"))
+            per      = safe_float(info.get("trailingPE"))
+            roe      = safe_float(info.get("returnOnEquity")) * 100
+            payout   = safe_float(info.get("payoutRatio")) * 100
+            div_rate = safe_float(info.get("dividendRate") or info.get("trailingAnnualDividendRate"))
+            sector_en= info.get("sector") or ""
+            sector   = SECTOR_MAP.get(sector_en, sector_en or "その他")
+            name     = (info.get("shortName") or info.get("longName") or code)[:20]
+            fin      = sector_en in FIN_SECTORS
+
+            # 自己資本比率
             total_assets = safe_float(info.get("totalAssets"))
             book_val     = safe_float(info.get("bookValue"))
             shares       = safe_float(info.get("sharesOutstanding"))
-            equity_ratio = (book_val * shares / total_assets * 100) if total_assets > 0 else 0
-
-            if pbr <= 0 or roe == 0:
-                continue
+            equity_ratio = (book_val * shares / total_assets * 100) if total_assets > 0 and book_val > 0 and shares > 0 else 0
 
             div_years = count_div_years(t)
 
-            # フィルター
-            if div_yield  < FILTERS["min_yield"]:                     continue
-            if pbr        > FILTERS["max_pbr"]:                       continue
-            if roe        < FILTERS["min_roe"]:                       continue
-            if not fin and equity_ratio < FILTERS["min_equity_ratio"]: continue
-            if div_years  < FILTERS["min_div_years"]:                 continue
-            if payout > 0 and payout > FILTERS["max_payout_ratio"]:   continue
-            if per > 0 and per > 35:                                  continue
+            # フィルター（最小限）
+            if div_yield < FILTERS["min_yield"]:             skipped_filter += 1; continue
+            if pbr > 0 and pbr > FILTERS["max_pbr"]:         skipped_filter += 1; continue
+            if div_years < FILTERS["min_div_years"]:         skipped_filter += 1; continue
 
             row = {
                 "code":                  code,
@@ -162,15 +178,20 @@ def screen():
             }
             row["score"] = calc_score(row)
             results.append(row)
-            log.info(f"  ✓ {code} {name[:12]:12s} 利回り:{div_yield:.1f}% PBR:{pbr:.2f} スコア:{row['score']}")
+            log.info(f"  ✓ {code} {name[:12]:12s} 利回り:{div_yield:.1f}% PBR:{pbr:.2f} ROE:{roe:.1f}%")
 
         except Exception as e:
             log.debug(f"{code}: スキップ ({e})")
         finally:
             time.sleep(0.4)
 
+    log.info(f"\n--- 統計 ---")
+    log.info(f"株価なし: {skipped_no_price}件")
+    log.info(f"配当なし: {skipped_no_div}件")
+    log.info(f"フィルター除外: {skipped_filter}件")
+    log.info(f"ヒット: {len(results)}件")
+
     results.sort(key=lambda x: x["score"], reverse=True)
-    log.info(f"\n=== 完了: {len(results)} 銘柄ヒット ===")
     return results
 
 def main():
