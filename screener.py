@@ -12,12 +12,12 @@ logging.basicConfig(level=logging.INFO, format="%(asctime)s %(levelname)s %(mess
 log = logging.getLogger(__name__)
 
 FILTERS = {
-    "min_yield":        float(os.environ.get("MIN_YIELD",   "2.0")),   # 最低限の条件のみ
-    "max_pbr":          float(os.environ.get("MAX_PBR",     "2.0")),   # 広めに
-    "min_roe":          float(os.environ.get("MIN_ROE",     "0.0")),   # 今回は無効化
-    "min_equity_ratio": float(os.environ.get("MIN_EQUITY",  "0.0")),   # 今回は無効化
-    "min_div_years":    int(os.environ.get("MIN_DIV_YEARS", "1")),     # 最低1年
-    "max_payout_ratio": float(os.environ.get("MAX_PAYOUT",  "99.0")),  # ほぼ無効化
+    "min_yield":        float(os.environ.get("MIN_YIELD",   "2.0")),
+    "max_pbr":          float(os.environ.get("MAX_PBR",     "99.0")),  # PBR条件を撤廃
+    "min_roe":          float(os.environ.get("MIN_ROE",     "0.0")),
+    "min_equity_ratio": float(os.environ.get("MIN_EQUITY",  "0.0")),
+    "min_div_years":    int(os.environ.get("MIN_DIV_YEARS", "1")),
+    "max_payout_ratio": float(os.environ.get("MAX_PAYOUT",  "99.0")),
 }
 
 OUTPUT_PATH = Path("public/data/results.json")
