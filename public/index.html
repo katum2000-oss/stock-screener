@@ -373,4 +373,16 @@ function render(){
 }
 
 fetch("data/results.json")
-  .then(r=>r.json(
+  .then(r=>r.json())
+  .then(data=>{
+    allStocks=data.stocks||[];
+    document.getElementById("updated").textContent="最終更新: "+(data.updatedAt||"不明");
+    document.getElementById("loading").style.display="none";
+    buildSliders();buildSecBtns();render();
+  })
+  .catch(err=>{
+    document.getElementById("loading").innerHTML=`<div style="color:#ff4455;font-size:14px">データの読み込みに失敗しました</div><div style="color:var(--muted);font-size:11px;margin-top:8px">${err.message}</div>`;
+  });
+</script>
+</body>
+</html>
