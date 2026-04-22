@@ -215,20 +215,23 @@ function renderDetailPanel(s){
     {label:"連続配当",val:`${s.continuousDividendYears}年`,c:s.continuousDividendYears>=10?"var(--teal)":"var(--text)"},
   ];
 
-  const edinetUrl=`https://disclosure2.edinet-fsa.go.jp/WZEK0040.aspx?S1,,,SC,KE,${encodeURIComponent(s.name)},,,,,,,17,,,,,,,,,`;
+  const kabutanUrl=`https://kabutan.jp/stock/finance?code=${s.code}`;
+  const tdnetUrl=`https://www.release.tdnet.info/inbs/I_main_00.html?target_c_cd=${s.code}`;
   const yahooUrl=`https://finance.yahoo.co.jp/quote/${s.code}.T`;
-  const tdnetUrl=`https://www.release.tdnet.info/inbs/I_main_00.html`;
 
   return `
   <div class="detail-panel">
     <div class="detail-kpi">
       ${kpis.map(k=>`<div class="kpi-item"><div class="kpi-label">${k.label}</div><div class="kpi-val" style="color:${k.c}">${k.val}</div></div>`).join("")}
       <div style="margin-left:auto;display:flex;flex-direction:column;gap:6px;justify-content:center;">
-        <a href="${edinetUrl}" target="_blank" rel="noopener" style="display:flex;align-items:center;gap:6px;padding:5px 12px;background:#0a1428;border:1px solid #1e3a6a;border-radius:4px;color:#5588cc;font-size:11px;text-decoration:none;white-space:nowrap;transition:.15s;" onmouseover="this.style.borderColor='#4488ff';this.style.color='#88bbff'" onmouseout="this.style.borderColor='#1e3a6a';this.style.color='#5588cc'">
-          <span style="font-size:13px">📄</span> EDINET 有価証券報告書
+        <a href="${kabutanUrl}" target="_blank" rel="noopener" style="display:flex;align-items:center;gap:6px;padding:5px 12px;background:#0a1428;border:1px solid #1e3a6a;border-radius:4px;color:#5588cc;font-size:11px;text-decoration:none;white-space:nowrap;" onmouseover="this.style.borderColor='#4488ff';this.style.color='#88bbff'" onmouseout="this.style.borderColor='#1e3a6a';this.style.color='#5588cc'">
+          📊 株探 財務情報
         </a>
-        <a href="${yahooUrl}" target="_blank" rel="noopener" style="display:flex;align-items:center;gap:6px;padding:5px 12px;background:#0a1c0f;border:1px solid #1c3820;border-radius:4px;color:#48a060;font-size:11px;text-decoration:none;white-space:nowrap;transition:.15s;" onmouseover="this.style.borderColor='#44cc44';this.style.color='#66dd66'" onmouseout="this.style.borderColor='#1c3820';this.style.color='#48a060'">
-          <span style="font-size:13px">📈</span> Yahoo Finance 株価
+        <a href="${tdnetUrl}" target="_blank" rel="noopener" style="display:flex;align-items:center;gap:6px;padding:5px 12px;background:#1a0a1e;border:1px solid #3a1e5a;border-radius:4px;color:#aa66cc;font-size:11px;text-decoration:none;white-space:nowrap;" onmouseover="this.style.borderColor='#aa44dd';this.style.color='#cc88ee'" onmouseout="this.style.borderColor='#3a1e5a';this.style.color='#aa66cc'">
+          📋 TDnet 適時開示
+        </a>
+        <a href="${yahooUrl}" target="_blank" rel="noopener" style="display:flex;align-items:center;gap:6px;padding:5px 12px;background:#0a1c0f;border:1px solid #1c3820;border-radius:4px;color:#48a060;font-size:11px;text-decoration:none;white-space:nowrap;" onmouseover="this.style.borderColor='#44cc44';this.style.color='#66dd66'" onmouseout="this.style.borderColor='#1c3820';this.style.color='#48a060'">
+          📈 Yahoo Finance
         </a>
       </div>
     </div>
