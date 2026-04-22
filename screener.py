@@ -1,5 +1,5 @@
 """
-国内株式 高配当・低PBR・安定スクリーナー（yfinance版・最終版）
+国内株式 高配当・低PBR・安定スクリーナー（yfinance版・業績履歴付き）
 """
 
 import os, json, time, logging
@@ -12,9 +12,9 @@ log = logging.getLogger(__name__)
 
 FILTERS = {
     "min_yield":        float(os.environ.get("MIN_YIELD",   "2.0")),
-    "max_pbr":          float(os.environ.get("MAX_PBR",     "99.0")),  # PBR条件は撤廃（ダッシュボードで調整）
-    "min_roe":          float(os.environ.get("MIN_ROE",     "0.0")),   # ダッシュボードで調整
-    "min_equity_ratio": float(os.environ.get("MIN_EQUITY",  "0.0")),   # ダッシュボードで調整
+    "max_pbr":          float(os.environ.get("MAX_PBR",     "99.0")),
+    "min_roe":          float(os.environ.get("MIN_ROE",     "0.0")),
+    "min_equity_ratio": float(os.environ.get("MIN_EQUITY",  "0.0")),
     "min_div_years":    int(os.environ.get("MIN_DIV_YEARS", "1")),
     "max_payout_ratio": float(os.environ.get("MAX_PAYOUT",  "99.0")),
 }
@@ -57,55 +57,110 @@ def safe_float(v, default=0.0):
     except Exception:
         return default
 
+def nv(v):
+    """None/NaN を None に変換（JSON用）"""
+    try:
+        f = float(v)
+        return None if f != f else f
+    except Exception:
+        return None
+
 def get_div_yield(info, price):
-    """配当利回りを複数の方法で取得（10%超は異常値として除外）"""
-    # 方法1: dividendYield
     dy = safe_float(info.get("dividendYield"))
     if 0 < dy <= 1.0:
-        val = dy * 100        # 小数→% (0.04→4%)
-        if 0 < val <= 10.0:
-            return val
+        val = dy * 100
+        if 0 < val <= 10.0: return val
     elif 1.0 < dy <= 10.0:
-        return dy             # すでに%表示
-
-    # 方法2: dividendRate / price
+        return dy
     dr = safe_float(info.get("dividendRate"))
     if dr > 0 and price > 0:
         val = dr / price * 100
-        if 0 < val <= 10.0:
-            return val
-
-    # 方法3: trailingAnnualDividendRate / price
+        if 0 < val <= 10.0: return val
     tr = safe_float(info.get("trailingAnnualDividendRate"))
     if tr > 0 and price > 0:
         val = tr / price * 100
-        if 0 < val <= 10.0:
-            return val
-
+        if 0 < val <= 10.0: return val
     return 0.0
 
-def count_div_years(ticker_obj):
+def count_div_years(divs):
+    if divs is None or divs.empty: return 0
+    years = sorted(divs.index.year.unique(), reverse=True)
+    count = 0
+    for yr in range(datetime.today().year, datetime.today().year - 25, -1):
+        if yr in years: count += 1
+        else: break
+    return count
+
+def get_history(t):
+    """過去5年分の業績履歴を取得"""
+    h = {"years":[], "revenue":[], "operatingIncome":[], "eps":[], "dividend":[], "roe":[], "equityRatio":[]}
     try:
-        divs = ticker_obj.dividends
-        if divs.empty:
-            return 0
-        years = sorted(divs.index.year.unique(), reverse=True)
-        count = 0
-        for yr in range(datetime.today().year, datetime.today().year - 25, -1):
-            if yr in years:
-                count += 1
-            else:
-                break
-        return count
-    except Exception:
-        return 0
+        fins = t.financials  # 行=指標, 列=決算期
+        if fins is not None and not fins.empty:
+            cols = sorted(fins.columns)[-5:]  # 直近5期
+            h["years"] = [str(c.year) for c in cols]
+
+            rev_key = next((k for k in fins.index if "Revenue" in k and "Total" in k), None)
+            op_key  = next((k for k in fins.index if "Operating" in k and "Income" in k), None)
+            eps_key = next((k for k in fins.index if "EPS" in k or "Earnings Per Share" in k), None)
+
+            for c in cols:
+                h["revenue"].append(round(nv(fins.loc[rev_key, c]) / 1e9, 1) if rev_key and nv(fins.loc[rev_key, c]) else None)
+                h["operatingIncome"].append(round(nv(fins.loc[op_key, c]) / 1e9, 1) if op_key and nv(fins.loc[op_key, c]) else None)
+                h["eps"].append(round(nv(fins.loc[eps_key, c]), 1) if eps_key and nv(fins.loc[eps_key, c]) else None)
+    except Exception as e:
+        log.debug(f"financials error: {e}")
+
+    try:
+        divs = t.dividends
+        if not divs.empty and h["years"]:
+            by_year = divs.groupby(divs.index.year).sum()
+            h["dividend"] = [round(float(by_year.get(int(y), 0)), 1) for y in h["years"]]
+    except Exception as e:
+        log.debug(f"dividends error: {e}")
+
+    try:
+        bs = t.balance_sheet
+        if bs is not None and not bs.empty and h["years"]:
+            eq_key = next((k for k in bs.index if "Stockholder" in k or "Common Stock Equity" in k), None)
+            ta_key = next((k for k in bs.index if "Total Assets" in k), None)
+            ni_key = next((k for k in bs.index if "Net Income" in k), None)
+
+            bs_cols = {str(c.year): c for c in bs.columns}
+            for y in h["years"]:
+                c = bs_cols.get(y)
+                if c is None:
+                    h["roe"].append(None)
+                    h["equityRatio"].append(None)
+                    continue
+                eq = nv(bs.loc[eq_key, c]) if eq_key else None
+                ta = nv(bs.loc[ta_key, c]) if ta_key else None
+                er = round(eq / ta * 100, 1) if eq and ta and ta > 0 else None
+                h["equityRatio"].append(er)
+
+                # ROE = 当期純利益 / 自己資本
+                ni = None
+                try:
+                    f = t.financials
+                    if ni_key and f is not None:
+                        fc = {str(col.year): col for col in f.columns}
+                        fc2 = fc.get(y)
+                        if fc2 is not None:
+                            ni = nv(f.loc[ni_key, fc2]) if ni_key in f.index else None
+                except Exception:
+                    pass
+                roe = round(ni / eq * 100, 1) if ni and eq and eq > 0 else None
+                h["roe"].append(roe)
+    except Exception as e:
+        log.debug(f"balance_sheet error: {e}")
+
+    return h
 
 def calc_score(s):
     pbr_score = max(0, (2.0 - s["pbr"]) / 2.0 * 25) if s["pbr"] > 0 else 5
     roe_score = min(s["roe"] / 15 * 20, 20) if s["roe"] > 0 else 5
     return round(
-        min(s["dividendYield"] / 6 * 30, 30) +
-        pbr_score + roe_score +
+        min(s["dividendYield"] / 6 * 30, 30) + pbr_score + roe_score +
         min(s["continuousDividendYears"] / 20 * 15, 15) +
         (10 if s["isFinancial"] else min(s["equityRatio"] / 60 * 10, 10))
     )
@@ -124,14 +179,10 @@ def screen():
             info = t.info
 
             price = safe_float(info.get("currentPrice") or info.get("regularMarketPrice"))
-            if price <= 0:
-                skipped_no_price += 1
-                continue
+            if price <= 0: skipped_no_price += 1; continue
 
             div_yield = get_div_yield(info, price)
-            if div_yield <= 0:
-                skipped_no_div += 1
-                continue
+            if div_yield <= 0: skipped_no_div += 1; continue
 
             pbr      = safe_float(info.get("priceToBook"))
             per      = safe_float(info.get("trailingPE"))
@@ -148,35 +199,35 @@ def screen():
             shares       = safe_float(info.get("sharesOutstanding"))
             equity_ratio = (book_val * shares / total_assets * 100) if total_assets > 0 and book_val > 0 and shares > 0 else 0
 
-            div_years = count_div_years(t)
+            divs      = t.dividends
+            div_years = count_div_years(divs)
 
-            # フィルター（最小限）
-            if div_yield < FILTERS["min_yield"]:  skipped_filter += 1; continue
+            if div_yield < FILTERS["min_yield"]: skipped_filter += 1; continue
             if div_years < FILTERS["min_div_years"]: skipped_filter += 1; continue
 
+            # 業績履歴取得
+            history = get_history(t)
+
             row = {
-                "code":                  code,
-                "name":                  name,
-                "sector":                sector,
-                "price":                 round(price),
-                "dividendYield":         round(div_yield, 2),
-                "annualDividend":        round(div_rate, 1),
-                "pbr":                   round(pbr, 2),
-                "per":                   round(per, 1),
-                "roe":                   round(roe, 1),
-                "equityRatio":           round(equity_ratio, 1),
-                "payoutRatio":           round(payout, 1),
+                "code": code, "name": name, "sector": sector,
+                "price": round(price),
+                "dividendYield": round(div_yield, 2),
+                "annualDividend": round(div_rate, 1),
+                "pbr": round(pbr, 2), "per": round(per, 1),
+                "roe": round(roe, 1), "equityRatio": round(equity_ratio, 1),
+                "payoutRatio": round(payout, 1),
                 "continuousDividendYears": div_years,
-                "isFinancial":           fin,
+                "isFinancial": fin,
+                "history": history,
             }
             row["score"] = calc_score(row)
             results.append(row)
-            log.info(f"  ✓ {code} {name[:12]:12s} 利回り:{div_yield:.1f}% PBR:{pbr:.2f} ROE:{roe:.1f}%")
+            log.info(f"  ✓ {code} {name[:12]:12s} 利回り:{div_yield:.1f}% PBR:{pbr:.2f}")
 
         except Exception as e:
             log.debug(f"{code}: スキップ ({e})")
         finally:
-            time.sleep(0.4)
+            time.sleep(0.5)
 
     log.info(f"--- 統計 --- 株価なし:{skipped_no_price} 配当なし:{skipped_no_div} フィルター除外:{skipped_filter} ヒット:{len(results)}")
     results.sort(key=lambda x: x["score"], reverse=True)
@@ -187,9 +238,7 @@ def main():
     stocks  = screen()
     payload = {
         "updatedAt": datetime.now().strftime("%Y/%m/%d %H:%M JST"),
-        "filters":   FILTERS,
-        "count":     len(stocks),
-        "stocks":    stocks,
+        "filters": FILTERS, "count": len(stocks), "stocks": stocks,
     }
     OUTPUT_PATH.parent.mkdir(parents=True, exist_ok=True)
     with open(OUTPUT_PATH, "w", encoding="utf-8") as f:
