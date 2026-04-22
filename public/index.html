@@ -222,7 +222,7 @@ function renderDetailPanel(s){
     </div>
     <div class="detail-grid">
       <div class="chart-card">
-        <div class="chart-title">売上・営業利益推移（十億円）</div>
+        <div class="chart-title">売上推移（十億円）・営業利益率（%・右軸）</div>
         ${hasData&&(h.revenue||[]).some(v=>v!=null)?`<div style="height:140px"><canvas id="ch-rev-${s.code}"></canvas></div>`:`<div class="no-data">データなし</div>`}
       </div>
       <div class="chart-card">
@@ -230,8 +230,8 @@ function renderDetailPanel(s){
         ${hasData&&(h.eps||[]).some(v=>v!=null)||(h.dividend||[]).some(v=>v>0)?`<div style="height:140px"><canvas id="ch-eps-${s.code}"></canvas></div>`:`<div class="no-data">データなし</div>`}
       </div>
       <div class="chart-card">
-        <div class="chart-title">ROE推移（%）</div>
-        ${hasData&&(h.roe||[]).some(v=>v!=null)?`<div style="height:140px"><canvas id="ch-roe-${s.code}"></canvas></div>`:`<div class="no-data">データなし</div>`}
+        <div class="chart-title">営業利益推移（十億円）</div>
+        ${hasData&&(h.operatingIncome||[]).some(v=>v!=null)?`<div style="height:140px"><canvas id="ch-op-${s.code}"></canvas></div>`:`<div class="no-data">データなし</div>`}
       </div>
       <div class="chart-card">
         <div class="chart-title">自己資本比率推移（%）</div>
@@ -246,12 +246,31 @@ function drawMiniCharts(s){
   const yrs=h.years||[];
   if(!yrs.length)return;
 
-  // 売上・営業利益
+  // 売上 + 営業利益率（右軸）
   if((h.revenue||[]).some(v=>v!=null)){
-    makeChart(`ch-rev-${s.code}`,"bar",yrs,[
-      {label:"売上",data:h.revenue,backgroundColor:"#1e3a5f",borderColor:"#4488ff",borderWidth:1,borderRadius:2},
-      {label:"営業利益",data:h.operatingIncome,type:"line",borderColor:"#e8a020",backgroundColor:"transparent",borderWidth:2,pointRadius:3,tension:.3},
-    ]);
+    const opMargin = h.revenue.map((rev,i)=>{
+      const op = (h.operatingIncome||[])[i];
+      return (rev&&op&&rev>0) ? Math.round(op/rev*1000)/10 : null;
+    });
+    if(miniCharts[`ch-rev-${s.code}`]) miniCharts[`ch-rev-${s.code}`].destroy();
+    miniCharts[`ch-rev-${s.code}`] = new Chart(document.getElementById(`ch-rev-${s.code}`),{
+      data:{
+        labels:yrs,
+        datasets:[
+          {type:"bar",label:"売上",data:h.revenue,backgroundColor:"#1e3a5f",borderColor:"#4488ff",borderWidth:1,borderRadius:2,yAxisID:"y"},
+          {type:"line",label:"営業利益率%",data:opMargin,borderColor:"#e8a020",backgroundColor:"transparent",borderWidth:2,pointRadius:3,tension:.3,yAxisID:"y2"},
+        ]
+      },
+      options:{
+        responsive:true,maintainAspectRatio:false,
+        plugins:{legend:{display:true,labels:{color:"#4a6080",font:{size:9},boxWidth:10}},tooltip:{callbacks:{label:ctx=>ctx.dataset.yAxisID==="y2"?`${ctx.dataset.label}:${ctx.parsed.y}%`:`${ctx.dataset.label}:${ctx.parsed.y}B`}}},
+        scales:{
+          x:{ticks:{color:"#4a6080",font:{size:9}},grid:{display:false},border:{display:false}},
+          y:{ticks:{color:"#4488ff",font:{size:9}},grid:{color:"#142030"},border:{display:false},title:{display:true,text:"十億円",color:"#4488ff",font:{size:8}}},
+          y2:{position:"right",ticks:{color:"#e8a020",font:{size:9},callback:v=>`${v}%`},grid:{display:false},border:{display:false},title:{display:true,text:"利益率%",color:"#e8a020",font:{size:8}}},
+        }
+      }
+    });
   }
   // EPS・配当
   const hasEps=(h.eps||[]).some(v=>v!=null);
@@ -262,10 +281,10 @@ function drawMiniCharts(s){
     if(hasDiv) ds.push({label:"配当",data:h.dividend,backgroundColor:"#2a1e08",borderColor:"#e8a020",borderWidth:1,borderRadius:2});
     makeChart(`ch-eps-${s.code}`,"bar",yrs,ds);
   }
-  // ROE
-  if((h.roe||[]).some(v=>v!=null)){
-    makeChart(`ch-roe-${s.code}`,"line",yrs,[
-      {label:"ROE%",data:h.roe,borderColor:"#00c8a0",backgroundColor:"rgba(0,200,160,.1)",borderWidth:2,fill:true,tension:.3,pointRadius:3},
+  // 営業利益専用
+  if((h.operatingIncome||[]).some(v=>v!=null)){
+    makeChart(`ch-op-${s.code}`,"bar",yrs,[
+      {label:"営業利益",data:h.operatingIncome,backgroundColor:"#1e2a1a",borderColor:"#44cc44",borderWidth:1,borderRadius:2},
     ]);
   }
   // 自己資本比率
