@@ -4,56 +4,48 @@ on:
   schedule:
     # 毎週月曜 07:00 JST（= 日曜 22:00 UTC）
     - cron: '0 22 * * 0'
-  # 手動実行ボタンも有効化
   workflow_dispatch:
     inputs:
       min_yield:
-        description: '配当利回り最低(%) デフォルト: 3.5'
+        description: '配当利回り最低(%) デフォルト: 2.0'
         required: false
-        default: '3.5'
+        default: '2.0'
       max_pbr:
-        description: 'PBR上限(倍) デフォルト: 1.0'
+        description: 'PBR上限(倍) デフォルト: 99'
         required: false
-        default: '1.0'
+        default: '99.0'
 
 jobs:
   screen:
     name: スクリーニング実行
     runs-on: ubuntu-latest
+    timeout-minutes: 60
     permissions:
-      contents: write   # results.json をコミットするために必要
+      contents: write
 
     steps:
-      # ① リポジトリをチェックアウト
       - name: Checkout
         uses: actions/checkout@v4
 
-      # ② Python 3.12 セットアップ
       - name: Setup Python
         uses: actions/setup-python@v5
         with:
           python-version: '3.12'
 
-      # ③ 依存ライブラリのインストール
       - name: Install dependencies
         run: pip install --no-cache-dir -r requirements.txt
 
-      # ④ スクリーナー実行
       - name: Run screener
         env:
-          JQUANTS_MAIL:     ${{ secrets.JQUANTS_MAIL }}
-          JQUANTS_PASSWORD: ${{ secrets.JQUANTS_PASSWORD }}
-          MIN_YIELD: ${{ github.event.inputs.min_yield || '3.5' }}
-          MAX_PBR:   ${{ github.event.inputs.max_pbr   || '1.0' }}
+          MIN_YIELD: ${{ github.event.inputs.min_yield || '2.0' }}
+          MAX_PBR:   ${{ github.event.inputs.max_pbr   || '99.0' }}
         run: python screener.py
 
-      # ⑤ results.json をコミット・プッシュ
       - name: Commit results
         run: |
           git config user.name  "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
           git add public/data/results.json
-          # 変更がある場合のみコミット
           git diff --staged --quiet || \
             git commit -m "chore: スクリーニング結果更新 $(date +'%Y-%m-%d')"
           git push
