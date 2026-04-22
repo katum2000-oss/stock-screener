@@ -215,10 +215,10 @@ function renderDetailPanel(s){
     {label:"連続配当",val:`${s.continuousDividendYears}年`,c:s.continuousDividendYears>=10?"var(--teal)":"var(--text)"},
   ];
 
-  const kabutanUrl=`https://kabutan.jp/stock/?code=${s.code}`;
-  const irUrl=`https://www.nikkei.com/nkd/company/kessan/?scode=${s.code}`;
   const yahooUrl=`https://finance.yahoo.co.jp/quote/${s.code}.T`;
-  const edinetUrl=`https://disclosure2.edinet-fsa.go.jp/WZEK0040.aspx`;
+  const irbankUrl=`https://irbank.net/${s.code}`;
+  const minkabuUrl=`https://minkabu.jp/stock/${s.code}`;
+  const googleUrl=`https://www.google.com/finance/quote/${s.code}:TYO`;
 
   return `
   <div class="detail-panel">
@@ -226,16 +226,16 @@ function renderDetailPanel(s){
       ${kpis.map(k=>`<div class="kpi-item"><div class="kpi-label">${k.label}</div><div class="kpi-val" style="color:${k.c}">${k.val}</div></div>`).join("")}
       <div style="margin-left:auto;display:flex;flex-direction:column;gap:6px;justify-content:center;">
         <a href="${yahooUrl}" target="_blank" rel="noopener" style="display:flex;align-items:center;gap:6px;padding:5px 12px;background:#0a1c0f;border:1px solid #1c3820;border-radius:4px;color:#48a060;font-size:11px;text-decoration:none;white-space:nowrap;" onmouseover="this.style.borderColor='#44cc44';this.style.color='#66dd66'" onmouseout="this.style.borderColor='#1c3820';this.style.color='#48a060'">
-          📈 Yahoo Finance 株価
+          📈 Yahoo Finance
         </a>
-        <a href="${kabutanUrl}" target="_blank" rel="noopener" style="display:flex;align-items:center;gap:6px;padding:5px 12px;background:#0a1428;border:1px solid #1e3a6a;border-radius:4px;color:#5588cc;font-size:11px;text-decoration:none;white-space:nowrap;" onmouseover="this.style.borderColor='#4488ff';this.style.color='#88bbff'" onmouseout="this.style.borderColor='#1e3a6a';this.style.color='#5588cc'">
-          📊 株探 銘柄情報
+        <a href="${irbankUrl}" target="_blank" rel="noopener" style="display:flex;align-items:center;gap:6px;padding:5px 12px;background:#0a1428;border:1px solid #1e3a6a;border-radius:4px;color:#5588cc;font-size:11px;text-decoration:none;white-space:nowrap;" onmouseover="this.style.borderColor='#4488ff';this.style.color='#88bbff'" onmouseout="this.style.borderColor='#1e3a6a';this.style.color='#5588cc'">
+          📊 IR Bank 財務推移
         </a>
-        <a href="${irUrl}" target="_blank" rel="noopener" style="display:flex;align-items:center;gap:6px;padding:5px 12px;background:#1a0f08;border:1px solid #3a2010;border-radius:4px;color:#cc8844;font-size:11px;text-decoration:none;white-space:nowrap;" onmouseover="this.style.borderColor='#dd9944';this.style.color='#ffbb66'" onmouseout="this.style.borderColor='#3a2010';this.style.color='#cc8844'">
-          📋 日経 決算情報
+        <a href="${minkabuUrl}" target="_blank" rel="noopener" style="display:flex;align-items:center;gap:6px;padding:5px 12px;background:#1a0f08;border:1px solid #3a2010;border-radius:4px;color:#cc8844;font-size:11px;text-decoration:none;white-space:nowrap;" onmouseover="this.style.borderColor='#dd9944';this.style.color='#ffbb66'" onmouseout="this.style.borderColor='#3a2010';this.style.color='#cc8844'">
+          💹 みんかぶ
         </a>
-        <a href="${edinetUrl}" target="_blank" rel="noopener" style="display:flex;align-items:center;gap:6px;padding:5px 12px;background:#1a0a1e;border:1px solid #3a1e5a;border-radius:4px;color:#aa66cc;font-size:11px;text-decoration:none;white-space:nowrap;" onmouseover="this.style.borderColor='#aa44dd';this.style.color='#cc88ee'" onmouseout="this.style.borderColor='#3a1e5a';this.style.color='#aa66cc'">
-          📄 EDINET 有報検索
+        <a href="${googleUrl}" target="_blank" rel="noopener" style="display:flex;align-items:center;gap:6px;padding:5px 12px;background:#1a0a1e;border:1px solid #3a1e5a;border-radius:4px;color:#aa66cc;font-size:11px;text-decoration:none;white-space:nowrap;" onmouseover="this.style.borderColor='#aa44dd';this.style.color='#cc88ee'" onmouseout="this.style.borderColor='#3a1e5a';this.style.color='#aa66cc'">
+          🔍 Google Finance
         </a>
       </div>
     </div>
