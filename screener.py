@@ -1,11 +1,14 @@
 """
-国内株式 高配当・低PBR・安定スクリーナー（yfinance版・業績履歴付き）
+国内株式 高配当・低PBR・安定スクリーナー（yfinance版・東証プライム全銘柄対応）
+JPXから東証プライム上場銘柄リストを動的取得し、全銘柄をスクリーニング
 """
 
-import os, json, time, logging
+import os, io, json, time, logging
 from datetime import datetime
 from pathlib import Path
 import yfinance as yf
+import pandas as pd
+import requests
 
 logging.basicConfig(level=logging.INFO, format="%(asctime)s %(levelname)s %(message)s")
 log = logging.getLogger(__name__)
@@ -21,26 +24,6 @@ FILTERS = {
 
 OUTPUT_PATH = Path("public/data/results.json")
 
-CODES = [
-    "7203","6758","9432","9984","8306","6861","7974","9433","6367","4063",
-    "9022","8316","9020","6098","8035","4519","2914","6501","7267","6702",
-    "8058","8031","7741","4543","9021","8411","6954","3382","4661","8002",
-    "8053","8001","9107","8591","8766","8750","8601","8308","8309","8253",
-    "9434","4689","3659","4188","4183","3407","4004","5401","5411","5802",
-    "1605","5020","8830","3289","8801","8802","1801","1802","6301","6302",
-    "6326","6503","6645","6752","6762","6902","6952","6971","6981","7011",
-    "7731","7201","7202","7261","7269","7270","2002","2503","2531","2802",
-    "4502","4503","4523","4568","2651","8267","9843","9983","7751","9101",
-    "9104","9531","5714","5803","4452","9005","9006","9041","9044","1928",
-    "2413","4324","6178","9602","3436","4042","5009","5101","5202","5301",
-    "5332","6113","8355","2768","9064","2432","4755","6028","3231","8795",
-    "7186","7004","7012","7013","6504","6506","6841","6857","6674","7733",
-    "7762","7205","7211","7272","2269","2281","2282","2502","2801","2871",
-    "4506","4507","2670","2678","2685","2730","2778","3099","8270","8273",
-    "8282","8905","9726","9706","9532","4385","6366","1963","1721",
-]
-CODES = sorted(set(c for c in CODES if c.isdigit() and len(c) == 4))
-
 SECTOR_MAP = {
     "Technology":"テクノロジー","Industrials":"産業機械","Consumer Cyclical":"一般消費財",
     "Financial Services":"金融サービス","Healthcare":"医薬品・医療",
@@ -50,6 +33,76 @@ SECTOR_MAP = {
 }
 FIN_SECTORS = {"Financial Services","Banks","Insurance"}
 
+# ─────────────────────────────────────────
+# JPXから東証プライム銘柄リストを取得
+# ─────────────────────────────────────────
+def fetch_prime_codes():
+    """JPXの上場銘柄一覧CSVからプライム市場の4桁コードを取得"""
+    url = "https://www.jpx.co.jp/markets/statistics-equities/misc/tvdivq0000001vg2-att/data_j.xls"
+    log.info("JPXから東証プライム銘柄リストを取得中...")
+    try:
+        r = requests.get(url, timeout=30, headers={"User-Agent": "Mozilla/5.0"})
+        r.raise_for_status()
+        df = pd.read_excel(io.BytesIO(r.content), dtype=str)
+        # カラム名を確認して市場区分でフィルター
+        log.info(f"カラム: {list(df.columns)}")
+        # 市場区分カラムを特定
+        mkt_col = next((c for c in df.columns if "市場" in str(c) or "Market" in str(c) or "市場・商品区分" in str(c)), None)
+        code_col = next((c for c in df.columns if "コード" in str(c) or "Code" in str(c)), None)
+        if mkt_col and code_col:
+            prime = df[df[mkt_col].str.contains("プライム", na=False)]
+            codes = prime[code_col].str[:4].dropna().unique().tolist()
+            codes = [c for c in codes if c.isdigit() and len(c) == 4]
+            log.info(f"東証プライム銘柄数: {len(codes)}")
+            return sorted(codes)
+        else:
+            log.warning(f"カラムが見つかりません。フォールバック使用。cols={list(df.columns)[:10]}")
+    except Exception as e:
+        log.warning(f"JPXリスト取得失敗: {e} → フォールバックリストを使用")
+    return get_fallback_codes()
+
+def get_fallback_codes():
+    """JPX取得失敗時のフォールバック（主要プライム銘柄）"""
+    log.info("フォールバックリストを使用（約300銘柄）")
+    # 業種別に幅広くカバー
+    codes = []
+    # 輸送機器
+    codes += ["7203","7267","7201","7202","7205","7211","7261","7269","7270","7272","7282","7296","7731","7733"]
+    # 電機・精密
+    codes += ["6758","6861","6954","6971","6981","6902","6952","6762","6752","6503","6504","6506","6645","6674","6841","6857","6367","6098","6301","6302","6326","6361","6501","6702","7011","7012","7013","7741"]
+    # 情報・通信
+    codes += ["9432","9433","9434","4689","3659","4755","2432","3668","4751","6178","9984","4552"]
+    # 商社・卸売
+    codes += ["8058","8031","8001","8002","8053","8015","9107","2768","8136"]
+    # 金融・銀行
+    codes += ["8306","8316","8411","8308","8309","8355","8354","8359","8361","8366","8368","8377","8379","8380","8381","8385","8386","8387","8388","8393"]
+    # 証券・保険・その他金融
+    codes += ["8591","8766","8750","8795","8601","8604","8628","8630","8725","8729","8739","8253","8267"]
+    # 不動産
+    codes += ["8801","8802","8804","8830","3289","3231","3003","8803","1878","1925","1928","1942"]
+    # 建設
+    codes += ["1801","1802","1803","1804","1805","1806","1808","1812","1815","1821","1824","1833","1963","6366","1721"]
+    # 食品・飲料
+    codes += ["2502","2503","2531","2801","2802","2871","2002","2269","2281","2282","2264","2290","2295","2212","2579","2914","2587","2593"]
+    # 医薬品
+    codes += ["4502","4503","4506","4507","4519","4523","4543","4568","4151","4188","4183","4452","4631","4004","4005","4021","4042","4063","4208"]
+    # 素材・化学・鉄鋼
+    codes += ["5401","5411","5714","5802","5803","3407","5901","5101","5110","5202","5301","5332","5333","5631","5713","5706","5707","5741","5842"]
+    # エネルギー・資源
+    codes += ["1605","5020","5019","1662","5021","5001","5002"]
+    # 小売
+    codes += ["2651","2670","2678","2685","2730","2778","3099","8270","8273","8282","8905","9843","9983","2670","2780","3086","3087","3088","3092","3097","7532","7533","7550","7581","7751","9766"]
+    # 公共・インフラ・交通
+    codes += ["9001","9005","9006","9008","9009","9020","9021","9022","9041","9044","9045","9048","9064","9101","9104","9531","9532","9706","9726"]
+    # サービス・その他
+    codes += ["2413","4324","4385","6028","9602","3436","5009","9005","2914","4661","3382","4519","6954"]
+    # 重工・機械
+    codes += ["7004","7011","7012","7013","6113","6305","6312","6315","6370","6383","6471","6472","6473","7003","7014"]
+    return sorted(set(c for c in codes if c.isdigit() and len(c) == 4))
+
+# ─────────────────────────────────────────
+# ユーティリティ
+# ─────────────────────────────────────────
 def safe_float(v, default=0.0):
     try:
         f = float(v)
@@ -58,7 +111,6 @@ def safe_float(v, default=0.0):
         return default
 
 def nv(v):
-    """None/NaN を None に変換（JSON用）"""
     try:
         f = float(v)
         return None if f != f else f
@@ -92,88 +144,71 @@ def count_div_years(divs):
     return count
 
 def get_history(t):
-    """過去5年分の業績履歴を取得"""
-    h = {"years":[], "revenue":[], "operatingIncome":[], "eps":[], "dividend":[], "roe":[], "equityRatio":[]}
+    h = {"years":[],"revenue":[],"operatingIncome":[],"eps":[],"dividend":[],"roe":[],"equityRatio":[]}
     try:
-        fins = t.financials  # 行=指標, 列=決算期
+        fins = t.financials
         if fins is not None and not fins.empty:
-            cols = sorted(fins.columns)[-5:]  # 直近5期
+            cols = sorted(fins.columns)[-5:]
             h["years"] = [str(c.year) for c in cols]
-
             rev_key = next((k for k in fins.index if "Revenue" in k and "Total" in k), None)
             op_key  = next((k for k in fins.index if "Operating" in k and "Income" in k), None)
             eps_key = next((k for k in fins.index if "EPS" in k or "Earnings Per Share" in k), None)
-
             for c in cols:
-                h["revenue"].append(round(nv(fins.loc[rev_key, c]) / 1e9, 1) if rev_key and nv(fins.loc[rev_key, c]) else None)
-                h["operatingIncome"].append(round(nv(fins.loc[op_key, c]) / 1e9, 1) if op_key and nv(fins.loc[op_key, c]) else None)
-                h["eps"].append(round(nv(fins.loc[eps_key, c]), 1) if eps_key and nv(fins.loc[eps_key, c]) else None)
-    except Exception as e:
-        log.debug(f"financials error: {e}")
-
+                h["revenue"].append(round(nv(fins.loc[rev_key,c])/1e9,1) if rev_key and nv(fins.loc[rev_key,c]) else None)
+                h["operatingIncome"].append(round(nv(fins.loc[op_key,c])/1e9,1) if op_key and nv(fins.loc[op_key,c]) else None)
+                h["eps"].append(round(nv(fins.loc[eps_key,c]),1) if eps_key and nv(fins.loc[eps_key,c]) else None)
+    except Exception: pass
     try:
         divs = t.dividends
         if not divs.empty and h["years"]:
             by_year = divs.groupby(divs.index.year).sum()
-            h["dividend"] = [round(float(by_year.get(int(y), 0)), 1) for y in h["years"]]
-    except Exception as e:
-        log.debug(f"dividends error: {e}")
-
+            h["dividend"] = [round(float(by_year.get(int(y),0)),1) for y in h["years"]]
+    except Exception: pass
     try:
         bs = t.balance_sheet
         if bs is not None and not bs.empty and h["years"]:
             eq_key = next((k for k in bs.index if "Stockholder" in k or "Common Stock Equity" in k), None)
             ta_key = next((k for k in bs.index if "Total Assets" in k), None)
             ni_key = next((k for k in bs.index if "Net Income" in k), None)
-
-            bs_cols = {str(c.year): c for c in bs.columns}
+            bs_cols = {str(c.year):c for c in bs.columns}
             for y in h["years"]:
                 c = bs_cols.get(y)
-                if c is None:
-                    h["roe"].append(None)
-                    h["equityRatio"].append(None)
-                    continue
-                eq = nv(bs.loc[eq_key, c]) if eq_key else None
-                ta = nv(bs.loc[ta_key, c]) if ta_key else None
-                er = round(eq / ta * 100, 1) if eq and ta and ta > 0 else None
-                h["equityRatio"].append(er)
-
-                # ROE = 当期純利益 / 自己資本
-                ni = None
+                if c is None: h["roe"].append(None); h["equityRatio"].append(None); continue
+                eq = nv(bs.loc[eq_key,c]) if eq_key else None
+                ta = nv(bs.loc[ta_key,c]) if ta_key else None
+                h["equityRatio"].append(round(eq/ta*100,1) if eq and ta and ta>0 else None)
                 try:
                     f = t.financials
-                    if ni_key and f is not None:
-                        fc = {str(col.year): col for col in f.columns}
-                        fc2 = fc.get(y)
-                        if fc2 is not None:
-                            ni = nv(f.loc[ni_key, fc2]) if ni_key in f.index else None
+                    fc = {str(col.year):col for col in f.columns}
+                    fc2 = fc.get(y)
+                    ni = nv(f.loc[ni_key,fc2]) if ni_key and fc2 and ni_key in f.index else None
                 except Exception:
-                    pass
-                roe = round(ni / eq * 100, 1) if ni and eq and eq > 0 else None
-                h["roe"].append(roe)
-    except Exception as e:
-        log.debug(f"balance_sheet error: {e}")
-
+                    ni = None
+                h["roe"].append(round(ni/eq*100,1) if ni and eq and eq>0 else None)
+    except Exception: pass
     return h
 
 def calc_score(s):
-    pbr_score = max(0, (2.0 - s["pbr"]) / 2.0 * 25) if s["pbr"] > 0 else 5
-    roe_score = min(s["roe"] / 15 * 20, 20) if s["roe"] > 0 else 5
+    pbr_score = max(0,(2.0-s["pbr"])/2.0*25) if s["pbr"]>0 else 5
+    roe_score  = min(s["roe"]/15*20,20) if s["roe"]>0 else 5
     return round(
-        min(s["dividendYield"] / 6 * 30, 30) + pbr_score + roe_score +
-        min(s["continuousDividendYears"] / 20 * 15, 15) +
-        (10 if s["isFinancial"] else min(s["equityRatio"] / 60 * 10, 10))
+        min(s["dividendYield"]/6*30,30) + pbr_score + roe_score +
+        min(s["continuousDividendYears"]/20*15,15) +
+        (10 if s["isFinancial"] else min(s["equityRatio"]/60*10,10))
     )
 
-def screen():
+# ─────────────────────────────────────────
+# スクリーニング本体
+# ─────────────────────────────────────────
+def screen(codes):
     results = []
-    skipped_no_price = skipped_no_div = skipped_filter = 0
-    total = len(CODES)
-    log.info(f"対象銘柄数: {total}")
+    skipped_no_price = skipped_no_div = skipped_filter = skipped_error = 0
+    total = len(codes)
+    log.info(f"スクリーニング開始: {total}銘柄")
 
-    for i, code in enumerate(CODES):
-        if i % 20 == 0:
-            log.info(f"[{i}/{total}] 処理中... (取得済み:{len(results)}件)")
+    for i, code in enumerate(codes):
+        if i % 50 == 0:
+            log.info(f"[{i}/{total}] 処理中... ヒット:{len(results)}件")
         try:
             t    = yf.Ticker(f"{code}.T")
             info = t.info
@@ -197,45 +232,46 @@ def screen():
             total_assets = safe_float(info.get("totalAssets"))
             book_val     = safe_float(info.get("bookValue"))
             shares       = safe_float(info.get("sharesOutstanding"))
-            equity_ratio = (book_val * shares / total_assets * 100) if total_assets > 0 and book_val > 0 and shares > 0 else 0
+            equity_ratio = (book_val*shares/total_assets*100) if total_assets>0 and book_val>0 and shares>0 else 0
 
             divs      = t.dividends
             div_years = count_div_years(divs)
 
-            if div_yield < FILTERS["min_yield"]: skipped_filter += 1; continue
-            if div_years < FILTERS["min_div_years"]: skipped_filter += 1; continue
+            if div_yield  < FILTERS["min_yield"]:      skipped_filter += 1; continue
+            if div_years  < FILTERS["min_div_years"]:  skipped_filter += 1; continue
 
-            # 業績履歴取得
             history = get_history(t)
 
             row = {
                 "code": code, "name": name, "sector": sector,
                 "price": round(price),
-                "dividendYield": round(div_yield, 2),
-                "annualDividend": round(div_rate, 1),
-                "pbr": round(pbr, 2), "per": round(per, 1),
-                "roe": round(roe, 1), "equityRatio": round(equity_ratio, 1),
-                "payoutRatio": round(payout, 1),
+                "dividendYield": round(div_yield,2),
+                "annualDividend": round(div_rate,1),
+                "pbr": round(pbr,2), "per": round(per,1),
+                "roe": round(roe,1), "equityRatio": round(equity_ratio,1),
+                "payoutRatio": round(payout,1),
                 "continuousDividendYears": div_years,
                 "isFinancial": fin,
                 "history": history,
             }
             row["score"] = calc_score(row)
             results.append(row)
-            log.info(f"  ✓ {code} {name[:12]:12s} 利回り:{div_yield:.1f}% PBR:{pbr:.2f}")
 
         except Exception as e:
-            log.debug(f"{code}: スキップ ({e})")
+            skipped_error += 1
+            log.debug(f"{code}: エラー ({e})")
         finally:
-            time.sleep(0.5)
+            time.sleep(0.3)
 
-    log.info(f"--- 統計 --- 株価なし:{skipped_no_price} 配当なし:{skipped_no_div} フィルター除外:{skipped_filter} ヒット:{len(results)}")
+    log.info(f"--- 統計 --- 株価なし:{skipped_no_price} 配当なし:{skipped_no_div} フィルター除外:{skipped_filter} エラー:{skipped_error} ヒット:{len(results)}")
     results.sort(key=lambda x: x["score"], reverse=True)
     return results
 
 def main():
-    log.info("=== 高配当・低PBR スクリーナー 開始 ===")
-    stocks  = screen()
+    log.info("=== 高配当・低PBR スクリーナー（東証プライム全銘柄版）開始 ===")
+    codes   = fetch_prime_codes()
+    log.info(f"対象: {len(codes)}銘柄")
+    stocks  = screen(codes)
     payload = {
         "updatedAt": datetime.now().strftime("%Y/%m/%d %H:%M JST"),
         "filters": FILTERS, "count": len(stocks), "stocks": stocks,
@@ -243,7 +279,7 @@ def main():
     OUTPUT_PATH.parent.mkdir(parents=True, exist_ok=True)
     with open(OUTPUT_PATH, "w", encoding="utf-8") as f:
         json.dump(payload, f, ensure_ascii=False, indent=2)
-    log.info(f"結果を {OUTPUT_PATH} に保存（{len(stocks)}銘柄）")
+    log.info(f"完了: {len(stocks)}銘柄を {OUTPUT_PATH} に保存")
 
 if __name__ == "__main__":
     main()
