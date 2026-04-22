@@ -70,7 +70,7 @@
   .chart-card{background:var(--card);border:1px solid var(--border);border-radius:6px;padding:14px;}
   .chart-title{color:var(--muted);font-size:10px;text-transform:uppercase;letter-spacing:1px;margin-bottom:10px;}
   .no-data{color:var(--dim);font-size:11px;text-align:center;padding:30px 0;}
-  .detail-kpi{display:flex;gap:24px;margin-bottom:16px;padding:12px 16px;background:var(--card);border:1px solid var(--border);border-radius:6px;}
+  .detail-kpi{display:flex;align-items:center;gap:24px;margin-bottom:16px;padding:12px 16px;background:var(--card);border:1px solid var(--border);border-radius:6px;flex-wrap:wrap;}
   .kpi-item{text-align:center;}
   .kpi-label{color:var(--muted);font-size:9px;text-transform:uppercase;letter-spacing:.8px;margin-bottom:4px;}
   .kpi-val{font-family:monospace;font-size:16px;font-weight:700;}
@@ -215,10 +215,22 @@ function renderDetailPanel(s){
     {label:"連続配当",val:`${s.continuousDividendYears}年`,c:s.continuousDividendYears>=10?"var(--teal)":"var(--text)"},
   ];
 
+  const edinetUrl=`https://disclosure2.edinet-fsa.go.jp/WZEK0040.aspx?S1,,,SC,KE,${encodeURIComponent(s.name)},,,,,,,17,,,,,,,,,`;
+  const yahooUrl=`https://finance.yahoo.co.jp/quote/${s.code}.T`;
+  const tdnetUrl=`https://www.release.tdnet.info/inbs/I_main_00.html`;
+
   return `
   <div class="detail-panel">
     <div class="detail-kpi">
       ${kpis.map(k=>`<div class="kpi-item"><div class="kpi-label">${k.label}</div><div class="kpi-val" style="color:${k.c}">${k.val}</div></div>`).join("")}
+      <div style="margin-left:auto;display:flex;flex-direction:column;gap:6px;justify-content:center;">
+        <a href="${edinetUrl}" target="_blank" rel="noopener" style="display:flex;align-items:center;gap:6px;padding:5px 12px;background:#0a1428;border:1px solid #1e3a6a;border-radius:4px;color:#5588cc;font-size:11px;text-decoration:none;white-space:nowrap;transition:.15s;" onmouseover="this.style.borderColor='#4488ff';this.style.color='#88bbff'" onmouseout="this.style.borderColor='#1e3a6a';this.style.color='#5588cc'">
+          <span style="font-size:13px">📄</span> EDINET 有価証券報告書
+        </a>
+        <a href="${yahooUrl}" target="_blank" rel="noopener" style="display:flex;align-items:center;gap:6px;padding:5px 12px;background:#0a1c0f;border:1px solid #1c3820;border-radius:4px;color:#48a060;font-size:11px;text-decoration:none;white-space:nowrap;transition:.15s;" onmouseover="this.style.borderColor='#44cc44';this.style.color='#66dd66'" onmouseout="this.style.borderColor='#1c3820';this.style.color='#48a060'">
+          <span style="font-size:13px">📈</span> Yahoo Finance 株価
+        </a>
+      </div>
     </div>
     <div class="detail-grid">
       <div class="chart-card">
