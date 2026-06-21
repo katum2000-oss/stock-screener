@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026/06/14 23:20 JST",
+  "updatedAt": "2026/06/21 23:27 JST",
   "filters": {
     "min_yield": 2.0,
     "max_pbr": 99.0,
@@ -8,17 +8,137 @@
     "min_div_years": 1,
     "max_payout_ratio": 99.0
   },
-  "count": 123,
+  "count": 124,
   "stocks": [
+    {
+      "code": "8387",
+      "name": "SHIKOKU BANK",
+      "sector": "金融サービス",
+      "price": 2750,
+      "dividendYield": 3.13,
+      "annualDividend": 86.0,
+      "pbr": 0.6,
+      "per": 6.6,
+      "roe": 9.9,
+      "equityRatio": 0,
+      "payoutRatio": 14.4,
+      "continuousDividendYears": 25,
+      "isFinancial": true,
+      "history": {
+        "years": [
+          "2023",
+          "2024",
+          "2025",
+          "2026"
+        ],
+        "revenue": [
+          56.5,
+          48.8,
+          47.1,
+          58.3
+        ],
+        "operatingIncome": [
+          null,
+          null,
+          null,
+          null
+        ],
+        "eps": [
+          133.1,
+          174.6,
+          163.1,
+          417.7
+        ],
+        "dividend": [
+          35.0,
+          47.5,
+          53.0,
+          32.0
+        ],
+        "roe": [
+          null,
+          null,
+          null,
+          null
+        ],
+        "equityRatio": [
+          4.5,
+          5.1,
+          4.7,
+          5.4
+        ]
+      },
+      "score": 71
+    },
+    {
+      "code": "1833",
+      "name": "OKUMURA CORP",
+      "sector": "産業機械",
+      "price": 5670,
+      "dividendYield": 5.29,
+      "annualDividend": 300.0,
+      "pbr": 1.03,
+      "per": 11.1,
+      "roe": 11.2,
+      "equityRatio": 0,
+      "payoutRatio": 58.0,
+      "continuousDividendYears": 25,
+      "isFinancial": false,
+      "history": {
+        "years": [
+          "2023",
+          "2024",
+          "2025",
+          "2026"
+        ],
+        "revenue": [
+          249.4,
+          288.1,
+          298.2,
+          307.2
+        ],
+        "operatingIncome": [
+          11.8,
+          13.7,
+          9.7,
+          15.9
+        ],
+        "eps": [
+          306.1,
+          339.3,
+          74.0,
+          511.8
+        ],
+        "dividend": [
+          234.0,
+          273.0,
+          213.0,
+          187.0
+        ],
+        "roe": [
+          null,
+          null,
+          null,
+          null
+        ],
+        "equityRatio": [
+          50.0,
+          49.0,
+          45.1,
+          44.7
+        ]
+      },
+      "score": 69
+    },
     {
       "code": "8253",
       "name": "CREDIT SAISON CO",
       "sector": "金融サービス",
-      "price": 4222,
-      "dividendYield": 3.79,
+      "price": 4381,
+      "dividendYield": 3.65,
       "annualDividend": 160.0,
-      "pbr": 0.8,
-      "per": 9.8,
+      "pbr": 0.83,
+      "per": 10.2,
       "roe": 8.5,
       "equityRatio": 0,
       "payoutRatio": 30.1,
@@ -68,77 +188,17 @@
           15.1
         ]
       },
-      "score": 70
-    },
-    {
-      "code": "8387",
-      "name": "SHIKOKU BANK",
-      "sector": "金融サービス",
-      "price": 2893,
-      "dividendYield": 2.97,
-      "annualDividend": 86.0,
-      "pbr": 0.63,
-      "per": 6.9,
-      "roe": 9.9,
-      "equityRatio": 0,
-      "payoutRatio": 14.4,
-      "continuousDividendYears": 25,
-      "isFinancial": true,
-      "history": {
-        "years": [
-          "2022",
-          "2023",
-          "2024",
-          "2025"
-        ],
-        "revenue": [
-          38.9,
-          56.5,
-          48.8,
-          47.1
-        ],
-        "operatingIncome": [
-          null,
-          null,
-          null,
-          null
-        ],
-        "eps": [
-          190.8,
-          133.1,
-          174.6,
-          163.1
-        ],
-        "dividend": [
-          42.5,
-          35.0,
-          47.5,
-          53.0
-        ],
-        "roe": [
-          null,
-          null,
-          null,
-          null
-        ],
-        "equityRatio": [
-          4.3,
-          4.5,
-          5.1,
-          4.7
-        ]
-      },
-      "score": 70
+      "score": 69
     },
     {
       "code": "8601",
       "name": "DAIWA SECURITIES GRO",
       "sector": "金融サービス",
-      "price": 1570,
-      "dividendYield": 4.46,
+      "price": 1606,
+      "dividendYield": 4.36,
       "annualDividend": 70.0,
-      "pbr": 1.23,
-      "per": 12.6,
+      "pbr": 1.26,
+      "per": 12.9,
       "roe": 9.6,
       "equityRatio": 0,
       "payoutRatio": 51.5,
@@ -146,35 +206,30 @@
       "isFinancial": true,
       "history": {
         "years": [
-          "2022",
           "2023",
           "2024",
           "2025",
           "2026"
         ],
         "revenue": [
-          586.0,
           606.5,
           773.0,
           780.1,
-          null
+          886.9
         ],
         "operatingIncome": [
-          null,
           null,
           null,
           null,
           null
         ],
         "eps": [
-          null,
           43.3,
           83.9,
           107.6,
           124.2
         ],
         "dividend": [
-          27.0,
           31.0,
           53.0,
           57.0,
@@ -184,93 +239,31 @@
           null,
           null,
           null,
-          null,
           null
         ],
         "equityRatio": [
-          5.0,
           5.4,
           4.8,
           4.6,
-          null
+          4.6
         ]
       },
-      "score": 70
+      "score": 69
     },
     {
       "code": "8630",
       "name": "SOMPO HOLDINGS INC",
       "sector": "金融サービス",
-      "price": 6149,
-      "dividendYield": 3.25,
+      "price": 6342,
+      "dividendYield": 3.15,
       "annualDividend": 200.0,
-      "pbr": 1.06,
-      "per": 8.8,
+      "pbr": 1.09,
+      "per": 25.3,
       "roe": 15.8,
       "equityRatio": 0,
-      "payoutRatio": 21.4,
+      "payoutRatio": 59.8,
       "continuousDividendYears": 16,
       "isFinancial": true,
-      "history": {
-        "years": [
-          "2022",
-          "2023",
-          "2024",
-          "2025"
-        ],
-        "revenue": [
-          4130.1,
-          4338.6,
-          5352.8,
-          5253.1
-        ],
-        "operatingIncome": [
-          -15.0,
-          -16.0,
-          -16.2,
-          -18.0
-        ],
-        "eps": [
-          214.6,
-          26.1,
-          421.3,
-          250.9
-        ],
-        "dividend": [
-          78.3,
-          93.3,
-          106.0,
-          151.0
-        ],
-        "roe": [
-          null,
-          null,
-          null,
-          null
-        ],
-        "equityRatio": [
-          14.7,
-          20.0,
-          25.0,
-          26.5
-        ]
-      },
-      "score": 70
-    },
-    {
-      "code": "1833",
-      "name": "OKUMURA CORP",
-      "sector": "産業機械",
-      "price": 5640,
-      "dividendYield": 5.32,
-      "annualDividend": 300.0,
-      "pbr": 1.03,
-      "per": 11.0,
-      "roe": 11.2,
-      "equityRatio": 0,
-      "payoutRatio": 58.0,
-      "continuousDividendYears": 25,
-      "isFinancial": false,
       "history": {
         "years": [
           "2022",
@@ -280,32 +273,32 @@
           "2026"
         ],
         "revenue": [
-          242.5,
-          249.4,
-          288.1,
-          298.2,
-          null
+          null,
+          4338.6,
+          5352.8,
+          5859.5,
+          5253.1
         ],
         "operatingIncome": [
-          12.6,
-          11.8,
-          13.7,
-          9.7,
-          null
+          null,
+          -16.0,
+          -16.2,
+          -24.5,
+          -18.0
         ],
         "eps": [
           null,
-          306.1,
-          339.3,
-          75.1,
-          511.8
+          26.1,
+          421.3,
+          701.0,
+          250.9
         ],
         "dividend": [
-          173.0,
-          234.0,
-          273.0,
-          213.0,
-          187.0
+          78.3,
+          93.3,
+          106.0,
+          151.0,
+          75.0
         ],
         "roe": [
           null,
@@ -315,84 +308,24 @@
           null
         ],
         "equityRatio": [
-          50.2,
-          50.0,
-          49.0,
-          45.1,
-          null
+          null,
+          20.0,
+          25.0,
+          26.5,
+          27.8
         ]
       },
       "score": 69
     },
     {
-      "code": "8604",
-      "name": "NOMURA HOLDINGS INC.",
-      "sector": "金融サービス",
-      "price": 1364,
-      "dividendYield": 3.52,
-      "annualDividend": 48.0,
-      "pbr": 1.07,
-      "per": 11.5,
-      "roe": 10.1,
-      "equityRatio": 0,
-      "payoutRatio": 42.9,
-      "continuousDividendYears": 25,
-      "isFinancial": true,
-      "history": {
-        "years": [
-          "2022",
-          "2023",
-          "2024",
-          "2025"
-        ],
-        "revenue": [
-          1143.7,
-          1145.0,
-          1378.0,
-          1662.4
-        ],
-        "operatingIncome": [
-          null,
-          null,
-          null,
-          null
-        ],
-        "eps": [
-          45.2,
-          29.7,
-          52.7,
-          111.0
-        ],
-        "dividend": [
-          19.0,
-          20.0,
-          38.0,
-          61.0
-        ],
-        "roe": [
-          null,
-          null,
-          null,
-          null
-        ],
-        "equityRatio": [
-          6.7,
-          6.6,
-          6.1,
-          6.1
-        ]
-      },
-      "score": 68
-    },
-    {
       "code": "1928",
       "name": "SEKISUI HOUSE",
       "sector": "一般消費財",
-      "price": 3289,
-      "dividendYield": 4.44,
+      "price": 3271,
+      "dividendYield": 4.46,
       "annualDividend": 146.0,
-      "pbr": 0.99,
-      "per": 8.3,
+      "pbr": 0.98,
+      "per": 8.2,
       "roe": 12.6,
       "equityRatio": 0,
       "payoutRatio": 36.3,
@@ -445,14 +378,74 @@
       "score": 67
     },
     {
+      "code": "8604",
+      "name": "NOMURA HOLDINGS INC.",
+      "sector": "金融サービス",
+      "price": 1408,
+      "dividendYield": 3.41,
+      "annualDividend": 48.0,
+      "pbr": 1.1,
+      "per": 11.8,
+      "roe": 10.1,
+      "equityRatio": 0,
+      "payoutRatio": 42.9,
+      "continuousDividendYears": 25,
+      "isFinancial": true,
+      "history": {
+        "years": [
+          "2022",
+          "2023",
+          "2024",
+          "2025"
+        ],
+        "revenue": [
+          1143.7,
+          1145.0,
+          1378.0,
+          1662.4
+        ],
+        "operatingIncome": [
+          null,
+          null,
+          null,
+          null
+        ],
+        "eps": [
+          45.2,
+          29.7,
+          52.7,
+          111.0
+        ],
+        "dividend": [
+          19.0,
+          20.0,
+          38.0,
+          61.0
+        ],
+        "roe": [
+          null,
+          null,
+          null,
+          null
+        ],
+        "equityRatio": [
+          6.7,
+          6.6,
+          6.1,
+          6.1
+        ]
+      },
+      "score": 67
+    },
+    {
       "code": "8725",
       "name": "MS&AD INS GP HLDGS",
       "sector": "金融サービス",
-      "price": 4597,
-      "dividendYield": 3.05,
+      "price": 4551,
+      "dividendYield": 3.08,
       "annualDividend": 140.0,
-      "pbr": 1.4,
-      "per": 8.7,
+      "pbr": 1.38,
+      "per": 8.6,
       "roe": 17.8,
       "equityRatio": 0,
       "payoutRatio": 23.6,
@@ -512,74 +505,14 @@
       "score": 67
     },
     {
-      "code": "7296",
-      "name": "F.C.C. CO LTD",
-      "sector": "一般消費財",
-      "price": 3390,
-      "dividendYield": 4.72,
-      "annualDividend": 160.0,
-      "pbr": 0.8,
-      "per": 8.7,
-      "roe": 9.6,
-      "equityRatio": 0,
-      "payoutRatio": 50.1,
-      "continuousDividendYears": 24,
-      "isFinancial": false,
-      "history": {
-        "years": [
-          "2022",
-          "2023",
-          "2024",
-          "2025"
-        ],
-        "revenue": [
-          171.0,
-          218.9,
-          240.3,
-          256.6
-        ],
-        "operatingIncome": [
-          10.1,
-          11.9,
-          15.1,
-          17.3
-        ],
-        "eps": [
-          172.1,
-          192.4,
-          245.9,
-          323.8
-        ],
-        "dividend": [
-          52.0,
-          60.0,
-          145.0,
-          168.0
-        ],
-        "roe": [
-          null,
-          null,
-          null,
-          null
-        ],
-        "equityRatio": [
-          75.1,
-          76.0,
-          75.6,
-          74.8
-        ]
-      },
-      "score": 66
-    },
-    {
       "code": "3231",
       "name": "NOMURA REAL ESTATE H",
       "sector": "不動産",
-      "price": 939,
-      "dividendYield": 4.69,
+      "price": 927,
+      "dividendYield": 4.75,
       "annualDividend": 44.0,
-      "pbr": 1.0,
-      "per": 9.7,
+      "pbr": 0.99,
+      "per": 9.6,
       "roe": 10.7,
       "equityRatio": 0,
       "payoutRatio": 41.4,
@@ -636,17 +569,77 @@
           null
         ]
       },
-      "score": 65
+      "score": 66
+    },
+    {
+      "code": "7296",
+      "name": "F.C.C. CO LTD",
+      "sector": "一般消費財",
+      "price": 3420,
+      "dividendYield": 4.68,
+      "annualDividend": 160.0,
+      "pbr": 0.81,
+      "per": 8.8,
+      "roe": 9.6,
+      "equityRatio": 0,
+      "payoutRatio": 50.1,
+      "continuousDividendYears": 24,
+      "isFinancial": false,
+      "history": {
+        "years": [
+          "2022",
+          "2023",
+          "2024",
+          "2025"
+        ],
+        "revenue": [
+          171.0,
+          218.9,
+          240.3,
+          256.6
+        ],
+        "operatingIncome": [
+          10.1,
+          11.9,
+          15.1,
+          17.3
+        ],
+        "eps": [
+          172.1,
+          192.4,
+          245.9,
+          323.8
+        ],
+        "dividend": [
+          52.0,
+          60.0,
+          145.0,
+          168.0
+        ],
+        "roe": [
+          null,
+          null,
+          null,
+          null
+        ],
+        "equityRatio": [
+          75.1,
+          76.0,
+          75.6,
+          74.8
+        ]
+      },
+      "score": 66
     },
     {
       "code": "4208",
       "name": "UBE CORPORATION",
       "sector": "素材・化学",
-      "price": 3068,
-      "dividendYield": 5.22,
+      "price": 3205,
+      "dividendYield": 4.99,
       "annualDividend": 160.0,
-      "pbr": 0.68,
-      "per": 12.5,
+      "pbr": 0.71,
+      "per": 13.0,
       "roe": 5.6,
       "equityRatio": 0,
       "payoutRatio": 44.8,
@@ -703,83 +696,16 @@
           null
         ]
       },
-      "score": 65
-    },
-    {
-      "code": "5901",
-      "name": "TOYO SEIKAN GROUP HO",
-      "sector": "一般消費財",
-      "price": 3933,
-      "dividendYield": 4.73,
-      "annualDividend": 186.0,
-      "pbr": 0.85,
-      "per": 10.9,
-      "roe": 8.0,
-      "equityRatio": 0,
-      "payoutRatio": 36.5,
-      "continuousDividendYears": 25,
-      "isFinancial": false,
-      "history": {
-        "years": [
-          "2022",
-          "2023",
-          "2024",
-          "2025",
-          "2026"
-        ],
-        "revenue": [
-          821.6,
-          906.0,
-          950.7,
-          922.5,
-          null
-        ],
-        "operatingIncome": [
-          34.1,
-          7.4,
-          33.9,
-          34.2,
-          null
-        ],
-        "eps": [
-          null,
-          57.1,
-          130.2,
-          134.1,
-          361.6
-        ],
-        "dividend": [
-          109.0,
-          90.0,
-          90.0,
-          103.0,
-          75.0
-        ],
-        "roe": [
-          null,
-          null,
-          null,
-          null,
-          null
-        ],
-        "equityRatio": [
-          58.9,
-          55.2,
-          56.4,
-          55.5,
-          null
-        ]
-      },
       "score": 64
     },
     {
       "code": "7267",
       "name": "HONDA MOTOR CO",
       "sector": "一般消費財",
-      "price": 1411,
+      "price": 1412,
       "dividendYield": 4.96,
       "annualDividend": 70.0,
-      "pbr": 0.46,
+      "pbr": 0.47,
       "per": 0.0,
       "roe": -2.8,
       "equityRatio": 0,
@@ -791,119 +717,66 @@
           "2022",
           "2023",
           "2024",
-          "2025"
+          "2025",
+          "2026"
         ],
         "revenue": [
-          14552.7,
+          null,
           16907.7,
           20428.8,
-          21688.8
+          21688.8,
+          21796.6
         ],
         "operatingIncome": [
-          871.2,
+          null,
           780.8,
           1382.0,
-          1213.5
+          1213.5,
+          -414.3
         ],
         "eps": [
-          137.0,
+          null,
           136.6,
           225.9,
-          178.9
+          178.9,
+          -106.1
         ],
         "dividend": [
           41.7,
           49.0,
           73.0,
-          69.0
+          69.0,
+          35.0
         ],
         "roe": [
+          null,
           null,
           null,
           null,
           null
         ],
         "equityRatio": [
-          43.7,
+          null,
           45.3,
           42.6,
-          40.1
+          40.1,
+          35.3
         ]
       },
       "score": 64
     },
     {
-      "code": "8750",
-      "name": "DAIICHI LIFE GROUP I",
+      "code": "8393",
+      "name": "MIYAZAKI BANK",
       "sector": "金融サービス",
-      "price": 1754,
-      "dividendYield": 4.11,
-      "annualDividend": 72.0,
-      "pbr": 1.48,
-      "per": 14.6,
-      "roe": 11.1,
+      "price": 1998,
+      "dividendYield": 2.8,
+      "annualDividend": 56.0,
+      "pbr": 0.75,
+      "per": 12.0,
+      "roe": 6.8,
       "equityRatio": 0,
-      "payoutRatio": 45.5,
-      "continuousDividendYears": 16,
-      "isFinancial": true,
-      "history": {
-        "years": [
-          "2022",
-          "2023",
-          "2024",
-          "2025"
-        ],
-        "revenue": [
-          7858.1,
-          8411.4,
-          10487.5,
-          9128.6
-        ],
-        "operatingIncome": [
-          -26.7,
-          -33.0,
-          -39.7,
-          -49.3
-        ],
-        "eps": [
-          95.7,
-          42.7,
-          82.4,
-          116.7
-        ],
-        "dividend": [
-          20.8,
-          21.5,
-          43.5,
-          43.0
-        ],
-        "roe": [
-          null,
-          null,
-          null,
-          null
-        ],
-        "equityRatio": [
-          6.7,
-          4.3,
-          5.7,
-          5.0
-        ]
-      },
-      "score": 64
-    },
-    {
-      "code": "8381",
-      "name": "SAN-IN GODO BANK",
-      "sector": "金融サービス",
-      "price": 2159,
-      "dividendYield": 3.15,
-      "annualDividend": 68.0,
-      "pbr": 1.01,
-      "per": 15.6,
-      "roe": 7.2,
-      "equityRatio": 0,
-      "payoutRatio": 37.5,
+      "payoutRatio": 24.0,
       "continuousDividendYears": 25,
       "isFinancial": true,
       "history": {
@@ -911,60 +784,67 @@
           "2022",
           "2023",
           "2024",
-          "2025"
+          "2025",
+          "2026"
         ],
         "revenue": [
-          88.9,
-          103.3,
-          109.0,
-          113.9
+          58.3,
+          57.8,
+          53.7,
+          57.9,
+          null
         ],
         "operatingIncome": [
+          null,
           null,
           null,
           null,
           null
         ],
         "eps": [
-          92.8,
-          99.2,
-          109.2,
-          122.9
+          null,
+          93.6,
+          81.6,
+          114.3,
+          166.6
         ],
         "dividend": [
-          38.0,
-          35.0,
-          45.0,
-          52.0
+          22.0,
+          20.0,
+          21.0,
+          29.0,
+          22.0
         ],
         "roe": [
+          null,
           null,
           null,
           null,
           null
         ],
         "equityRatio": [
-          5.2,
-          4.5,
-          4.4,
-          3.7
+          3.8,
+          4.1,
+          4.6,
+          4.7,
+          null
         ]
       },
-      "score": 63
+      "score": 64
     },
     {
-      "code": "8795",
-      "name": "T&D HOLDINGS INC",
+      "code": "8386",
+      "name": "HYAKUJUSHI BANK",
       "sector": "金融サービス",
-      "price": 4712,
-      "dividendYield": 3.48,
-      "annualDividend": 164.0,
-      "pbr": 1.4,
-      "per": 16.9,
-      "roe": 9.6,
+      "price": 2388,
+      "dividendYield": 2.93,
+      "annualDividend": 70.0,
+      "pbr": 0.7,
+      "per": 14.4,
+      "roe": 5.3,
       "equityRatio": 0,
-      "payoutRatio": 46.5,
-      "continuousDividendYears": 22,
+      "payoutRatio": 35.2,
+      "continuousDividendYears": 25,
       "isFinancial": true,
       "history": {
         "years": [
@@ -974,28 +854,28 @@
           "2026"
         ],
         "revenue": [
-          2126.8,
-          2303.9,
-          2338.2,
-          2725.6
+          73.5,
+          63.9,
+          71.5,
+          87.2
         ],
         "operatingIncome": [
-          -1.7,
-          -1.4,
-          -2.4,
-          -7.3
+          null,
+          null,
+          null,
+          null
         ],
         "eps": [
-          -237.3,
-          183.1,
-          241.6,
-          289.6
+          78.9,
+          84.0,
+          120.3,
+          166.1
         ],
         "dividend": [
-          66.0,
-          75.0,
-          102.0,
-          68.0
+          18.8,
+          28.8,
+          48.2,
+          31.5
         ],
         "roe": [
           null,
@@ -1004,10 +884,10 @@
           null
         ],
         "equityRatio": [
-          5.9,
-          8.2,
-          8.4,
-          9.3
+          4.8,
+          5.6,
+          5.7,
+          6.6
         ]
       },
       "score": 63
@@ -1016,11 +896,11 @@
       "code": "1878",
       "name": "DAITO TRUST CONSTRUC",
       "sector": "不動産",
-      "price": 3072,
-      "dividendYield": 5.31,
+      "price": 3017,
+      "dividendYield": 5.4,
       "annualDividend": 163.0,
-      "pbr": 2.02,
-      "per": 10.3,
+      "pbr": 1.98,
+      "per": 10.1,
       "roe": 20.5,
       "equityRatio": 0,
       "payoutRatio": 50.3,
@@ -1083,11 +963,11 @@
       "code": "5714",
       "name": "DOWA HOLDINGS",
       "sector": "素材・化学",
-      "price": 9377,
-      "dividendYield": 3.6,
+      "price": 9480,
+      "dividendYield": 3.57,
       "annualDividend": 338.0,
-      "pbr": 1.22,
-      "per": 8.9,
+      "pbr": 1.23,
+      "per": 9.0,
       "roe": 14.5,
       "equityRatio": 0,
       "payoutRatio": 25.5,
@@ -1140,114 +1020,54 @@
       "score": 62
     },
     {
-      "code": "7202",
-      "name": "ISUZU MOTORS",
+      "code": "5901",
+      "name": "TOYO SEIKAN GROUP HO",
       "sector": "一般消費財",
-      "price": 2135,
-      "dividendYield": 4.4,
-      "annualDividend": 94.0,
-      "pbr": 0.99,
-      "per": 11.1,
-      "roe": 10.7,
+      "price": 4127,
+      "dividendYield": 4.51,
+      "annualDividend": 186.0,
+      "pbr": 0.89,
+      "per": 11.4,
+      "roe": 8.0,
       "equityRatio": 0,
-      "payoutRatio": 47.6,
-      "continuousDividendYears": 17,
+      "payoutRatio": 36.5,
+      "continuousDividendYears": 25,
       "isFinancial": false,
       "history": {
         "years": [
           "2022",
           "2023",
           "2024",
-          "2025"
-        ],
-        "revenue": [
-          2514.3,
-          3195.5,
-          3404.6,
-          3235.6
-        ],
-        "operatingIncome": [
-          187.2,
-          253.5,
-          281.6,
-          229.5
-        ],
-        "eps": [
-          162.9,
-          195.8,
-          229.9,
-          229.9
-        ],
-        "dividend": [
-          73.0,
-          86.0,
-          95.0,
-          92.0
-        ],
-        "roe": [
-          null,
-          null,
-          null,
-          null
-        ],
-        "equityRatio": [
-          41.8,
-          42.9,
-          42.4,
-          41.6
-        ]
-      },
-      "score": 62
-    },
-    {
-      "code": "8354",
-      "name": "FUKUOKA FINANCIAL GR",
-      "sector": "金融サービス",
-      "price": 6867,
-      "dividendYield": 3.06,
-      "annualDividend": 210.0,
-      "pbr": 1.21,
-      "per": 15.2,
-      "roe": 8.5,
-      "equityRatio": 0,
-      "payoutRatio": 39.8,
-      "continuousDividendYears": 20,
-      "isFinancial": true,
-      "history": {
-        "years": [
-          "2022",
-          "2023",
-          "2024",
           "2025",
           "2026"
         ],
         "revenue": [
-          244.5,
-          261.4,
-          270.7,
-          296.1,
+          821.6,
+          906.0,
+          950.7,
+          922.5,
           null
         ],
         "operatingIncome": [
-          null,
-          null,
-          null,
-          null,
+          34.1,
+          7.4,
+          33.9,
+          34.2,
           null
         ],
         "eps": [
           null,
-          165.5,
-          324.8,
-          381.5,
-          452.0
+          57.1,
+          130.2,
+          134.1,
+          361.6
         ],
         "dividend": [
-          100.0,
-          110.0,
-          122.5,
-          155.0,
-          95.0
+          109.0,
+          90.0,
+          90.0,
+          103.0,
+          75.0
         ],
         "roe": [
           null,
@@ -1257,27 +1077,27 @@
           null
         ],
         "equityRatio": [
-          3.2,
-          3.0,
-          3.1,
-          2.9,
+          58.9,
+          55.2,
+          56.4,
+          55.5,
           null
         ]
       },
       "score": 62
     },
     {
-      "code": "8386",
-      "name": "HYAKUJUSHI BANK",
+      "code": "8381",
+      "name": "SAN-IN GODO BANK",
       "sector": "金融サービス",
-      "price": 2521,
-      "dividendYield": 2.78,
-      "annualDividend": 70.0,
-      "pbr": 0.74,
-      "per": 15.2,
-      "roe": 5.3,
+      "price": 2186,
+      "dividendYield": 3.11,
+      "annualDividend": 68.0,
+      "pbr": 1.03,
+      "per": 14.6,
+      "roe": 7.2,
       "equityRatio": 0,
-      "payoutRatio": 35.2,
+      "payoutRatio": 40.0,
       "continuousDividendYears": 25,
       "isFinancial": true,
       "history": {
@@ -1289,11 +1109,11 @@
           "2026"
         ],
         "revenue": [
-          67.3,
-          73.5,
-          63.9,
-          71.5,
-          null
+          null,
+          103.3,
+          109.0,
+          113.9,
+          122.5
         ],
         "operatingIncome": [
           null,
@@ -1304,17 +1124,17 @@
         ],
         "eps": [
           null,
-          78.9,
-          84.0,
-          120.3,
-          166.1
+          99.2,
+          109.2,
+          122.9,
+          150.0
         ],
         "dividend": [
-          18.8,
-          18.8,
-          28.8,
-          48.2,
-          31.5
+          38.0,
+          35.0,
+          45.0,
+          52.0,
+          32.0
         ],
         "roe": [
           null,
@@ -1324,78 +1144,11 @@
           null
         ],
         "equityRatio": [
-          4.9,
-          4.8,
-          5.6,
-          5.7,
-          null
-        ]
-      },
-      "score": 62
-    },
-    {
-      "code": "8393",
-      "name": "MIYAZAKI BANK",
-      "sector": "金融サービス",
-      "price": 2130,
-      "dividendYield": 2.63,
-      "annualDividend": 56.0,
-      "pbr": 0.8,
-      "per": 12.8,
-      "roe": 6.8,
-      "equityRatio": 0,
-      "payoutRatio": 24.0,
-      "continuousDividendYears": 25,
-      "isFinancial": true,
-      "history": {
-        "years": [
-          "2022",
-          "2023",
-          "2024",
-          "2025",
-          "2026"
-        ],
-        "revenue": [
-          58.3,
-          57.8,
-          53.7,
-          57.9,
-          null
-        ],
-        "operatingIncome": [
           null,
-          null,
-          null,
-          null,
-          null
-        ],
-        "eps": [
-          null,
-          93.6,
-          81.6,
-          114.3,
-          166.6
-        ],
-        "dividend": [
-          22.0,
-          20.0,
-          21.0,
-          29.0,
-          22.0
-        ],
-        "roe": [
-          null,
-          null,
-          null,
-          null,
-          null
-        ],
-        "equityRatio": [
-          3.8,
-          4.1,
-          4.6,
-          4.7,
-          null
+          4.5,
+          4.4,
+          3.7,
+          3.6
         ]
       },
       "score": 62
@@ -1404,8 +1157,8 @@
       "code": "8739",
       "name": "SPARX GROUP CO.LTD",
       "sector": "金融サービス",
-      "price": 2145,
-      "dividendYield": 4.38,
+      "price": 2140,
+      "dividendYield": 4.39,
       "annualDividend": 94.0,
       "pbr": 2.16,
       "per": 13.3,
@@ -1468,14 +1221,81 @@
       "score": 62
     },
     {
+      "code": "8750",
+      "name": "DAIICHI LIFE GROUP I",
+      "sector": "金融サービス",
+      "price": 1814,
+      "dividendYield": 3.97,
+      "annualDividend": 72.0,
+      "pbr": 1.54,
+      "per": 15.0,
+      "roe": 11.1,
+      "equityRatio": 0,
+      "payoutRatio": 45.0,
+      "continuousDividendYears": 16,
+      "isFinancial": true,
+      "history": {
+        "years": [
+          "2022",
+          "2023",
+          "2024",
+          "2025",
+          "2026"
+        ],
+        "revenue": [
+          null,
+          8411.4,
+          10487.5,
+          9100.1,
+          10517.7
+        ],
+        "operatingIncome": [
+          null,
+          -33.0,
+          -39.7,
+          -49.3,
+          -62.2
+        ],
+        "eps": [
+          null,
+          42.7,
+          82.4,
+          124.5,
+          121.2
+        ],
+        "dividend": [
+          20.8,
+          21.5,
+          43.5,
+          43.0,
+          30.5
+        ],
+        "roe": [
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        "equityRatio": [
+          null,
+          4.3,
+          5.7,
+          5.2,
+          5.7
+        ]
+      },
+      "score": 62
+    },
+    {
       "code": "8766",
       "name": "TOKIO MARINE HOLDING",
       "sector": "金融サービス",
-      "price": 7325,
-      "dividendYield": 3.34,
+      "price": 7194,
+      "dividendYield": 3.41,
       "annualDividend": 245.0,
-      "pbr": 2.54,
-      "per": 14.2,
+      "pbr": 2.49,
+      "per": 13.9,
       "roe": 18.7,
       "equityRatio": 0,
       "payoutRatio": 42.3,
@@ -1535,18 +1355,85 @@
       "score": 62
     },
     {
-      "code": "8306",
-      "name": "MITSUBISHI UFJ FINAN",
-      "sector": "金融サービス",
-      "price": 3162,
-      "dividendYield": 3.04,
-      "annualDividend": 96.0,
-      "pbr": 1.6,
-      "per": 14.9,
-      "roe": 11.9,
+      "code": "9104",
+      "name": "MITSUI O.S.K. LINES ",
+      "sector": "産業機械",
+      "price": 5264,
+      "dividendYield": 3.89,
+      "annualDividend": 205.0,
+      "pbr": 0.63,
+      "per": 8.5,
+      "roe": 7.6,
       "equityRatio": 0,
-      "payoutRatio": 40.5,
-      "continuousDividendYears": 21,
+      "payoutRatio": 32.3,
+      "continuousDividendYears": 25,
+      "isFinancial": false,
+      "history": {
+        "years": [
+          "2022",
+          "2023",
+          "2024",
+          "2025",
+          "2026"
+        ],
+        "revenue": [
+          1269.3,
+          1612.0,
+          1627.9,
+          1775.5,
+          null
+        ],
+        "operatingIncome": [
+          55.0,
+          108.7,
+          103.1,
+          150.9,
+          null
+        ],
+        "eps": [
+          null,
+          2196.5,
+          721.0,
+          1184.5,
+          618.8
+        ],
+        "dividend": [
+          400.0,
+          370.0,
+          290.0,
+          265.0,
+          115.0
+        ],
+        "roe": [
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        "equityRatio": [
+          47.5,
+          54.0,
+          57.1,
+          53.9,
+          null
+        ]
+      },
+      "score": 62
+    },
+    {
+      "code": "8354",
+      "name": "FUKUOKA FINANCIAL GR",
+      "sector": "金融サービス",
+      "price": 6974,
+      "dividendYield": 3.01,
+      "annualDividend": 210.0,
+      "pbr": 1.22,
+      "per": 15.4,
+      "roe": 8.5,
+      "equityRatio": 0,
+      "payoutRatio": 39.8,
+      "continuousDividendYears": 20,
       "isFinancial": true,
       "history": {
         "years": [
@@ -1557,11 +1444,11 @@
           "2026"
         ],
         "revenue": [
-          null,
-          6057.2,
-          5879.8,
-          6838.4,
-          7521.1
+          244.5,
+          261.4,
+          270.7,
+          296.1,
+          null
         ],
         "operatingIncome": [
           null,
@@ -1572,17 +1459,17 @@
         ],
         "eps": [
           null,
-          90.4,
-          124.3,
-          159.5,
-          212.3
+          165.5,
+          324.8,
+          381.5,
+          452.0
         ],
         "dividend": [
-          30.5,
-          36.5,
-          45.5,
-          74.0,
-          51.0
+          100.0,
+          110.0,
+          122.5,
+          155.0,
+          95.0
         ],
         "roe": [
           null,
@@ -1592,59 +1479,59 @@
           null
         ],
         "equityRatio": [
-          null,
-          4.5,
-          4.9,
-          5.0,
-          5.2
+          3.2,
+          3.0,
+          3.1,
+          2.9,
+          null
         ]
       },
       "score": 61
     },
     {
-      "code": "1815",
-      "name": "TEKKEN CORP",
-      "sector": "産業機械",
-      "price": 4325,
-      "dividendYield": 5.16,
-      "annualDividend": 223.0,
-      "pbr": 0.77,
-      "per": 17.8,
-      "roe": 6.8,
+      "code": "8795",
+      "name": "T&D HOLDINGS INC",
+      "sector": "金融サービス",
+      "price": 4894,
+      "dividendYield": 3.35,
+      "annualDividend": 164.0,
+      "pbr": 1.46,
+      "per": 17.5,
+      "roe": 9.6,
       "equityRatio": 0,
-      "payoutRatio": 70.0,
-      "continuousDividendYears": 13,
-      "isFinancial": false,
+      "payoutRatio": 46.5,
+      "continuousDividendYears": 22,
+      "isFinancial": true,
       "history": {
         "years": [
-          "2022",
           "2023",
           "2024",
-          "2025"
+          "2025",
+          "2026"
         ],
         "revenue": [
-          151.6,
-          160.7,
-          183.6,
-          185.1
+          2126.8,
+          2303.9,
+          2338.2,
+          2725.6
         ],
         "operatingIncome": [
-          5.2,
-          1.2,
-          1.0,
-          3.5
+          -1.7,
+          -1.4,
+          -2.4,
+          -7.3
         ],
         "eps": [
-          303.1,
-          154.8,
-          282.1,
-          242.8
+          -237.3,
+          183.1,
+          241.6,
+          289.6
         ],
         "dividend": [
-          80.0,
-          80.0,
-          100.0,
-          122.0
+          66.0,
+          75.0,
+          102.0,
+          68.0
         ],
         "roe": [
           null,
@@ -1653,23 +1540,23 @@
           null
         ],
         "equityRatio": [
-          36.7,
-          35.5,
-          34.0,
-          31.0
+          5.9,
+          8.2,
+          8.4,
+          9.3
         ]
       },
-      "score": 60
+      "score": 61
     },
     {
       "code": "1925",
       "name": "DAIWA HOUSE INDUSTRY",
       "sector": "不動産",
-      "price": 4300,
-      "dividendYield": 3.05,
+      "price": 4363,
+      "dividendYield": 3.0,
       "annualDividend": 131.0,
-      "pbr": 0.92,
-      "per": 7.6,
+      "pbr": 0.93,
+      "per": 7.7,
       "roe": 12.5,
       "equityRatio": 0,
       "payoutRatio": 29.1,
@@ -1680,110 +1567,50 @@
           "2022",
           "2023",
           "2024",
-          "2025"
+          "2025",
+          "2026"
         ],
         "revenue": [
-          4439.5,
+          null,
           4908.2,
           5202.9,
-          5434.8
+          5434.8,
+          5576.9
         ],
         "operatingIncome": [
-          383.3,
+          null,
           465.4,
           440.2,
-          546.3
+          546.3,
+          614.9
         ],
         "eps": [
           343.8,
           469.1,
           457.2,
-          514.0
+          514.0,
+          null
         ],
         "dividend": [
           131.0,
           133.0,
           150.0,
-          155.0
+          155.0,
+          100.0
         ],
         "roe": [
+          null,
           null,
           null,
           null,
           null
         ],
         "equityRatio": [
-          36.6,
+          null,
           37.2,
           37.3,
-          37.1
-        ]
-      },
-      "score": 60
-    },
-    {
-      "code": "5021",
-      "name": "COSMO ENERGY HLDGS C",
-      "sector": "エネルギー",
-      "price": 3571,
-      "dividendYield": 4.62,
-      "annualDividend": 165.0,
-      "pbr": 0.94,
-      "per": 7.9,
-      "roe": 11.4,
-      "equityRatio": 0,
-      "payoutRatio": 36.4,
-      "continuousDividendYears": 11,
-      "isFinancial": false,
-      "history": {
-        "years": [
-          "2022",
-          "2023",
-          "2024",
-          "2025",
-          "2026"
-        ],
-        "revenue": [
-          2440.5,
-          2791.9,
-          2729.6,
-          2799.9,
-          null
-        ],
-        "operatingIncome": [
-          235.3,
-          163.8,
-          149.2,
-          128.2,
-          null
-        ],
-        "eps": [
-          null,
-          363.3,
-          469.1,
-          336.4,
-          453.1
-        ],
-        "dividend": [
-          87.5,
-          112.5,
-          150.0,
-          165.0,
-          90.0
-        ],
-        "roe": [
-          null,
-          null,
-          null,
-          null,
-          null
-        ],
-        "equityRatio": [
-          23.5,
-          24.9,
-          27.2,
-          27.1,
-          null
+          37.1,
+          34.4
         ]
       },
       "score": 60
@@ -1792,11 +1619,11 @@
       "code": "6902",
       "name": "DENSO CORP",
       "sector": "一般消費財",
-      "price": 1854,
-      "dividendYield": 3.99,
+      "price": 1900,
+      "dividendYield": 3.89,
       "annualDividend": 74.0,
-      "pbr": 0.91,
-      "per": 7.2,
+      "pbr": 0.93,
+      "per": 7.4,
       "roe": 8.9,
       "equityRatio": 0,
       "payoutRatio": 26.0,
@@ -1923,18 +1750,18 @@
       "score": 60
     },
     {
-      "code": "8359",
-      "name": "HACHIJUNI NAGANO BK ",
+      "code": "8306",
+      "name": "MITSUBISHI UFJ FINAN",
       "sector": "金融サービス",
-      "price": 2342,
-      "dividendYield": 2.77,
-      "annualDividend": 65.0,
-      "pbr": 0.92,
-      "per": 16.6,
-      "roe": 6.1,
+      "price": 3278,
+      "dividendYield": 2.93,
+      "annualDividend": 96.0,
+      "pbr": 1.66,
+      "per": 15.4,
+      "roe": 11.9,
       "equityRatio": 0,
-      "payoutRatio": 39.0,
-      "continuousDividendYears": 25,
+      "payoutRatio": 40.5,
+      "continuousDividendYears": 21,
       "isFinancial": true,
       "history": {
         "years": [
@@ -1945,11 +1772,11 @@
           "2026"
         ],
         "revenue": [
-          141.4,
-          174.5,
-          167.9,
-          201.5,
-          null
+          null,
+          6057.2,
+          5879.8,
+          6838.4,
+          7521.1
         ],
         "operatingIncome": [
           null,
@@ -1960,13 +1787,75 @@
         ],
         "eps": [
           null,
+          90.4,
+          124.3,
+          159.5,
+          212.3
+        ],
+        "dividend": [
+          30.5,
+          36.5,
+          45.5,
+          74.0,
+          51.0
+        ],
+        "roe": [
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        "equityRatio": [
+          null,
+          4.5,
+          4.9,
+          5.0,
+          5.2
+        ]
+      },
+      "score": 60
+    },
+    {
+      "code": "8359",
+      "name": "HACHIJUNI NAGANO BK ",
+      "sector": "金融サービス",
+      "price": 2347,
+      "dividendYield": 2.77,
+      "annualDividend": 65.0,
+      "pbr": 0.93,
+      "per": 16.6,
+      "roe": 6.1,
+      "equityRatio": 0,
+      "payoutRatio": 39.0,
+      "continuousDividendYears": 25,
+      "isFinancial": true,
+      "history": {
+        "years": [
+          "2023",
+          "2024",
+          "2025",
+          "2026"
+        ],
+        "revenue": [
+          174.5,
+          167.9,
+          201.5,
+          242.9
+        ],
+        "operatingIncome": [
+          null,
+          null,
+          null,
+          null
+        ],
+        "eps": [
           49.8,
           76.3,
           101.2,
           141.1
         ],
         "dividend": [
-          20.0,
           20.0,
           27.0,
           49.0,
@@ -1976,45 +1865,43 @@
           null,
           null,
           null,
-          null,
           null
         ],
         "equityRatio": [
-          6.8,
           7.0,
           7.5,
           7.1,
-          null
+          8.5
         ]
       },
       "score": 60
     },
     {
-      "code": "8388",
-      "name": "AWA BANK",
+      "code": "8377",
+      "name": "HOKUHOKU FINANCIAL G",
       "sector": "金融サービス",
-      "price": 6990,
-      "dividendYield": 2.58,
-      "annualDividend": 180.0,
-      "pbr": 0.68,
-      "per": 17.6,
-      "roe": 4.2,
+      "price": 6415,
+      "dividendYield": 2.34,
+      "annualDividend": 150.0,
+      "pbr": 1.06,
+      "per": 13.3,
+      "roe": 8.5,
       "equityRatio": 0,
-      "payoutRatio": 33.4,
-      "continuousDividendYears": 25,
+      "payoutRatio": 22.8,
+      "continuousDividendYears": 23,
       "isFinancial": true,
       "history": {
         "years": [
-          "2022",
           "2023",
           "2024",
-          "2025"
+          "2025",
+          "2026"
         ],
         "revenue": [
-          65.0,
-          79.2,
-          66.3,
-          70.5
+          163.7,
+          160.5,
+          168.7,
+          207.9
         ],
         "operatingIncome": [
           null,
@@ -2023,16 +1910,16 @@
           null
         ],
         "eps": [
-          265.4,
-          248.2,
-          277.3,
-          330.9
+          158.6,
+          176.3,
+          310.3,
+          483.2
         ],
         "dividend": [
-          45.0,
+          37.0,
           62.5,
-          85.0,
-          110.0
+          72.5,
+          65.0
         ],
         "roe": [
           null,
@@ -2041,10 +1928,70 @@
           null
         ],
         "equityRatio": [
-          7.3,
+          3.8,
+          4.0,
+          4.0,
+          4.3
+        ]
+      },
+      "score": 60
+    },
+    {
+      "code": "8388",
+      "name": "AWA BANK",
+      "sector": "金融サービス",
+      "price": 6820,
+      "dividendYield": 2.64,
+      "annualDividend": 180.0,
+      "pbr": 0.67,
+      "per": 17.2,
+      "roe": 4.2,
+      "equityRatio": 0,
+      "payoutRatio": 33.4,
+      "continuousDividendYears": 25,
+      "isFinancial": true,
+      "history": {
+        "years": [
+          "2023",
+          "2024",
+          "2025",
+          "2026"
+        ],
+        "revenue": [
+          79.2,
+          66.3,
+          70.5,
+          82.8
+        ],
+        "operatingIncome": [
+          null,
+          null,
+          null,
+          null
+        ],
+        "eps": [
+          248.2,
+          277.3,
+          330.9,
+          396.8
+        ],
+        "dividend": [
+          62.5,
+          85.0,
+          110.0,
+          82.5
+        ],
+        "roe": [
+          null,
+          null,
+          null,
+          null
+        ],
+        "equityRatio": [
           7.2,
           8.5,
-          8.3
+          8.3,
+          9.6
         ]
       },
       "score": 60
@@ -2053,15 +2000,135 @@
       "code": "9021",
       "name": "WEST JAPAN RAILWAY C",
       "sector": "産業機械",
-      "price": 2578,
-      "dividendYield": 3.78,
+      "price": 2594,
+      "dividendYield": 3.76,
       "annualDividend": 97.5,
-      "pbr": 0.97,
+      "pbr": 0.98,
       "per": 9.3,
       "roe": 10.2,
       "equityRatio": 0,
       "payoutRatio": 35.1,
       "continuousDividendYears": 25,
+      "isFinancial": false,
+      "history": {
+        "years": [
+          "2023",
+          "2024",
+          "2025",
+          "2026"
+        ],
+        "revenue": [
+          1395.5,
+          1635.0,
+          1707.9,
+          1845.8
+        ],
+        "operatingIncome": [
+          84.0,
+          179.7,
+          180.2,
+          198.1
+        ],
+        "eps": [
+          181.6,
+          202.6,
+          240.1,
+          277.7
+        ],
+        "dividend": [
+          66.2,
+          79.2,
+          92.5,
+          52.5
+        ],
+        "roe": [
+          null,
+          null,
+          null,
+          null
+        ],
+        "equityRatio": [
+          27.7,
+          29.3,
+          30.8,
+          30.3
+        ]
+      },
+      "score": 60
+    },
+    {
+      "code": "7202",
+      "name": "ISUZU MOTORS",
+      "sector": "一般消費財",
+      "price": 2280,
+      "dividendYield": 4.12,
+      "annualDividend": 94.0,
+      "pbr": 1.06,
+      "per": 11.8,
+      "roe": 10.7,
+      "equityRatio": 0,
+      "payoutRatio": 47.6,
+      "continuousDividendYears": 17,
+      "isFinancial": false,
+      "history": {
+        "years": [
+          "2022",
+          "2023",
+          "2024",
+          "2025"
+        ],
+        "revenue": [
+          2514.3,
+          3195.5,
+          3404.6,
+          3235.6
+        ],
+        "operatingIncome": [
+          187.2,
+          253.5,
+          281.6,
+          229.5
+        ],
+        "eps": [
+          162.9,
+          195.8,
+          229.9,
+          229.9
+        ],
+        "dividend": [
+          73.0,
+          86.0,
+          95.0,
+          92.0
+        ],
+        "roe": [
+          null,
+          null,
+          null,
+          null
+        ],
+        "equityRatio": [
+          41.8,
+          42.9,
+          42.4,
+          41.6
+        ]
+      },
+      "score": 59
+    },
+    {
+      "code": "1662",
+      "name": "JAPAN PETROLEUM EXPL",
+      "sector": "エネルギー",
+      "price": 1636,
+      "dividendYield": 2.75,
+      "annualDividend": 45.0,
+      "pbr": 0.67,
+      "per": 7.8,
+      "roe": 9.2,
+      "equityRatio": 0,
+      "payoutRatio": 31.1,
+      "continuousDividendYears": 23,
       "isFinancial": false,
       "history": {
         "years": [
@@ -2072,32 +2139,32 @@
           "2026"
         ],
         "revenue": [
-          1031.1,
-          1395.5,
-          1635.0,
-          1707.9,
-          null
+          null,
+          336.5,
+          325.9,
+          389.1,
+          340.3
         ],
         "operatingIncome": [
-          -119.1,
-          84.0,
-          179.7,
-          180.2,
-          null
+          null,
+          62.1,
+          55.2,
+          62.0,
+          38.9
         ],
         "eps": [
           null,
-          181.6,
-          405.2,
-          240.1,
-          277.7
+          247.3,
+          198.9,
+          314.9,
+          208.7
         ],
         "dividend": [
+          35.0,
+          69.0,
+          60.0,
           50.0,
-          66.2,
-          79.2,
-          92.5,
-          52.5
+          45.0
         ],
         "roe": [
           null,
@@ -2107,24 +2174,84 @@
           null
         ],
         "equityRatio": [
-          26.2,
-          27.7,
-          29.3,
-          30.8,
-          null
+          null,
+          74.9,
+          76.2,
+          77.4,
+          72.8
         ]
       },
-      "score": 60
+      "score": 58
+    },
+    {
+      "code": "1815",
+      "name": "TEKKEN CORP",
+      "sector": "産業機械",
+      "price": 4550,
+      "dividendYield": 4.9,
+      "annualDividend": 223.0,
+      "pbr": 0.81,
+      "per": 18.7,
+      "roe": 6.8,
+      "equityRatio": 0,
+      "payoutRatio": 70.0,
+      "continuousDividendYears": 13,
+      "isFinancial": false,
+      "history": {
+        "years": [
+          "2022",
+          "2023",
+          "2024",
+          "2025"
+        ],
+        "revenue": [
+          151.6,
+          160.7,
+          183.6,
+          185.1
+        ],
+        "operatingIncome": [
+          5.2,
+          1.2,
+          1.0,
+          3.5
+        ],
+        "eps": [
+          303.1,
+          154.8,
+          282.1,
+          242.8
+        ],
+        "dividend": [
+          80.0,
+          80.0,
+          100.0,
+          122.0
+        ],
+        "roe": [
+          null,
+          null,
+          null,
+          null
+        ],
+        "equityRatio": [
+          36.7,
+          35.5,
+          34.0,
+          31.0
+        ]
+      },
+      "score": 58
     },
     {
       "code": "2768",
       "name": "SOJITZ CORPORATION",
       "sector": "産業機械",
-      "price": 5081,
-      "dividendYield": 3.54,
+      "price": 5297,
+      "dividendYield": 3.4,
       "annualDividend": 180.0,
-      "pbr": 0.97,
-      "per": 10.3,
+      "pbr": 1.01,
+      "per": 10.7,
       "roe": 10.0,
       "equityRatio": 0,
       "payoutRatio": 33.3,
@@ -2181,17 +2308,84 @@
           null
         ]
       },
-      "score": 59
+      "score": 58
+    },
+    {
+      "code": "5021",
+      "name": "COSMO ENERGY HLDGS C",
+      "sector": "エネルギー",
+      "price": 3775,
+      "dividendYield": 4.37,
+      "annualDividend": 165.0,
+      "pbr": 0.99,
+      "per": 8.3,
+      "roe": 11.4,
+      "equityRatio": 0,
+      "payoutRatio": 36.4,
+      "continuousDividendYears": 11,
+      "isFinancial": false,
+      "history": {
+        "years": [
+          "2022",
+          "2023",
+          "2024",
+          "2025",
+          "2026"
+        ],
+        "revenue": [
+          2440.5,
+          2791.9,
+          2729.6,
+          2799.9,
+          null
+        ],
+        "operatingIncome": [
+          235.3,
+          163.8,
+          149.2,
+          128.2,
+          null
+        ],
+        "eps": [
+          null,
+          363.3,
+          469.1,
+          336.4,
+          453.1
+        ],
+        "dividend": [
+          87.5,
+          112.5,
+          150.0,
+          165.0,
+          90.0
+        ],
+        "roe": [
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        "equityRatio": [
+          23.5,
+          24.9,
+          27.2,
+          27.1,
+          null
+        ]
+      },
+      "score": 58
     },
     {
       "code": "7269",
       "name": "SUZUKI MOTOR CORP",
       "sector": "一般消費財",
-      "price": 1868,
-      "dividendYield": 2.78,
+      "price": 1916,
+      "dividendYield": 2.71,
       "annualDividend": 52.0,
-      "pbr": 1.07,
-      "per": 8.2,
+      "pbr": 1.09,
+      "per": 8.4,
       "roe": 13.9,
       "equityRatio": 0,
       "payoutRatio": 20.2,
@@ -2241,151 +2435,17 @@
           49.6
         ]
       },
-      "score": 59
-    },
-    {
-      "code": "8377",
-      "name": "HOKUHOKU FINANCIAL G",
-      "sector": "金融サービス",
-      "price": 6505,
-      "dividendYield": 2.31,
-      "annualDividend": 150.0,
-      "pbr": 1.08,
-      "per": 13.5,
-      "roe": 8.5,
-      "equityRatio": 0,
-      "payoutRatio": 22.8,
-      "continuousDividendYears": 23,
-      "isFinancial": true,
-      "history": {
-        "years": [
-          "2022",
-          "2023",
-          "2024",
-          "2025",
-          "2026"
-        ],
-        "revenue": [
-          160.9,
-          163.7,
-          160.5,
-          168.7,
-          null
-        ],
-        "operatingIncome": [
-          null,
-          null,
-          null,
-          null,
-          null
-        ],
-        "eps": [
-          null,
-          158.6,
-          176.3,
-          310.3,
-          483.2
-        ],
-        "dividend": [
-          35.0,
-          37.0,
-          62.5,
-          72.5,
-          65.0
-        ],
-        "roe": [
-          null,
-          null,
-          null,
-          null,
-          null
-        ],
-        "equityRatio": [
-          3.6,
-          3.8,
-          4.0,
-          4.0,
-          null
-        ]
-      },
-      "score": 59
-    },
-    {
-      "code": "9104",
-      "name": "MITSUI O.S.K. LINES ",
-      "sector": "産業機械",
-      "price": 5765,
-      "dividendYield": 3.56,
-      "annualDividend": 205.0,
-      "pbr": 0.69,
-      "per": 9.3,
-      "roe": 7.6,
-      "equityRatio": 0,
-      "payoutRatio": 32.3,
-      "continuousDividendYears": 25,
-      "isFinancial": false,
-      "history": {
-        "years": [
-          "2022",
-          "2023",
-          "2024",
-          "2025",
-          "2026"
-        ],
-        "revenue": [
-          1269.3,
-          1612.0,
-          1627.9,
-          1775.5,
-          null
-        ],
-        "operatingIncome": [
-          55.0,
-          108.7,
-          103.1,
-          150.9,
-          null
-        ],
-        "eps": [
-          null,
-          2196.5,
-          721.0,
-          1184.5,
-          618.8
-        ],
-        "dividend": [
-          400.0,
-          370.0,
-          290.0,
-          265.0,
-          115.0
-        ],
-        "roe": [
-          null,
-          null,
-          null,
-          null,
-          null
-        ],
-        "equityRatio": [
-          47.5,
-          54.0,
-          57.1,
-          53.9,
-          null
-        ]
-      },
-      "score": 59
+      "score": 58
     },
     {
       "code": "7270",
       "name": "SUBARU CORPORATION",
       "sector": "一般消費財",
-      "price": 2474,
-      "dividendYield": 4.69,
+      "price": 2440,
+      "dividendYield": 4.75,
       "annualDividend": 116.0,
-      "pbr": 0.64,
-      "per": 19.7,
+      "pbr": 0.63,
+      "per": 19.5,
       "roe": 3.3,
       "equityRatio": 0,
       "payoutRatio": 92.0,
@@ -2438,201 +2498,14 @@
       "score": 58
     },
     {
-      "code": "8591",
-      "name": "ORIX CORPORATION",
-      "sector": "金融サービス",
-      "price": 6092,
-      "dividendYield": 2.56,
-      "annualDividend": 156.1,
-      "pbr": 1.49,
-      "per": 15.2,
-      "roe": 10.4,
-      "equityRatio": 0,
-      "payoutRatio": 39.1,
-      "continuousDividendYears": 25,
-      "isFinancial": true,
-      "history": {
-        "years": [
-          "2022",
-          "2023",
-          "2024",
-          "2025"
-        ],
-        "revenue": [
-          1562.9,
-          1631.1,
-          1797.0,
-          1829.2
-        ],
-        "operatingIncome": [
-          -20.5,
-          -14.4,
-          4.7,
-          -27.1
-        ],
-        "eps": [
-          263.4,
-          231.0,
-          298.1,
-          307.2
-        ],
-        "dividend": [
-          89.4,
-          85.6,
-          118.0,
-          151.6
-        ],
-        "roe": [
-          null,
-          null,
-          null,
-          null
-        ],
-        "equityRatio": [
-          22.9,
-          23.2,
-          24.1,
-          24.2
-        ]
-      },
-      "score": 58
-    },
-    {
-      "code": "1662",
-      "name": "JAPAN PETROLEUM EXPL",
-      "sector": "エネルギー",
-      "price": 1658,
-      "dividendYield": 2.71,
-      "annualDividend": 45.0,
-      "pbr": 0.68,
-      "per": 7.9,
-      "roe": 9.2,
-      "equityRatio": 0,
-      "payoutRatio": 31.1,
-      "continuousDividendYears": 23,
-      "isFinancial": false,
-      "history": {
-        "years": [
-          "2022",
-          "2023",
-          "2024",
-          "2025"
-        ],
-        "revenue": [
-          249.1,
-          336.5,
-          325.9,
-          389.1
-        ],
-        "operatingIncome": [
-          19.8,
-          62.1,
-          55.2,
-          62.0
-        ],
-        "eps": [
-          -109.1,
-          247.3,
-          198.9,
-          314.9
-        ],
-        "dividend": [
-          35.0,
-          69.0,
-          60.0,
-          50.0
-        ],
-        "roe": [
-          null,
-          null,
-          null,
-          null
-        ],
-        "equityRatio": [
-          78.7,
-          74.9,
-          76.2,
-          77.4
-        ]
-      },
-      "score": 57
-    },
-    {
-      "code": "8368",
-      "name": "HYAKUGO BANK",
-      "sector": "金融サービス",
-      "price": 1945,
-      "dividendYield": 2.16,
-      "annualDividend": 42.0,
-      "pbr": 0.91,
-      "per": 17.6,
-      "roe": 5.6,
-      "equityRatio": 0,
-      "payoutRatio": 30.9,
-      "continuousDividendYears": 25,
-      "isFinancial": true,
-      "history": {
-        "years": [
-          "2022",
-          "2023",
-          "2024",
-          "2025",
-          "2026"
-        ],
-        "revenue": [
-          91.6,
-          91.5,
-          104.6,
-          103.5,
-          null
-        ],
-        "operatingIncome": [
-          null,
-          null,
-          null,
-          null,
-          null
-        ],
-        "eps": [
-          null,
-          57.1,
-          56.4,
-          72.8,
-          110.2
-        ],
-        "dividend": [
-          11.5,
-          15.0,
-          16.0,
-          25.0,
-          21.0
-        ],
-        "roe": [
-          null,
-          null,
-          null,
-          null,
-          null
-        ],
-        "equityRatio": [
-          5.2,
-          5.2,
-          6.1,
-          5.9,
-          null
-        ]
-      },
-      "score": 57
-    },
-    {
       "code": "4005",
       "name": "SUMITOMO CHEMICAL CO",
       "sector": "素材・化学",
-      "price": 554,
-      "dividendYield": 2.89,
+      "price": 543,
+      "dividendYield": 2.95,
       "annualDividend": 16.0,
-      "pbr": 0.91,
-      "per": 14.9,
+      "pbr": 0.89,
+      "per": 14.6,
       "roe": 10.0,
       "equityRatio": 0,
       "payoutRatio": 36.3,
@@ -2689,17 +2562,331 @@
           null
         ]
       },
+      "score": 57
+    },
+    {
+      "code": "8368",
+      "name": "HYAKUGO BANK",
+      "sector": "金融サービス",
+      "price": 1890,
+      "dividendYield": 2.22,
+      "annualDividend": 42.0,
+      "pbr": 0.89,
+      "per": 17.2,
+      "roe": 5.6,
+      "equityRatio": 0,
+      "payoutRatio": 30.9,
+      "continuousDividendYears": 25,
+      "isFinancial": true,
+      "history": {
+        "years": [
+          "2023",
+          "2024",
+          "2025",
+          "2026"
+        ],
+        "revenue": [
+          91.5,
+          104.6,
+          103.5,
+          132.6
+        ],
+        "operatingIncome": [
+          null,
+          null,
+          null,
+          null
+        ],
+        "eps": [
+          57.1,
+          56.4,
+          72.8,
+          110.2
+        ],
+        "dividend": [
+          15.0,
+          16.0,
+          25.0,
+          21.0
+        ],
+        "roe": [
+          null,
+          null,
+          null,
+          null
+        ],
+        "equityRatio": [
+          5.2,
+          6.1,
+          5.9,
+          6.8
+        ]
+      },
+      "score": 57
+    },
+    {
+      "code": "8591",
+      "name": "ORIX CORPORATION",
+      "sector": "金融サービス",
+      "price": 6325,
+      "dividendYield": 2.47,
+      "annualDividend": 156.1,
+      "pbr": 1.55,
+      "per": 15.8,
+      "roe": 10.4,
+      "equityRatio": 0,
+      "payoutRatio": 39.1,
+      "continuousDividendYears": 25,
+      "isFinancial": true,
+      "history": {
+        "years": [
+          "2022",
+          "2023",
+          "2024",
+          "2025"
+        ],
+        "revenue": [
+          1562.9,
+          1631.1,
+          1797.0,
+          1829.2
+        ],
+        "operatingIncome": [
+          -20.5,
+          -14.4,
+          4.7,
+          -27.1
+        ],
+        "eps": [
+          263.4,
+          231.0,
+          298.1,
+          307.2
+        ],
+        "dividend": [
+          89.4,
+          85.6,
+          118.0,
+          151.6
+        ],
+        "roe": [
+          null,
+          null,
+          null,
+          null
+        ],
+        "equityRatio": [
+          22.9,
+          23.2,
+          24.1,
+          24.2
+        ]
+      },
+      "score": 57
+    },
+    {
+      "code": "8729",
+      "name": "SONY FINANCIAL GROUP",
+      "sector": "金融サービス",
+      "price": 140,
+      "dividendYield": 5.7,
+      "annualDividend": 8.0,
+      "pbr": 1.5,
+      "per": 18.1,
+      "roe": 8.5,
+      "equityRatio": 0,
+      "payoutRatio": 49.0,
+      "continuousDividendYears": 1,
+      "isFinancial": true,
+      "history": {
+        "years": [
+          "2022",
+          "2023",
+          "2024",
+          "2025",
+          "2026"
+        ],
+        "revenue": [
+          null,
+          2078.2,
+          3193.0,
+          2414.7,
+          2499.1
+        ],
+        "operatingIncome": [
+          null,
+          null,
+          null,
+          null,
+          40.8
+        ],
+        "eps": [
+          null,
+          null,
+          null,
+          11.0,
+          7.8
+        ],
+        "dividend": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          3.8
+        ],
+        "roe": [
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        "equityRatio": [
+          null,
+          null,
+          null,
+          null,
+          2.6
+        ]
+      },
+      "score": 57
+    },
+    {
+      "code": "9432",
+      "name": "NTT INC",
+      "sector": "通信・メディア",
+      "price": 144,
+      "dividendYield": 3.74,
+      "annualDividend": 5.4,
+      "pbr": 1.21,
+      "per": 11.5,
+      "roe": 10.0,
+      "equityRatio": 0,
+      "payoutRatio": 42.0,
+      "continuousDividendYears": 25,
+      "isFinancial": false,
+      "history": {
+        "years": [
+          "2023",
+          "2024",
+          "2025",
+          "2026"
+        ],
+        "revenue": [
+          13136.2,
+          13374.6,
+          13704.7,
+          14409.1
+        ],
+        "operatingIncome": [
+          1829.0,
+          1922.9,
+          1649.6,
+          1706.2
+        ],
+        "eps": [
+          13.9,
+          15.1,
+          12.0,
+          12.6
+        ],
+        "dividend": [
+          4.9,
+          5.2,
+          5.2,
+          2.6
+        ],
+        "roe": [
+          null,
+          null,
+          null,
+          null
+        ],
+        "equityRatio": [
+          33.8,
+          33.3,
+          34.0,
+          20.8
+        ]
+      },
+      "score": 57
+    },
+    {
+      "code": "3289",
+      "name": "TOKYU FUDOSAN HOLDIN",
+      "sector": "不動産",
+      "price": 1296,
+      "dividendYield": 3.86,
+      "annualDividend": 50.0,
+      "pbr": 1.03,
+      "per": 9.6,
+      "roe": 11.2,
+      "equityRatio": 0,
+      "payoutRatio": 35.4,
+      "continuousDividendYears": 13,
+      "isFinancial": false,
+      "history": {
+        "years": [
+          "2022",
+          "2023",
+          "2024",
+          "2025",
+          "2026"
+        ],
+        "revenue": [
+          989.0,
+          1005.8,
+          1103.0,
+          1150.3,
+          null
+        ],
+        "operatingIncome": [
+          83.8,
+          110.4,
+          120.2,
+          140.8,
+          null
+        ],
+        "eps": [
+          null,
+          67.2,
+          96.4,
+          108.7,
+          135.4
+        ],
+        "dividend": [
+          18.0,
+          28.5,
+          34.0,
+          41.5,
+          26.0
+        ],
+        "roe": [
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        "equityRatio": [
+          24.0,
+          25.0,
+          24.8,
+          25.2,
+          null
+        ]
+      },
       "score": 56
     },
     {
       "code": "8628",
       "name": "MATSUI SECURITIES CO",
       "sector": "金融サービス",
-      "price": 952,
-      "dividendYield": 5.25,
+      "price": 981,
+      "dividendYield": 5.1,
       "annualDividend": 50.0,
-      "pbr": 2.71,
-      "per": 15.9,
+      "pbr": 2.8,
+      "per": 16.4,
       "roe": 0.0,
       "equityRatio": 0,
       "payoutRatio": 83.4,
@@ -2752,68 +2939,61 @@
       "score": 56
     },
     {
-      "code": "8729",
-      "name": "SONY FINANCIAL GROUP",
-      "sector": "金融サービス",
-      "price": 142,
-      "dividendYield": 5.65,
-      "annualDividend": 8.0,
-      "pbr": 1.51,
-      "per": 18.3,
-      "roe": 8.5,
+      "code": "8803",
+      "name": "HEIWA REAL ESTATE CO",
+      "sector": "不動産",
+      "price": 2349,
+      "dividendYield": 3.75,
+      "annualDividend": 88.0,
+      "pbr": 1.22,
+      "per": 14.2,
+      "roe": 9.0,
       "equityRatio": 0,
-      "payoutRatio": 49.0,
-      "continuousDividendYears": 1,
-      "isFinancial": true,
+      "payoutRatio": 50.1,
+      "continuousDividendYears": 25,
+      "isFinancial": false,
       "history": {
         "years": [
           "2022",
           "2023",
           "2024",
-          "2025",
-          "2026"
+          "2025"
         ],
         "revenue": [
-          2111.3,
-          2078.2,
-          3193.0,
-          2414.7,
-          null
+          57.8,
+          44.5,
+          44.4,
+          42.1
         ],
         "operatingIncome": [
-          null,
-          null,
-          null,
-          null,
-          null
+          12.6,
+          10.8,
+          13.0,
+          13.2
         ],
         "eps": [
-          null,
-          null,
-          null,
-          181.1,
-          7.8
+          118.4,
+          254.3,
+          118.1,
+          283.1
         ],
         "dividend": [
-          0.0,
-          0.0,
-          0.0,
-          0.0,
-          3.8
+          52.0,
+          56.0,
+          85.5,
+          90.5
         ],
         "roe": [
-          null,
           null,
           null,
           null,
           null
         ],
         "equityRatio": [
-          null,
-          null,
-          null,
-          null,
-          null
+          31.7,
+          30.0,
+          30.9,
+          28.1
         ]
       },
       "score": 56
@@ -2822,11 +3002,11 @@
       "code": "9008",
       "name": "KEIO CORPORATION",
       "sector": "産業機械",
-      "price": 740,
-      "dividendYield": 2.97,
+      "price": 748,
+      "dividendYield": 2.94,
       "annualDividend": 22.0,
-      "pbr": 0.96,
-      "per": 14.4,
+      "pbr": 0.98,
+      "per": 14.6,
       "roe": 10.0,
       "equityRatio": 0,
       "payoutRatio": 42.8,
@@ -2889,11 +3069,11 @@
       "code": "9045",
       "name": "KEIHAN HOLDINGS CO L",
       "sector": "産業機械",
-      "price": 3195,
-      "dividendYield": 2.69,
+      "price": 3099,
+      "dividendYield": 2.78,
       "annualDividend": 86.0,
-      "pbr": 0.94,
-      "per": 11.4,
+      "pbr": 0.92,
+      "per": 11.1,
       "roe": 10.5,
       "equityRatio": 0,
       "payoutRatio": 14.3,
@@ -2946,148 +3126,14 @@
       "score": 56
     },
     {
-      "code": "9432",
-      "name": "NTT INC",
-      "sector": "通信・メディア",
-      "price": 148,
-      "dividendYield": 3.65,
-      "annualDividend": 5.4,
-      "pbr": 1.24,
-      "per": 11.7,
-      "roe": 10.0,
-      "equityRatio": 0,
-      "payoutRatio": 42.0,
-      "continuousDividendYears": 25,
-      "isFinancial": false,
-      "history": {
-        "years": [
-          "2022",
-          "2023",
-          "2024",
-          "2025",
-          "2026"
-        ],
-        "revenue": [
-          12156.4,
-          13136.2,
-          13374.6,
-          13704.7,
-          null
-        ],
-        "operatingIncome": [
-          1768.6,
-          1829.0,
-          1922.9,
-          1649.6,
-          null
-        ],
-        "eps": [
-          null,
-          13.9,
-          15.1,
-          12.0,
-          12.6
-        ],
-        "dividend": [
-          4.8,
-          4.9,
-          5.2,
-          5.2,
-          2.6
-        ],
-        "roe": [
-          null,
-          null,
-          null,
-          null,
-          null
-        ],
-        "equityRatio": [
-          34.7,
-          33.8,
-          33.3,
-          34.0,
-          null
-        ]
-      },
-      "score": 56
-    },
-    {
-      "code": "3289",
-      "name": "TOKYU FUDOSAN HOLDIN",
-      "sector": "不動産",
-      "price": 1324,
-      "dividendYield": 3.78,
-      "annualDividend": 50.0,
-      "pbr": 1.05,
-      "per": 9.8,
-      "roe": 11.2,
-      "equityRatio": 0,
-      "payoutRatio": 35.4,
-      "continuousDividendYears": 13,
-      "isFinancial": false,
-      "history": {
-        "years": [
-          "2022",
-          "2023",
-          "2024",
-          "2025",
-          "2026"
-        ],
-        "revenue": [
-          989.0,
-          1005.8,
-          1103.0,
-          1150.3,
-          null
-        ],
-        "operatingIncome": [
-          83.8,
-          110.4,
-          120.2,
-          140.8,
-          null
-        ],
-        "eps": [
-          null,
-          67.2,
-          96.4,
-          108.7,
-          135.4
-        ],
-        "dividend": [
-          18.0,
-          28.5,
-          34.0,
-          41.5,
-          26.0
-        ],
-        "roe": [
-          null,
-          null,
-          null,
-          null,
-          null
-        ],
-        "equityRatio": [
-          24.0,
-          25.0,
-          24.8,
-          25.2,
-          null
-        ]
-      },
-      "score": 55
-    },
-    {
       "code": "4568",
       "name": "DAIICHI SANKYO COMPA",
       "sector": "医薬品・医療",
-      "price": 2500,
-      "dividendYield": 4.0,
+      "price": 2542,
+      "dividendYield": 3.93,
       "annualDividend": 100.0,
-      "pbr": 2.73,
-      "per": 17.8,
+      "pbr": 2.78,
+      "per": 18.1,
       "roe": 15.8,
       "equityRatio": 0,
       "payoutRatio": 55.6,
@@ -3102,18 +3148,18 @@
           "2026"
         ],
         "revenue": [
-          1044.9,
+          null,
           1278.5,
           1601.7,
           1886.3,
-          null
+          2123.0
         ],
         "operatingIncome": [
-          73.0,
+          null,
           120.6,
           211.6,
           331.9,
-          null
+          229.1
         ],
         "eps": [
           null,
@@ -3137,29 +3183,29 @@
           null
         ],
         "equityRatio": [
-          60.8,
+          null,
           57.6,
           48.8,
           47.0,
-          null
+          41.5
         ]
       },
       "score": 55
     },
     {
-      "code": "7282",
-      "name": "TOYODA GOSEI",
-      "sector": "一般消費財",
-      "price": 4577,
-      "dividendYield": 2.25,
-      "annualDividend": 103.0,
-      "pbr": 0.94,
-      "per": 9.3,
-      "roe": 11.3,
+      "code": "6178",
+      "name": "JAPAN POST HLDGS CO ",
+      "sector": "金融サービス",
+      "price": 2240,
+      "dividendYield": 2.68,
+      "annualDividend": 60.0,
+      "pbr": 0.65,
+      "per": 17.4,
+      "roe": 4.7,
       "equityRatio": 0,
-      "payoutRatio": 28.0,
-      "continuousDividendYears": 25,
-      "isFinancial": false,
+      "payoutRatio": 38.7,
+      "continuousDividendYears": 11,
+      "isFinancial": true,
       "history": {
         "years": [
           "2022",
@@ -3169,32 +3215,32 @@
           "2026"
         ],
         "revenue": [
-          830.2,
-          951.9,
-          1071.1,
-          1059.8,
+          11264.8,
+          11138.6,
+          11982.2,
+          11468.4,
           null
         ],
         "operatingIncome": [
-          34.2,
-          35.1,
-          67.7,
-          59.8,
+          null,
+          null,
+          null,
+          null,
           null
         ],
         "eps": [
-          180.4,
-          123.6,
-          400.2,
           null,
-          493.6
+          120.8,
+          80.3,
+          119.3,
+          129.1
         ],
         "dividend": [
-          55.0,
-          68.0,
-          107.0,
-          105.0,
-          88.0
+          50.0,
+          75.0,
+          50.0,
+          50.0,
+          25.0
         ],
         "roe": [
           null,
@@ -3204,10 +3250,10 @@
           null
         ],
         "equityRatio": [
-          49.9,
-          51.8,
-          56.0,
-          59.4,
+          4.1,
+          3.4,
+          3.4,
+          3.1,
           null
         ]
       },
@@ -3217,7 +3263,7 @@
       "code": "8273",
       "name": "IZUMI CO LTD",
       "sector": "一般消費財",
-      "price": 946,
+      "price": 945,
       "dividendYield": 3.17,
       "annualDividend": 30.0,
       "pbr": 0.68,
@@ -3281,14 +3327,268 @@
       "score": 55
     },
     {
+      "code": "4503",
+      "name": "ASTELLAS PHARMA",
+      "sector": "医薬品・医療",
+      "price": 2146,
+      "dividendYield": 3.73,
+      "annualDividend": 80.0,
+      "pbr": 2.1,
+      "per": 13.2,
+      "roe": 17.4,
+      "equityRatio": 0,
+      "payoutRatio": 48.1,
+      "continuousDividendYears": 25,
+      "isFinancial": false,
+      "history": {
+        "years": [
+          "2022",
+          "2023",
+          "2024",
+          "2025",
+          "2026"
+        ],
+        "revenue": [
+          null,
+          1518.6,
+          1603.7,
+          1912.3,
+          2139.2
+        ],
+        "operatingIncome": [
+          null,
+          133.0,
+          25.5,
+          41.0,
+          382.6
+        ],
+        "eps": [
+          67.0,
+          54.1,
+          9.5,
+          28.2,
+          null
+        ],
+        "dividend": [
+          55.0,
+          65.0,
+          72.0,
+          76.0,
+          39.0
+        ],
+        "roe": [
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        "equityRatio": [
+          null,
+          61.4,
+          44.7,
+          45.3,
+          51.3
+        ]
+      },
+      "score": 54
+    },
+    {
+      "code": "4507",
+      "name": "SHIONOGI & CO",
+      "sector": "医薬品・医療",
+      "price": 2780,
+      "dividendYield": 2.73,
+      "annualDividend": 76.0,
+      "pbr": 1.4,
+      "per": 11.5,
+      "roe": 13.5,
+      "equityRatio": 0,
+      "payoutRatio": 29.5,
+      "continuousDividendYears": 25,
+      "isFinancial": false,
+      "history": {
+        "years": [
+          "2022",
+          "2023",
+          "2024",
+          "2025",
+          "2026"
+        ],
+        "revenue": [
+          null,
+          426.7,
+          435.1,
+          438.3,
+          499.7
+        ],
+        "operatingIncome": [
+          null,
+          149.0,
+          153.3,
+          156.6,
+          166.7
+        ],
+        "eps": [
+          126.2,
+          207.0,
+          186.1,
+          null,
+          null
+        ],
+        "dividend": [
+          40.0,
+          50.0,
+          56.7,
+          66.0,
+          38.0
+        ],
+        "roe": [
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        "equityRatio": [
+          null,
+          83.9,
+          87.2,
+          88.7,
+          65.4
+        ]
+      },
+      "score": 54
+    },
+    {
+      "code": "6305",
+      "name": "HITACHI CONSTRUCTION",
+      "sector": "産業機械",
+      "price": 5408,
+      "dividendYield": 3.51,
+      "annualDividend": 190.0,
+      "pbr": 1.28,
+      "per": 15.7,
+      "roe": 9.1,
+      "equityRatio": 0,
+      "payoutRatio": 50.9,
+      "continuousDividendYears": 25,
+      "isFinancial": false,
+      "history": {
+        "years": [
+          "2022",
+          "2023",
+          "2024",
+          "2025"
+        ],
+        "revenue": [
+          1025.0,
+          1264.9,
+          1405.9,
+          1371.3
+        ],
+        "operatingIncome": [
+          106.6,
+          135.7,
+          162.7,
+          154.7
+        ],
+        "eps": [
+          356.6,
+          330.0,
+          438.7,
+          382.8
+        ],
+        "dividend": [
+          115.0,
+          145.0,
+          130.0,
+          185.0
+        ],
+        "roe": [
+          null,
+          null,
+          null,
+          null
+        ],
+        "equityRatio": [
+          43.4,
+          40.6,
+          41.6,
+          45.2
+        ]
+      },
+      "score": 54
+    },
+    {
+      "code": "8366",
+      "name": "SHIGA BANK",
+      "sector": "金融サービス",
+      "price": 2294,
+      "dividendYield": 2.18,
+      "annualDividend": 50.0,
+      "pbr": 1.04,
+      "per": 24.9,
+      "roe": 4.5,
+      "equityRatio": 0,
+      "payoutRatio": 30.3,
+      "continuousDividendYears": 25,
+      "isFinancial": true,
+      "history": {
+        "years": [
+          "2023",
+          "2024",
+          "2025",
+          "2026"
+        ],
+        "revenue": [
+          101.4,
+          97.9,
+          103.3,
+          122.4
+        ],
+        "operatingIncome": [
+          null,
+          null,
+          null,
+          null
+        ],
+        "eps": [
+          62.1,
+          67.3,
+          79.9,
+          92.3
+        ],
+        "dividend": [
+          18.0,
+          17.0,
+          22.0,
+          15.0
+        ],
+        "roe": [
+          null,
+          null,
+          null,
+          null
+        ],
+        "equityRatio": [
+          6.0,
+          6.2,
+          5.9,
+          6.6
+        ]
+      },
+      "score": 54
+    },
+    {
       "code": "9001",
       "name": "TOBU RAILWAY CO",
       "sector": "産業機械",
-      "price": 2839,
-      "dividendYield": 2.64,
+      "price": 2862,
+      "dividendYield": 2.62,
       "annualDividend": 75.0,
-      "pbr": 0.9,
-      "per": 10.0,
+      "pbr": 0.91,
+      "per": 10.1,
       "roe": 9.5,
       "equityRatio": 0,
       "payoutRatio": 24.7,
@@ -3345,17 +3645,77 @@
           null
         ]
       },
-      "score": 55
+      "score": 54
+    },
+    {
+      "code": "2002",
+      "name": "NISSHIN SEIFUN GROUP",
+      "sector": "生活必需品",
+      "price": 1923,
+      "dividendYield": 3.38,
+      "annualDividend": 65.0,
+      "pbr": 1.04,
+      "per": 17.0,
+      "roe": 6.5,
+      "equityRatio": 0,
+      "payoutRatio": 52.9,
+      "continuousDividendYears": 25,
+      "isFinancial": false,
+      "history": {
+        "years": [
+          "2022",
+          "2023",
+          "2024",
+          "2025"
+        ],
+        "revenue": [
+          679.7,
+          798.7,
+          858.2,
+          851.5
+        ],
+        "operatingIncome": [
+          29.4,
+          32.8,
+          47.8,
+          46.4
+        ],
+        "eps": [
+          58.9,
+          -34.9,
+          106.7,
+          117.3
+        ],
+        "dividend": [
+          39.0,
+          42.0,
+          49.0,
+          60.0
+        ],
+        "roe": [
+          null,
+          null,
+          null,
+          null
+        ],
+        "equityRatio": [
+          62.1,
+          59.4,
+          60.5,
+          61.4
+        ]
+      },
+      "score": 53
     },
     {
       "code": "4183",
       "name": "MITSUI CHEMICALS INC",
       "sector": "素材・化学",
-      "price": 2060,
-      "dividendYield": 3.64,
+      "price": 2137,
+      "dividendYield": 3.51,
       "annualDividend": 75.0,
-      "pbr": 0.88,
-      "per": 22.5,
+      "pbr": 0.91,
+      "per": 23.3,
       "roe": 4.8,
       "equityRatio": 0,
       "payoutRatio": 81.9,
@@ -3412,142 +3772,22 @@
           null
         ]
       },
-      "score": 54
+      "score": 53
     },
     {
-      "code": "4503",
-      "name": "ASTELLAS PHARMA",
+      "code": "4502",
+      "name": "TAKEDA PHARMACEUTICA",
       "sector": "医薬品・医療",
-      "price": 2140,
-      "dividendYield": 3.74,
-      "annualDividend": 80.0,
-      "pbr": 2.1,
-      "per": 13.2,
-      "roe": 17.4,
+      "price": 4934,
+      "dividendYield": 4.13,
+      "annualDividend": 204.0,
+      "pbr": 1.0,
+      "per": 0.0,
+      "roe": -2.1,
       "equityRatio": 0,
-      "payoutRatio": 48.1,
+      "payoutRatio": 167.2,
       "continuousDividendYears": 25,
       "isFinancial": false,
-      "history": {
-        "years": [
-          "2022",
-          "2023",
-          "2024",
-          "2025"
-        ],
-        "revenue": [
-          1296.2,
-          1518.6,
-          1603.7,
-          1912.3
-        ],
-        "operatingIncome": [
-          155.7,
-          133.0,
-          25.5,
-          41.0
-        ],
-        "eps": [
-          67.0,
-          54.1,
-          9.5,
-          28.2
-        ],
-        "dividend": [
-          55.0,
-          65.0,
-          72.0,
-          76.0
-        ],
-        "roe": [
-          null,
-          null,
-          null,
-          null
-        ],
-        "equityRatio": [
-          62.6,
-          61.4,
-          44.7,
-          45.3
-        ]
-      },
-      "score": 54
-    },
-    {
-      "code": "4507",
-      "name": "SHIONOGI & CO",
-      "sector": "医薬品・医療",
-      "price": 2776,
-      "dividendYield": 2.74,
-      "annualDividend": 76.0,
-      "pbr": 1.4,
-      "per": 11.5,
-      "roe": 13.5,
-      "equityRatio": 0,
-      "payoutRatio": 29.5,
-      "continuousDividendYears": 25,
-      "isFinancial": false,
-      "history": {
-        "years": [
-          "2022",
-          "2023",
-          "2024",
-          "2025"
-        ],
-        "revenue": [
-          335.1,
-          426.7,
-          435.1,
-          438.3
-        ],
-        "operatingIncome": [
-          110.3,
-          149.0,
-          153.3,
-          156.6
-        ],
-        "eps": [
-          126.2,
-          207.0,
-          186.1,
-          null
-        ],
-        "dividend": [
-          40.0,
-          50.0,
-          56.7,
-          66.0
-        ],
-        "roe": [
-          null,
-          null,
-          null,
-          null
-        ],
-        "equityRatio": [
-          84.8,
-          83.9,
-          87.2,
-          88.7
-        ]
-      },
-      "score": 54
-    },
-    {
-      "code": "6178",
-      "name": "JAPAN POST HLDGS CO ",
-      "sector": "金融サービス",
-      "price": 2318,
-      "dividendYield": 2.59,
-      "annualDividend": 60.0,
-      "pbr": 0.67,
-      "per": 18.0,
-      "roe": 4.7,
-      "equityRatio": 0,
-      "payoutRatio": 38.7,
-      "continuousDividendYears": 11,
-      "isFinancial": true,
       "history": {
         "years": [
           "2022",
@@ -3557,406 +3797,46 @@
           "2026"
         ],
         "revenue": [
-          11264.8,
-          11138.6,
-          11982.2,
-          11468.4,
-          null
+          null,
+          4027.5,
+          4263.8,
+          4581.6,
+          4505.7
         ],
         "operatingIncome": [
           null,
-          null,
-          null,
-          null,
-          null
+          490.5,
+          214.1,
+          342.6,
+          6.2
         ],
         "eps": [
           null,
-          120.8,
-          80.3,
-          119.3,
-          129.1
+          201.9,
+          91.2,
+          67.2,
+          -96.8
         ],
         "dividend": [
-          50.0,
-          75.0,
-          50.0,
-          50.0,
-          25.0
-        ],
-        "roe": [
-          null,
-          null,
-          null,
-          null,
-          null
-        ],
-        "equityRatio": [
-          4.1,
-          3.4,
-          3.4,
-          3.1,
-          null
-        ]
-      },
-      "score": 54
-    },
-    {
-      "code": "6305",
-      "name": "HITACHI CONSTRUCTION",
-      "sector": "産業機械",
-      "price": 5303,
-      "dividendYield": 3.58,
-      "annualDividend": 190.0,
-      "pbr": 1.25,
-      "per": 15.4,
-      "roe": 9.1,
-      "equityRatio": 0,
-      "payoutRatio": 50.9,
-      "continuousDividendYears": 25,
-      "isFinancial": false,
-      "history": {
-        "years": [
-          "2022",
-          "2023",
-          "2024",
-          "2025"
-        ],
-        "revenue": [
-          1025.0,
-          1264.9,
-          1405.9,
-          1371.3
-        ],
-        "operatingIncome": [
-          106.6,
-          135.7,
-          162.7,
-          154.7
-        ],
-        "eps": [
-          356.6,
-          330.0,
-          438.7,
-          382.8
-        ],
-        "dividend": [
-          115.0,
-          145.0,
-          130.0,
-          185.0
-        ],
-        "roe": [
-          null,
-          null,
-          null,
-          null
-        ],
-        "equityRatio": [
-          43.4,
-          40.6,
-          41.6,
-          45.2
-        ]
-      },
-      "score": 54
-    },
-    {
-      "code": "8366",
-      "name": "SHIGA BANK",
-      "sector": "金融サービス",
-      "price": 2268,
-      "dividendYield": 2.2,
-      "annualDividend": 50.0,
-      "pbr": 1.03,
-      "per": 24.6,
-      "roe": 4.5,
-      "equityRatio": 0,
-      "payoutRatio": 30.3,
-      "continuousDividendYears": 25,
-      "isFinancial": true,
-      "history": {
-        "years": [
-          "2022",
-          "2023",
-          "2024",
-          "2025"
-        ],
-        "revenue": [
-          91.3,
-          101.4,
-          97.9,
-          103.3
-        ],
-        "operatingIncome": [
-          null,
-          null,
-          null,
-          null
-        ],
-        "eps": [
-          71.8,
-          62.1,
-          67.3,
-          79.9
-        ],
-        "dividend": [
-          20.5,
-          18.0,
-          17.0,
-          22.0
-        ],
-        "roe": [
-          null,
-          null,
-          null,
-          null
-        ],
-        "equityRatio": [
-          6.2,
-          6.0,
-          6.2,
-          5.9
-        ]
-      },
-      "score": 54
-    },
-    {
-      "code": "8803",
-      "name": "HEIWA REAL ESTATE CO",
-      "sector": "不動産",
-      "price": 2415,
-      "dividendYield": 3.64,
-      "annualDividend": 88.0,
-      "pbr": 1.26,
-      "per": 14.6,
-      "roe": 9.0,
-      "equityRatio": 0,
-      "payoutRatio": 50.1,
-      "continuousDividendYears": 25,
-      "isFinancial": false,
-      "history": {
-        "years": [
-          "2022",
-          "2023",
-          "2024",
-          "2025"
-        ],
-        "revenue": [
-          57.8,
-          44.5,
-          44.4,
-          42.1
-        ],
-        "operatingIncome": [
-          12.6,
-          10.8,
-          13.0,
-          13.2
-        ],
-        "eps": [
-          118.4,
-          254.3,
-          118.1,
-          283.1
-        ],
-        "dividend": [
-          52.0,
-          56.0,
-          85.5,
-          90.5
-        ],
-        "roe": [
-          null,
-          null,
-          null,
-          null
-        ],
-        "equityRatio": [
-          31.7,
-          30.0,
-          30.9,
-          28.1
-        ]
-      },
-      "score": 54
-    },
-    {
-      "code": "1802",
-      "name": "OBAYASHI CORP",
-      "sector": "産業機械",
-      "price": 3085,
-      "dividendYield": 3.05,
-      "annualDividend": 94.0,
-      "pbr": 1.69,
-      "per": 12.4,
-      "roe": 14.1,
-      "equityRatio": 0,
-      "payoutRatio": 35.3,
-      "continuousDividendYears": 25,
-      "isFinancial": false,
-      "history": {
-        "years": [
-          "2022",
-          "2023",
-          "2024",
-          "2025"
-        ],
-        "revenue": [
-          1922.9,
-          1983.9,
-          2325.2,
-          2620.1
-        ],
-        "operatingIncome": [
-          41.1,
-          93.8,
-          79.4,
-          143.4
-        ],
-        "eps": [
-          54.5,
-          108.3,
-          104.7,
-          203.9
-        ],
-        "dividend": [
-          37.0,
-          42.0,
-          94.0,
-          82.0
-        ],
-        "roe": [
-          null,
-          null,
-          null,
-          null
-        ],
-        "equityRatio": [
-          39.5,
-          38.2,
-          38.1,
-          38.1
-        ]
-      },
-      "score": 53
-    },
-    {
-      "code": "4042",
-      "name": "TOSOH CORP",
-      "sector": "素材・化学",
-      "price": 2862,
-      "dividendYield": 3.49,
-      "annualDividend": 100.0,
-      "pbr": 1.06,
-      "per": 22.5,
-      "roe": 6.3,
-      "equityRatio": 0,
-      "payoutRatio": 78.7,
-      "continuousDividendYears": 25,
-      "isFinancial": false,
-      "history": {
-        "years": [
-          "2022",
-          "2023",
-          "2024",
-          "2025"
-        ],
-        "revenue": [
-          918.6,
-          1064.4,
-          1005.6,
-          1063.4
-        ],
-        "operatingIncome": [
-          144.0,
-          74.6,
-          79.8,
-          98.9
-        ],
-        "eps": [
-          339.0,
-          158.1,
           180.0,
-          182.1
-        ],
-        "dividend": [
-          90.0,
-          80.0,
-          95.0,
+          184.0,
+          192.0,
+          198.0,
           100.0
         ],
         "roe": [
           null,
           null,
           null,
-          null
-        ],
-        "equityRatio": [
-          65.2,
-          61.9,
-          61.6,
-          62.3
-        ]
-      },
-      "score": 53
-    },
-    {
-      "code": "4689",
-      "name": "LY CORPORATION",
-      "sector": "一般消費財",
-      "price": 402,
-      "dividendYield": 2.73,
-      "annualDividend": 11.0,
-      "pbr": 0.92,
-      "per": 14.5,
-      "roe": 7.9,
-      "equityRatio": 0,
-      "payoutRatio": 26.2,
-      "continuousDividendYears": 22,
-      "isFinancial": false,
-      "history": {
-        "years": [
-          "2022",
-          "2023",
-          "2024",
-          "2025"
-        ],
-        "revenue": [
-          1567.4,
-          1672.4,
-          1814.7,
-          1917.5
-        ],
-        "operatingIncome": [
-          189.5,
-          314.5,
-          208.2,
-          315.0
-        ],
-        "eps": [
-          10.1,
-          23.8,
-          15.0,
-          null
-        ],
-        "dividend": [
-          5.8,
-          5.6,
-          5.6,
-          7.0
-        ],
-        "roe": [
-          null,
-          null,
           null,
           null
         ],
         "equityRatio": [
-          37.8,
-          34.0,
-          33.6,
-          32.7
+          null,
+          45.5,
+          48.1,
+          48.7,
+          47.9
         ]
       },
       "score": 53
@@ -3965,7 +3845,7 @@
       "code": "5411",
       "name": "JFE HOLDINGS INC",
       "sector": "素材・化学",
-      "price": 1613,
+      "price": 1614,
       "dividendYield": 4.96,
       "annualDividend": 80.0,
       "pbr": 0.39,
@@ -3980,296 +3860,63 @@
           "2022",
           "2023",
           "2024",
-          "2025"
+          "2025",
+          "2026"
         ],
         "revenue": [
-          4365.1,
+          null,
           5268.8,
           5174.6,
-          4859.6
+          4859.6,
+          4539.3
         ],
         "operatingIncome": [
-          -400.2,
+          null,
           225.1,
           287.0,
-          165.1
+          165.1,
+          112.2
         ],
         "eps": [
-          500.1,
+          null,
           280.5,
           315.1,
-          138.2
+          138.2,
+          105.5
         ],
         "dividend": [
           130.0,
           80.0,
           100.0,
-          90.0
+          90.0,
+          40.0
         ],
         "roe": [
+          null,
           null,
           null,
           null,
           null
         ],
         "equityRatio": [
-          37.6,
+          null,
           38.4,
           42.8,
-          44.8
+          44.8,
+          44.4
         ]
       },
       "score": 53
     },
     {
-      "code": "1803",
-      "name": "SHIMIZU CORP",
-      "sector": "産業機械",
-      "price": 2461,
-      "dividendYield": 3.13,
-      "annualDividend": 77.0,
-      "pbr": 1.71,
-      "per": 13.2,
-      "roe": 13.4,
-      "equityRatio": 0,
-      "payoutRatio": 38.6,
-      "continuousDividendYears": 25,
-      "isFinancial": false,
-      "history": {
-        "years": [
-          "2022",
-          "2023",
-          "2024",
-          "2025"
-        ],
-        "revenue": [
-          1483.0,
-          1933.8,
-          2005.5,
-          1944.4
-        ],
-        "operatingIncome": [
-          45.1,
-          54.6,
-          -24.7,
-          71.0
-        ],
-        "eps": [
-          64.1,
-          66.3,
-          23.6,
-          94.8
-        ],
-        "dividend": [
-          22.0,
-          24.0,
-          24.0,
-          42.5
-        ],
-        "roe": [
-          null,
-          null,
-          null,
-          null
-        ],
-        "equityRatio": [
-          38.7,
-          34.8,
-          35.0,
-          34.1
-        ]
-      },
-      "score": 52
-    },
-    {
-      "code": "2002",
-      "name": "NISSHIN SEIFUN GROUP",
-      "sector": "生活必需品",
-      "price": 1967,
-      "dividendYield": 3.3,
-      "annualDividend": 65.0,
-      "pbr": 1.06,
-      "per": 17.4,
-      "roe": 6.5,
-      "equityRatio": 0,
-      "payoutRatio": 52.9,
-      "continuousDividendYears": 25,
-      "isFinancial": false,
-      "history": {
-        "years": [
-          "2022",
-          "2023",
-          "2024",
-          "2025"
-        ],
-        "revenue": [
-          679.7,
-          798.7,
-          858.2,
-          851.5
-        ],
-        "operatingIncome": [
-          29.4,
-          32.8,
-          47.8,
-          46.4
-        ],
-        "eps": [
-          58.9,
-          -34.9,
-          106.7,
-          117.3
-        ],
-        "dividend": [
-          39.0,
-          42.0,
-          49.0,
-          60.0
-        ],
-        "roe": [
-          null,
-          null,
-          null,
-          null
-        ],
-        "equityRatio": [
-          62.1,
-          59.4,
-          60.5,
-          61.4
-        ]
-      },
-      "score": 52
-    },
-    {
-      "code": "4523",
-      "name": "EISAI CO LTD",
-      "sector": "医薬品・医療",
-      "price": 3780,
-      "dividendYield": 4.23,
-      "annualDividend": 160.0,
-      "pbr": 1.19,
-      "per": 27.6,
-      "roe": 4.5,
-      "equityRatio": 0,
-      "payoutRatio": 117.0,
-      "continuousDividendYears": 25,
-      "isFinancial": false,
-      "history": {
-        "years": [
-          "2023",
-          "2024",
-          "2025",
-          "2026"
-        ],
-        "revenue": [
-          744.4,
-          741.8,
-          789.4,
-          825.4
-        ],
-        "operatingIncome": [
-          40.0,
-          53.4,
-          54.4,
-          44.1
-        ],
-        "eps": [
-          193.3,
-          147.9,
-          163.8,
-          136.8
-        ],
-        "dividend": [
-          160.0,
-          160.0,
-          160.0,
-          80.0
-        ],
-        "roe": [
-          null,
-          null,
-          null,
-          null
-        ],
-        "equityRatio": [
-          63.3,
-          62.8,
-          60.7,
-          62.0
-        ]
-      },
-      "score": 52
-    },
-    {
-      "code": "4552",
-      "name": "JCR PHARMACEUTICAL C",
-      "sector": "医薬品・医療",
-      "price": 449,
-      "dividendYield": 4.45,
-      "annualDividend": 20.0,
-      "pbr": 1.17,
-      "per": 25.1,
-      "roe": 4.7,
-      "equityRatio": 0,
-      "payoutRatio": 111.9,
-      "continuousDividendYears": 17,
-      "isFinancial": false,
-      "history": {
-        "years": [
-          "2022",
-          "2023",
-          "2024",
-          "2025"
-        ],
-        "revenue": [
-          51.1,
-          34.3,
-          42.9,
-          33.1
-        ],
-        "operatingIncome": [
-          19.9,
-          5.0,
-          7.5,
-          -6.7
-        ],
-        "eps": [
-          116.8,
-          30.2,
-          43.9,
-          null
-        ],
-        "dividend": [
-          22.0,
-          20.0,
-          20.0,
-          20.0
-        ],
-        "roe": [
-          null,
-          null,
-          null,
-          null
-        ],
-        "equityRatio": [
-          52.4,
-          54.9,
-          55.0,
-          44.9
-        ]
-      },
-      "score": 52
-    },
-    {
       "code": "9006",
       "name": "KEIKYU CORPORATION",
       "sector": "産業機械",
-      "price": 1488,
-      "dividendYield": 3.09,
+      "price": 1448,
+      "dividendYield": 3.18,
       "annualDividend": 46.0,
-      "pbr": 1.03,
-      "per": 14.6,
+      "pbr": 1.0,
+      "per": 14.2,
       "roe": 7.2,
       "equityRatio": 0,
       "payoutRatio": 45.1,
@@ -4319,21 +3966,155 @@
           35.7
         ]
       },
+      "score": 53
+    },
+    {
+      "code": "9107",
+      "name": "KAWASAKI KISEN KAISH",
+      "sector": "産業機械",
+      "price": 2476,
+      "dividendYield": 4.85,
+      "annualDividend": 120.0,
+      "pbr": 0.87,
+      "per": 11.8,
+      "roe": 7.8,
+      "equityRatio": 0,
+      "payoutRatio": 57.0,
+      "continuousDividendYears": 5,
+      "isFinancial": false,
+      "history": {
+        "years": [
+          "2022",
+          "2023",
+          "2024",
+          "2025",
+          "2026"
+        ],
+        "revenue": [
+          null,
+          942.6,
+          957.9,
+          1047.9,
+          1018.4
+        ],
+        "operatingIncome": [
+          null,
+          78.9,
+          84.2,
+          102.9,
+          84.2
+        ],
+        "eps": [
+          765.3,
+          857.0,
+          145.2,
+          460.1,
+          null
+        ],
+        "dividend": [
+          100.0,
+          133.3,
+          100.0,
+          110.0,
+          60.0
+        ],
+        "roe": [
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        "equityRatio": [
+          null,
+          73.8,
+          75.5,
+          74.6,
+          76.9
+        ]
+      },
+      "score": 53
+    },
+    {
+      "code": "4689",
+      "name": "LY CORPORATION",
+      "sector": "一般消費財",
+      "price": 410,
+      "dividendYield": 2.69,
+      "annualDividend": 11.0,
+      "pbr": 0.94,
+      "per": 14.7,
+      "roe": 7.9,
+      "equityRatio": 0,
+      "payoutRatio": 26.2,
+      "continuousDividendYears": 22,
+      "isFinancial": false,
+      "history": {
+        "years": [
+          "2022",
+          "2023",
+          "2024",
+          "2025",
+          "2026"
+        ],
+        "revenue": [
+          null,
+          1672.4,
+          1814.7,
+          1917.5,
+          2036.4
+        ],
+        "operatingIncome": [
+          null,
+          314.5,
+          208.2,
+          315.0,
+          341.3
+        ],
+        "eps": [
+          10.1,
+          23.8,
+          15.0,
+          null,
+          null
+        ],
+        "dividend": [
+          5.8,
+          5.6,
+          5.6,
+          7.0,
+          7.3
+        ],
+        "roe": [
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        "equityRatio": [
+          null,
+          34.0,
+          33.6,
+          32.7,
+          26.8
+        ]
+      },
       "score": 52
     },
     {
-      "code": "1808",
-      "name": "HASEKO CORPORATION",
+      "code": "7261",
+      "name": "MAZDA MOTOR CORP",
       "sector": "一般消費財",
-      "price": 2691,
-      "dividendYield": 3.72,
-      "annualDividend": 100.0,
-      "pbr": 1.27,
-      "per": 13.2,
-      "roe": 10.0,
+      "price": 1102,
+      "dividendYield": 4.99,
+      "annualDividend": 55.0,
+      "pbr": 0.36,
+      "per": 19.8,
+      "roe": 1.9,
       "equityRatio": 0,
-      "payoutRatio": 46.5,
-      "continuousDividendYears": 13,
+      "payoutRatio": 98.9,
+      "continuousDividendYears": 5,
       "isFinancial": false,
       "history": {
         "years": [
@@ -4343,28 +4124,28 @@
           "2025"
         ],
         "revenue": [
-          909.7,
-          1027.3,
-          1094.4,
-          1177.4
+          3120.3,
+          3826.8,
+          4827.7,
+          5018.9
         ],
         "operatingIncome": [
-          82.7,
-          90.2,
-          85.7,
-          84.7
+          104.2,
+          142.0,
+          250.5,
+          186.1
         ],
         "eps": [
-          198.3,
-          216.1,
-          205.4,
-          126.2
+          129.4,
+          226.5,
+          329.4,
+          180.9
         ],
         "dividend": [
-          85.0,
-          80.0,
-          85.0,
-          90.0
+          40.0,
+          50.0,
+          60.0,
+          55.0
         ],
         "roe": [
           null,
@@ -4373,10 +4154,264 @@
           null
         ],
         "equityRatio": [
-          38.6,
-          37.9,
-          37.8,
-          39.0
+          43.9,
+          44.2,
+          45.8,
+          43.8
+        ]
+      },
+      "score": 52
+    },
+    {
+      "code": "7282",
+      "name": "TOYODA GOSEI",
+      "sector": "一般消費財",
+      "price": 5027,
+      "dividendYield": 2.05,
+      "annualDividend": 103.0,
+      "pbr": 1.04,
+      "per": 10.2,
+      "roe": 11.3,
+      "equityRatio": 0,
+      "payoutRatio": 28.0,
+      "continuousDividendYears": 25,
+      "isFinancial": false,
+      "history": {
+        "years": [
+          "2022",
+          "2023",
+          "2024",
+          "2025",
+          "2026"
+        ],
+        "revenue": [
+          null,
+          951.9,
+          1071.1,
+          1059.8,
+          1146.8
+        ],
+        "operatingIncome": [
+          null,
+          35.1,
+          67.7,
+          59.8,
+          79.6
+        ],
+        "eps": [
+          180.4,
+          123.6,
+          400.2,
+          null,
+          493.6
+        ],
+        "dividend": [
+          55.0,
+          68.0,
+          107.0,
+          105.0,
+          88.0
+        ],
+        "roe": [
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        "equityRatio": [
+          null,
+          51.8,
+          56.0,
+          59.4,
+          57.3
+        ]
+      },
+      "score": 52
+    },
+    {
+      "code": "9101",
+      "name": "NIPPON YUSEN KABUSHI",
+      "sector": "産業機械",
+      "price": 5152,
+      "dividendYield": 3.88,
+      "annualDividend": 200.0,
+      "pbr": 0.68,
+      "per": 10.2,
+      "roe": 7.1,
+      "equityRatio": 0,
+      "payoutRatio": 40.6,
+      "continuousDividendYears": 9,
+      "isFinancial": false,
+      "history": {
+        "years": [
+          "2022",
+          "2023",
+          "2024",
+          "2025",
+          "2026"
+        ],
+        "revenue": [
+          null,
+          2616.1,
+          2387.2,
+          2588.7,
+          2423.7
+        ],
+        "operatingIncome": [
+          null,
+          296.4,
+          174.7,
+          210.8,
+          138.6
+        ],
+        "eps": [
+          null,
+          1993.7,
+          468.1,
+          1070.3,
+          504.9
+        ],
+        "dividend": [
+          766.7,
+          230.0,
+          210.0,
+          310.0,
+          115.0
+        ],
+        "roe": [
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        "equityRatio": [
+          null,
+          65.6,
+          62.3,
+          67.6,
+          59.1
+        ]
+      },
+      "score": 52
+    },
+    {
+      "code": "1802",
+      "name": "OBAYASHI CORP",
+      "sector": "産業機械",
+      "price": 3280,
+      "dividendYield": 2.87,
+      "annualDividend": 94.0,
+      "pbr": 1.79,
+      "per": 13.2,
+      "roe": 14.1,
+      "equityRatio": 0,
+      "payoutRatio": 35.3,
+      "continuousDividendYears": 25,
+      "isFinancial": false,
+      "history": {
+        "years": [
+          "2022",
+          "2023",
+          "2024",
+          "2025"
+        ],
+        "revenue": [
+          1922.9,
+          1983.9,
+          2325.2,
+          2620.1
+        ],
+        "operatingIncome": [
+          41.1,
+          93.8,
+          79.4,
+          143.4
+        ],
+        "eps": [
+          54.5,
+          108.3,
+          104.7,
+          203.9
+        ],
+        "dividend": [
+          37.0,
+          42.0,
+          94.0,
+          82.0
+        ],
+        "roe": [
+          null,
+          null,
+          null,
+          null
+        ],
+        "equityRatio": [
+          39.5,
+          38.2,
+          38.1,
+          38.1
+        ]
+      },
+      "score": 51
+    },
+    {
+      "code": "1803",
+      "name": "SHIMIZU CORP",
+      "sector": "産業機械",
+      "price": 2555,
+      "dividendYield": 3.01,
+      "annualDividend": 77.0,
+      "pbr": 1.77,
+      "per": 13.7,
+      "roe": 13.4,
+      "equityRatio": 0,
+      "payoutRatio": 38.6,
+      "continuousDividendYears": 25,
+      "isFinancial": false,
+      "history": {
+        "years": [
+          "2022",
+          "2023",
+          "2024",
+          "2025"
+        ],
+        "revenue": [
+          1483.0,
+          1933.8,
+          2005.5,
+          1944.4
+        ],
+        "operatingIncome": [
+          45.1,
+          54.6,
+          -24.7,
+          71.0
+        ],
+        "eps": [
+          64.1,
+          66.3,
+          23.6,
+          94.8
+        ],
+        "dividend": [
+          22.0,
+          24.0,
+          24.0,
+          42.5
+        ],
+        "roe": [
+          null,
+          null,
+          null,
+          null
+        ],
+        "equityRatio": [
+          38.7,
+          34.8,
+          35.0,
+          34.1
         ]
       },
       "score": 51
@@ -4385,11 +4420,11 @@
       "code": "2282",
       "name": "NH FOODS LTD",
       "sector": "生活必需品",
-      "price": 6067,
-      "dividendYield": 2.97,
+      "price": 5928,
+      "dividendYield": 3.04,
       "annualDividend": 180.0,
-      "pbr": 1.06,
-      "per": 16.8,
+      "pbr": 1.04,
+      "per": 16.4,
       "roe": 6.8,
       "equityRatio": 0,
       "payoutRatio": 44.3,
@@ -4452,11 +4487,11 @@
       "code": "3092",
       "name": "ZOZO INC",
       "sector": "一般消費財",
-      "price": 1088,
-      "dividendYield": 3.68,
+      "price": 1114,
+      "dividendYield": 3.59,
       "annualDividend": 40.0,
-      "pbr": 9.01,
-      "per": 20.1,
+      "pbr": 9.22,
+      "per": 20.6,
       "roe": 46.6,
       "equityRatio": 0,
       "payoutRatio": 72.1,
@@ -4516,17 +4551,17 @@
       "score": 51
     },
     {
-      "code": "4502",
-      "name": "TAKEDA PHARMACEUTICA",
-      "sector": "医薬品・医療",
-      "price": 5082,
-      "dividendYield": 4.01,
-      "annualDividend": 204.0,
-      "pbr": 1.03,
-      "per": 42.6,
-      "roe": 2.6,
+      "code": "4042",
+      "name": "TOSOH CORP",
+      "sector": "素材・化学",
+      "price": 2970,
+      "dividendYield": 3.37,
+      "annualDividend": 100.0,
+      "pbr": 1.1,
+      "per": 23.4,
+      "roe": 6.3,
       "equityRatio": 0,
-      "payoutRatio": 167.2,
+      "payoutRatio": 78.7,
       "continuousDividendYears": 25,
       "isFinancial": false,
       "history": {
@@ -4537,28 +4572,28 @@
           "2025"
         ],
         "revenue": [
-          3569.0,
-          4027.5,
-          4263.8,
-          4581.6
+          918.6,
+          1064.4,
+          1005.6,
+          1063.4
         ],
         "operatingIncome": [
-          460.8,
-          490.5,
-          214.1,
-          342.6
+          144.0,
+          74.6,
+          79.8,
+          98.9
         ],
         "eps": [
-          145.9,
-          201.9,
-          91.2,
-          67.2
-        ],
-        "dividend": [
+          339.0,
+          158.1,
           180.0,
-          184.0,
-          192.0,
-          198.0
+          182.1
+        ],
+        "dividend": [
+          90.0,
+          80.0,
+          95.0,
+          100.0
         ],
         "roe": [
           null,
@@ -4567,58 +4602,58 @@
           null
         ],
         "equityRatio": [
-          43.1,
-          45.5,
-          48.1,
-          48.7
+          65.2,
+          61.9,
+          61.6,
+          62.3
         ]
       },
       "score": 51
     },
     {
-      "code": "7261",
-      "name": "MAZDA MOTOR CORP",
-      "sector": "一般消費財",
-      "price": 1132,
-      "dividendYield": 4.86,
-      "annualDividend": 55.0,
-      "pbr": 0.37,
-      "per": 20.4,
-      "roe": 1.9,
+      "code": "4523",
+      "name": "EISAI CO LTD",
+      "sector": "医薬品・医療",
+      "price": 3902,
+      "dividendYield": 4.1,
+      "annualDividend": 160.0,
+      "pbr": 1.22,
+      "per": 28.5,
+      "roe": 4.5,
       "equityRatio": 0,
-      "payoutRatio": 98.9,
-      "continuousDividendYears": 5,
+      "payoutRatio": 117.0,
+      "continuousDividendYears": 25,
       "isFinancial": false,
       "history": {
         "years": [
-          "2022",
           "2023",
           "2024",
-          "2025"
+          "2025",
+          "2026"
         ],
         "revenue": [
-          3120.3,
-          3826.8,
-          4827.7,
-          5018.9
+          744.4,
+          741.8,
+          789.4,
+          825.4
         ],
         "operatingIncome": [
-          104.2,
-          142.0,
-          250.5,
-          186.1
-        ],
-        "eps": [
-          129.4,
-          226.5,
-          329.4,
-          180.9
-        ],
-        "dividend": [
           40.0,
-          50.0,
-          60.0,
-          55.0
+          53.4,
+          54.4,
+          44.1
+        ],
+        "eps": [
+          193.3,
+          147.9,
+          163.8,
+          136.8
+        ],
+        "dividend": [
+          160.0,
+          160.0,
+          160.0,
+          80.0
         ],
         "roe": [
           null,
@@ -4627,27 +4662,27 @@
           null
         ],
         "equityRatio": [
-          43.9,
-          44.2,
-          45.8,
-          43.8
+          63.3,
+          62.8,
+          60.7,
+          62.0
         ]
       },
       "score": 51
     },
     {
-      "code": "9107",
-      "name": "KAWASAKI KISEN KAISH",
-      "sector": "産業機械",
-      "price": 2622,
-      "dividendYield": 4.58,
-      "annualDividend": 120.0,
-      "pbr": 0.92,
-      "per": 12.5,
-      "roe": 7.8,
+      "code": "4552",
+      "name": "JCR PHARMACEUTICAL C",
+      "sector": "医薬品・医療",
+      "price": 457,
+      "dividendYield": 4.38,
+      "annualDividend": 20.0,
+      "pbr": 1.19,
+      "per": 25.6,
+      "roe": 4.7,
       "equityRatio": 0,
-      "payoutRatio": 57.0,
-      "continuousDividendYears": 5,
+      "payoutRatio": 111.9,
+      "continuousDividendYears": 17,
       "isFinancial": false,
       "history": {
         "years": [
@@ -4657,28 +4692,28 @@
           "2025"
         ],
         "revenue": [
-          757.0,
-          942.6,
-          957.9,
-          1047.9
+          51.1,
+          34.3,
+          42.9,
+          33.1
         ],
         "operatingIncome": [
-          17.7,
-          78.9,
-          84.2,
-          102.9
+          19.9,
+          5.0,
+          7.5,
+          -6.7
         ],
         "eps": [
-          765.3,
-          857.0,
-          145.2,
-          460.1
+          116.8,
+          30.2,
+          43.9,
+          null
         ],
         "dividend": [
-          100.0,
-          133.3,
-          100.0,
-          110.0
+          22.0,
+          20.0,
+          20.0,
+          20.0
         ],
         "roe": [
           null,
@@ -4687,23 +4722,270 @@
           null
         ],
         "equityRatio": [
-          56.2,
-          73.8,
-          75.5,
-          74.6
+          52.4,
+          54.9,
+          55.0,
+          44.9
         ]
       },
       "score": 51
+    },
+    {
+      "code": "9009",
+      "name": "KEISEI ELECTRIC RAIL",
+      "sector": "産業機械",
+      "price": 1082,
+      "dividendYield": 2.03,
+      "annualDividend": 22.0,
+      "pbr": 0.93,
+      "per": 10.9,
+      "roe": 9.1,
+      "equityRatio": 0,
+      "payoutRatio": 21.1,
+      "continuousDividendYears": 25,
+      "isFinancial": false,
+      "history": {
+        "years": [
+          "2022",
+          "2023",
+          "2024",
+          "2025"
+        ],
+        "revenue": [
+          214.2,
+          252.3,
+          296.5,
+          319.3
+        ],
+        "operatingIncome": [
+          -5.2,
+          10.2,
+          25.2,
+          36.0
+        ],
+        "eps": [
+          -8.8,
+          53.9,
+          174.9,
+          143.5
+        ],
+        "dividend": [
+          5.7,
+          8.2,
+          14.7,
+          24.0
+        ],
+        "roe": [
+          null,
+          null,
+          null,
+          null
+        ],
+        "equityRatio": [
+          41.1,
+          40.9,
+          42.4,
+          46.5
+        ]
+      },
+      "score": 51
+    },
+    {
+      "code": "1808",
+      "name": "HASEKO CORPORATION",
+      "sector": "一般消費財",
+      "price": 2730,
+      "dividendYield": 3.66,
+      "annualDividend": 100.0,
+      "pbr": 1.28,
+      "per": 13.4,
+      "roe": 10.0,
+      "equityRatio": 0,
+      "payoutRatio": 46.5,
+      "continuousDividendYears": 13,
+      "isFinancial": false,
+      "history": {
+        "years": [
+          "2022",
+          "2023",
+          "2024",
+          "2025"
+        ],
+        "revenue": [
+          909.7,
+          1027.3,
+          1094.4,
+          1177.4
+        ],
+        "operatingIncome": [
+          82.7,
+          90.2,
+          85.7,
+          84.7
+        ],
+        "eps": [
+          198.3,
+          216.1,
+          205.4,
+          126.2
+        ],
+        "dividend": [
+          85.0,
+          80.0,
+          85.0,
+          90.0
+        ],
+        "roe": [
+          null,
+          null,
+          null,
+          null
+        ],
+        "equityRatio": [
+          38.6,
+          37.9,
+          37.8,
+          39.0
+        ]
+      },
+      "score": 50
+    },
+    {
+      "code": "2432",
+      "name": "DENA CO LTD",
+      "sector": "産業機械",
+      "price": 2354,
+      "dividendYield": 2.8,
+      "annualDividend": 66.0,
+      "pbr": 1.09,
+      "per": 13.8,
+      "roe": 7.5,
+      "equityRatio": 0,
+      "payoutRatio": 38.6,
+      "continuousDividendYears": 20,
+      "isFinancial": false,
+      "history": {
+        "years": [
+          "2022",
+          "2023",
+          "2024",
+          "2025",
+          "2026"
+        ],
+        "revenue": [
+          130.9,
+          134.9,
+          136.7,
+          164.0,
+          null
+        ],
+        "operatingIncome": [
+          11.5,
+          4.2,
+          -28.3,
+          29.0,
+          null
+        ],
+        "eps": [
+          null,
+          76.7,
+          -257.6,
+          216.9,
+          170.9
+        ],
+        "dividend": [
+          39.0,
+          20.0,
+          20.0,
+          65.0,
+          66.0
+        ],
+        "roe": [
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        "equityRatio": [
+          70.7,
+          63.5,
+          62.3,
+          61.3,
+          null
+        ]
+      },
+      "score": 50
+    },
+    {
+      "code": "2670",
+      "name": "ABC-MART INC",
+      "sector": "一般消費財",
+      "price": 2699,
+      "dividendYield": 2.96,
+      "annualDividend": 80.0,
+      "pbr": 1.68,
+      "per": 14.4,
+      "roe": 12.1,
+      "equityRatio": 0,
+      "payoutRatio": 40.1,
+      "continuousDividendYears": 24,
+      "isFinancial": false,
+      "history": {
+        "years": [
+          "2023",
+          "2024",
+          "2025",
+          "2026"
+        ],
+        "revenue": [
+          290.1,
+          344.2,
+          372.2,
+          378.6
+        ],
+        "operatingIncome": [
+          42.3,
+          55.7,
+          62.5,
+          63.3
+        ],
+        "eps": [
+          122.2,
+          161.6,
+          183.2,
+          187.2
+        ],
+        "dividend": [
+          56.7,
+          70.0,
+          72.0,
+          40.0
+        ],
+        "roe": [
+          null,
+          null,
+          null,
+          null
+        ],
+        "equityRatio": [
+          86.9,
+          87.6,
+          87.7,
+          87.5
+        ]
+      },
+      "score": 50
     },
     {
       "code": "3382",
       "name": "SEVEN & I HOLDINGS C",
       "sector": "生活必需品",
-      "price": 1946,
-      "dividendYield": 3.08,
+      "price": 1934,
+      "dividendYield": 3.1,
       "annualDividend": 60.0,
-      "pbr": 1.24,
-      "per": 16.4,
+      "pbr": 1.23,
+      "per": 16.3,
       "roe": 7.6,
       "equityRatio": 0,
       "payoutRatio": 42.1,
@@ -4759,11 +5041,11 @@
       "code": "5020",
       "name": "ENEOS HOLDINGS INC",
       "sector": "エネルギー",
-      "price": 1236,
-      "dividendYield": 2.75,
+      "price": 1264,
+      "dividendYield": 2.69,
       "annualDividend": 34.0,
-      "pbr": 0.99,
-      "per": 12.9,
+      "pbr": 1.01,
+      "per": 13.2,
       "roe": 8.5,
       "equityRatio": 0,
       "payoutRatio": 35.4,
@@ -4819,11 +5101,11 @@
       "code": "5713",
       "name": "SUMITOMO METAL MININ",
       "sector": "素材・化学",
-      "price": 8638,
-      "dividendYield": 2.41,
+      "price": 8607,
+      "dividendYield": 2.42,
       "annualDividend": 208.0,
-      "pbr": 1.13,
-      "per": 13.3,
+      "pbr": 1.12,
+      "per": 13.2,
       "roe": 8.7,
       "equityRatio": 0,
       "payoutRatio": 35.1,
@@ -4876,328 +5158,74 @@
       "score": 50
     },
     {
-      "code": "6471",
-      "name": "NSK",
-      "sector": "一般消費財",
-      "price": 1102,
-      "dividendYield": 3.09,
-      "annualDividend": 34.0,
-      "pbr": 0.8,
-      "per": 23.7,
-      "roe": 3.6,
-      "equityRatio": 0,
-      "payoutRatio": 73.1,
-      "continuousDividendYears": 25,
-      "isFinancial": false,
-      "history": {
-        "years": [
-          "2022",
-          "2023",
-          "2024",
-          "2025"
-        ],
-        "revenue": [
-          865.2,
-          776.8,
-          788.9,
-          796.7
-        ],
-        "operatingIncome": [
-          29.4,
-          43.8,
-          27.4,
-          28.5
-        ],
-        "eps": [
-          32.3,
-          35.8,
-          17.2,
-          21.7
-        ],
-        "dividend": [
-          30.0,
-          30.0,
-          32.0,
-          34.0
-        ],
-        "roe": [
-          null,
-          null,
-          null,
-          null
-        ],
-        "equityRatio": [
-          50.0,
-          50.0,
-          50.8,
-          53.4
-        ]
-      },
-      "score": 50
-    },
-    {
-      "code": "6473",
-      "name": "JTEKT CORPORATION",
-      "sector": "一般消費財",
-      "price": 1992,
-      "dividendYield": 3.51,
-      "annualDividend": 70.0,
-      "pbr": 0.8,
-      "per": 52.9,
-      "roe": 1.8,
-      "equityRatio": 0,
-      "payoutRatio": 159.6,
-      "continuousDividendYears": 25,
-      "isFinancial": false,
-      "history": {
-        "years": [
-          "2022",
-          "2023",
-          "2024",
-          "2025",
-          "2026"
-        ],
-        "revenue": [
-          1428.4,
-          1678.1,
-          1891.5,
-          1884.4,
-          null
-        ],
-        "operatingIncome": [
-          36.4,
-          49.3,
-          62.2,
-          38.5,
-          null
-        ],
-        "eps": [
-          null,
-          99.9,
-          117.3,
-          40.3,
-          37.6
-        ],
-        "dividend": [
-          21.0,
-          35.0,
-          45.0,
-          55.0,
-          30.0
-        ],
-        "roe": [
-          null,
-          null,
-          null,
-          null,
-          null
-        ],
-        "equityRatio": [
-          45.0,
-          46.3,
-          48.4,
-          47.6,
-          null
-        ]
-      },
-      "score": 50
-    },
-    {
-      "code": "9009",
-      "name": "KEISEI ELECTRIC RAIL",
+      "code": "8031",
+      "name": "MITSUI & CO",
       "sector": "産業機械",
-      "price": 1088,
-      "dividendYield": 2.02,
-      "annualDividend": 22.0,
-      "pbr": 0.94,
-      "per": 10.9,
-      "roe": 9.1,
+      "price": 4716,
+      "dividendYield": 2.97,
+      "annualDividend": 140.0,
+      "pbr": 1.52,
+      "per": 16.2,
+      "roe": 10.3,
       "equityRatio": 0,
-      "payoutRatio": 21.1,
+      "payoutRatio": 39.5,
       "continuousDividendYears": 25,
       "isFinancial": false,
       "history": {
         "years": [
-          "2022",
-          "2023",
-          "2024",
-          "2025"
-        ],
-        "revenue": [
-          214.2,
-          252.3,
-          296.5,
-          319.3
-        ],
-        "operatingIncome": [
-          -5.2,
-          10.2,
-          25.2,
-          36.0
-        ],
-        "eps": [
-          -8.8,
-          53.9,
-          174.9,
-          143.5
-        ],
-        "dividend": [
-          5.7,
-          8.2,
-          14.7,
-          24.0
-        ],
-        "roe": [
-          null,
-          null,
-          null,
-          null
-        ],
-        "equityRatio": [
-          41.1,
-          40.9,
-          42.4,
-          46.5
-        ]
-      },
-      "score": 50
-    },
-    {
-      "code": "9101",
-      "name": "NIPPON YUSEN KABUSHI",
-      "sector": "産業機械",
-      "price": 5630,
-      "dividendYield": 3.55,
-      "annualDividend": 200.0,
-      "pbr": 0.74,
-      "per": 11.1,
-      "roe": 7.1,
-      "equityRatio": 0,
-      "payoutRatio": 40.6,
-      "continuousDividendYears": 9,
-      "isFinancial": false,
-      "history": {
-        "years": [
-          "2022",
           "2023",
           "2024",
           "2025",
           "2026"
         ],
         "revenue": [
-          2280.8,
-          2616.1,
-          2387.2,
-          2588.7,
-          null
+          14306.4,
+          13324.9,
+          14662.6,
+          13995.2
         ],
         "operatingIncome": [
-          268.9,
-          296.4,
-          174.7,
-          210.8,
-          null
+          9.2,
+          31.3,
+          31.7,
+          56.0
         ],
         "eps": [
-          null,
-          1993.7,
-          468.1,
-          1070.3,
-          504.9
+          360.7,
+          352.6,
+          306.5,
+          290.9
         ],
         "dividend": [
-          766.7,
-          230.0,
-          210.0,
-          310.0,
-          115.0
+          80.0,
+          92.5,
+          105.0,
+          60.0
         ],
         "roe": [
-          null,
           null,
           null,
           null,
           null
         ],
         "equityRatio": [
-          55.6,
-          65.6,
-          62.3,
-          67.6,
-          null
+          41.4,
+          44.6,
+          44.9,
+          42.1
         ]
       },
       "score": 50
-    },
-    {
-      "code": "2670",
-      "name": "ABC-MART INC",
-      "sector": "一般消費財",
-      "price": 2738,
-      "dividendYield": 2.92,
-      "annualDividend": 80.0,
-      "pbr": 1.7,
-      "per": 14.6,
-      "roe": 12.1,
-      "equityRatio": 0,
-      "payoutRatio": 40.1,
-      "continuousDividendYears": 24,
-      "isFinancial": false,
-      "history": {
-        "years": [
-          "2023",
-          "2024",
-          "2025",
-          "2026"
-        ],
-        "revenue": [
-          290.1,
-          344.2,
-          372.2,
-          378.6
-        ],
-        "operatingIncome": [
-          42.3,
-          55.7,
-          62.5,
-          63.3
-        ],
-        "eps": [
-          122.2,
-          161.6,
-          183.2,
-          187.2
-        ],
-        "dividend": [
-          56.7,
-          70.0,
-          72.0,
-          40.0
-        ],
-        "roe": [
-          null,
-          null,
-          null,
-          null
-        ],
-        "equityRatio": [
-          86.9,
-          87.6,
-          87.7,
-          87.5
-        ]
-      },
-      "score": 49
     },
     {
       "code": "2780",
       "name": "KOMEHYO HOLDINGS CO ",
       "sector": "不動産",
-      "price": 5140,
-      "dividendYield": 2.1,
+      "price": 5220,
+      "dividendYield": 2.07,
       "annualDividend": 108.0,
-      "pbr": 1.51,
-      "per": 10.3,
+      "pbr": 1.54,
+      "per": 10.4,
       "roe": 15.5,
       "equityRatio": 0,
       "payoutRatio": 21.2,
@@ -5250,80 +5278,13 @@
       "score": 49
     },
     {
-      "code": "4021",
-      "name": "NISSAN CHEMICAL CORP",
-      "sector": "素材・化学",
-      "price": 7519,
-      "dividendYield": 2.82,
-      "annualDividend": 212.0,
-      "pbr": 3.95,
-      "per": 20.4,
-      "roe": 20.4,
-      "equityRatio": 0,
-      "payoutRatio": 54.9,
-      "continuousDividendYears": 25,
-      "isFinancial": false,
-      "history": {
-        "years": [
-          "2022",
-          "2023",
-          "2024",
-          "2025",
-          "2026"
-        ],
-        "revenue": [
-          208.0,
-          228.1,
-          226.7,
-          251.4,
-          null
-        ],
-        "operatingIncome": [
-          51.0,
-          52.3,
-          48.2,
-          56.8,
-          null
-        ],
-        "eps": [
-          null,
-          291.4,
-          272.8,
-          313.3,
-          368.3
-        ],
-        "dividend": [
-          142.0,
-          164.0,
-          164.0,
-          174.0,
-          132.0
-        ],
-        "roe": [
-          null,
-          null,
-          null,
-          null,
-          null
-        ],
-        "equityRatio": [
-          73.6,
-          73.1,
-          70.3,
-          70.5,
-          null
-        ]
-      },
-      "score": 49
-    },
-    {
       "code": "4188",
       "name": "MITSUBISHI CHEMICAL ",
       "sector": "素材・化学",
-      "price": 1080,
-      "dividendYield": 2.96,
+      "price": 1092,
+      "dividendYield": 2.93,
       "annualDividend": 32.0,
-      "pbr": 0.83,
+      "pbr": 0.84,
       "per": 0.0,
       "roe": -0.7,
       "equityRatio": 0,
@@ -5384,14 +5345,74 @@
       "score": 49
     },
     {
+      "code": "5019",
+      "name": "IDEMITSU KOSAN CO.LT",
+      "sector": "エネルギー",
+      "price": 1260,
+      "dividendYield": 2.86,
+      "annualDividend": 36.0,
+      "pbr": 0.8,
+      "per": 9.0,
+      "roe": 0.0,
+      "equityRatio": 0,
+      "payoutRatio": 25.6,
+      "continuousDividendYears": 20,
+      "isFinancial": false,
+      "history": {
+        "years": [
+          "2023",
+          "2024",
+          "2025",
+          "2026"
+        ],
+        "revenue": [
+          9456.3,
+          8719.2,
+          9190.2,
+          8105.9
+        ],
+        "operatingIncome": [
+          282.4,
+          346.3,
+          162.2,
+          212.2
+        ],
+        "eps": [
+          170.7,
+          161.3,
+          77.8,
+          140.4
+        ],
+        "dividend": [
+          28.0,
+          34.0,
+          36.0,
+          18.0
+        ],
+        "roe": [
+          null,
+          null,
+          null,
+          null
+        ],
+        "equityRatio": [
+          33.2,
+          35.9,
+          36.0,
+          36.0
+        ]
+      },
+      "score": 49
+    },
+    {
       "code": "6301",
       "name": "KOMATSU",
       "sector": "産業機械",
-      "price": 6525,
-      "dividendYield": 2.91,
+      "price": 6492,
+      "dividendYield": 2.93,
       "annualDividend": 190.0,
       "pbr": 1.67,
-      "per": 15.8,
+      "per": 15.7,
       "roe": 11.4,
       "equityRatio": 0,
       "payoutRatio": 45.9,
@@ -5406,18 +5427,18 @@
           "2026"
         ],
         "revenue": [
-          2802.3,
+          null,
           3543.5,
           3865.1,
           4104.4,
-          null
+          4132.8
         ],
         "operatingIncome": [
-          317.0,
+          null,
           490.7,
           607.2,
           657.1,
-          null
+          567.3
         ],
         "eps": [
           237.9,
@@ -5441,11 +5462,138 @@
           null
         ],
         "equityRatio": [
-          51.4,
+          null,
           52.1,
           53.8,
           55.0,
+          54.7
+        ]
+      },
+      "score": 49
+    },
+    {
+      "code": "6473",
+      "name": "JTEKT CORPORATION",
+      "sector": "一般消費財",
+      "price": 2058,
+      "dividendYield": 3.4,
+      "annualDividend": 70.0,
+      "pbr": 0.83,
+      "per": 54.6,
+      "roe": 1.8,
+      "equityRatio": 0,
+      "payoutRatio": 159.6,
+      "continuousDividendYears": 25,
+      "isFinancial": false,
+      "history": {
+        "years": [
+          "2023",
+          "2024",
+          "2025",
+          "2026"
+        ],
+        "revenue": [
+          1678.1,
+          1891.5,
+          1884.4,
+          1925.0
+        ],
+        "operatingIncome": [
+          49.3,
+          62.2,
+          38.5,
+          24.8
+        ],
+        "eps": [
+          99.9,
+          117.3,
+          40.3,
+          37.6
+        ],
+        "dividend": [
+          35.0,
+          45.0,
+          55.0,
+          30.0
+        ],
+        "roe": [
+          null,
+          null,
+          null,
           null
+        ],
+        "equityRatio": [
+          46.3,
+          48.4,
+          47.6,
+          50.1
+        ]
+      },
+      "score": 49
+    },
+    {
+      "code": "9044",
+      "name": "NANKAI CO LTD",
+      "sector": "不動産",
+      "price": 2694,
+      "dividendYield": 2.04,
+      "annualDividend": 55.0,
+      "pbr": 0.87,
+      "per": 11.8,
+      "roe": 7.7,
+      "equityRatio": 0,
+      "payoutRatio": 22.0,
+      "continuousDividendYears": 19,
+      "isFinancial": false,
+      "history": {
+        "years": [
+          "2022",
+          "2023",
+          "2024",
+          "2025",
+          "2026"
+        ],
+        "revenue": [
+          null,
+          221.3,
+          241.6,
+          260.8,
+          264.7
+        ],
+        "operatingIncome": [
+          null,
+          21.0,
+          30.8,
+          34.7,
+          39.9
+        ],
+        "eps": [
+          null,
+          129.1,
+          211.3,
+          199.1,
+          227.5
+        ],
+        "dividend": [
+          25.0,
+          25.0,
+          52.5,
+          47.5,
+          25.0
+        ],
+        "roe": [
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        "equityRatio": [
+          null,
+          27.9,
+          30.8,
+          31.7,
+          31.3
         ]
       },
       "score": 49
@@ -5454,11 +5602,11 @@
       "code": "9433",
       "name": "KDDI CORPORATION",
       "sector": "通信・メディア",
-      "price": 2769,
-      "dividendYield": 3.03,
+      "price": 2722,
+      "dividendYield": 3.09,
       "annualDividend": 84.0,
-      "pbr": 2.08,
-      "per": 15.1,
+      "pbr": 2.04,
+      "per": 14.8,
       "roe": 14.0,
       "equityRatio": 0,
       "payoutRatio": 43.6,
@@ -5518,268 +5666,14 @@
       "score": 49
     },
     {
-      "code": "3407",
-      "name": "ASAHI KASEI CORP",
-      "sector": "産業機械",
-      "price": 1788,
-      "dividendYield": 2.46,
-      "annualDividend": 44.0,
-      "pbr": 1.16,
-      "per": 15.3,
-      "roe": 8.0,
-      "equityRatio": 0,
-      "payoutRatio": 35.9,
-      "continuousDividendYears": 25,
-      "isFinancial": false,
-      "history": {
-        "years": [
-          "2022",
-          "2023",
-          "2024",
-          "2025"
-        ],
-        "revenue": [
-          2461.3,
-          2726.5,
-          2784.9,
-          3037.3
-        ],
-        "operatingIncome": [
-          202.6,
-          127.7,
-          140.7,
-          211.9
-        ],
-        "eps": [
-          116.7,
-          -66.3,
-          31.6,
-          99.4
-        ],
-        "dividend": [
-          35.0,
-          36.0,
-          36.0,
-          40.0
-        ],
-        "roe": [
-          null,
-          null,
-          null,
-          null
-        ],
-        "equityRatio": [
-          50.4,
-          48.1,
-          49.5,
-          46.3
-        ]
-      },
-      "score": 48
-    },
-    {
-      "code": "5019",
-      "name": "IDEMITSU KOSAN CO.LT",
-      "sector": "エネルギー",
-      "price": 1314,
-      "dividendYield": 2.74,
-      "annualDividend": 36.0,
-      "pbr": 0.83,
-      "per": 9.4,
-      "roe": 0.0,
-      "equityRatio": 0,
-      "payoutRatio": 25.6,
-      "continuousDividendYears": 20,
-      "isFinancial": false,
-      "history": {
-        "years": [
-          "2022",
-          "2023",
-          "2024",
-          "2025",
-          "2026"
-        ],
-        "revenue": [
-          6686.8,
-          9456.3,
-          8719.2,
-          9190.2,
-          null
-        ],
-        "operatingIncome": [
-          434.5,
-          282.4,
-          346.3,
-          162.2,
-          null
-        ],
-        "eps": [
-          null,
-          170.7,
-          161.3,
-          77.8,
-          140.4
-        ],
-        "dividend": [
-          34.0,
-          28.0,
-          34.0,
-          36.0,
-          18.0
-        ],
-        "roe": [
-          null,
-          null,
-          null,
-          null,
-          null
-        ],
-        "equityRatio": [
-          30.7,
-          33.2,
-          35.9,
-          36.0,
-          null
-        ]
-      },
-      "score": 48
-    },
-    {
-      "code": "8031",
-      "name": "MITSUI & CO",
-      "sector": "産業機械",
-      "price": 4886,
-      "dividendYield": 2.87,
-      "annualDividend": 140.0,
-      "pbr": 1.58,
-      "per": 16.8,
-      "roe": 10.3,
-      "equityRatio": 0,
-      "payoutRatio": 39.5,
-      "continuousDividendYears": 25,
-      "isFinancial": false,
-      "history": {
-        "years": [
-          "2023",
-          "2024",
-          "2025",
-          "2026"
-        ],
-        "revenue": [
-          14306.4,
-          13324.9,
-          14662.6,
-          13995.2
-        ],
-        "operatingIncome": [
-          9.2,
-          31.3,
-          31.7,
-          56.0
-        ],
-        "eps": [
-          360.7,
-          352.6,
-          306.5,
-          290.9
-        ],
-        "dividend": [
-          80.0,
-          92.5,
-          105.0,
-          60.0
-        ],
-        "roe": [
-          null,
-          null,
-          null,
-          null
-        ],
-        "equityRatio": [
-          41.4,
-          44.6,
-          44.9,
-          42.1
-        ]
-      },
-      "score": 48
-    },
-    {
-      "code": "9020",
-      "name": "EAST JAPAN RAILWAY C",
-      "sector": "産業機械",
-      "price": 3404,
-      "dividendYield": 2.47,
-      "annualDividend": 84.0,
-      "pbr": 1.26,
-      "per": 15.5,
-      "roe": 8.4,
-      "equityRatio": 0,
-      "payoutRatio": 33.7,
-      "continuousDividendYears": 25,
-      "isFinancial": false,
-      "history": {
-        "years": [
-          "2022",
-          "2023",
-          "2024",
-          "2025",
-          "2026"
-        ],
-        "revenue": [
-          1979.0,
-          2405.5,
-          2730.1,
-          2887.6,
-          null
-        ],
-        "operatingIncome": [
-          -153.9,
-          140.6,
-          345.2,
-          376.8,
-          null
-        ],
-        "eps": [
-          null,
-          87.8,
-          173.8,
-          198.3,
-          219.6
-        ],
-        "dividend": [
-          33.3,
-          35.0,
-          54.3,
-          69.0,
-          39.0
-        ],
-        "roe": [
-          null,
-          null,
-          null,
-          null,
-          null
-        ],
-        "equityRatio": [
-          26.3,
-          26.4,
-          27.8,
-          28.1,
-          null
-        ]
-      },
-      "score": 48
-    },
-    {
       "code": "9532",
       "name": "OSAKA GAS CO",
       "sector": "公益事業",
-      "price": 5615,
-      "dividendYield": 2.32,
+      "price": 5410,
+      "dividendYield": 2.4,
       "annualDividend": 130.0,
-      "pbr": 1.19,
-      "per": 14.3,
+      "pbr": 1.15,
+      "per": 13.8,
       "roe": 8.5,
       "equityRatio": 0,
       "payoutRatio": 30.7,
@@ -5836,21 +5730,81 @@
           null
         ]
       },
+      "score": 49
+    },
+    {
+      "code": "3407",
+      "name": "ASAHI KASEI CORP",
+      "sector": "産業機械",
+      "price": 1792,
+      "dividendYield": 2.45,
+      "annualDividend": 44.0,
+      "pbr": 1.16,
+      "per": 15.3,
+      "roe": 8.0,
+      "equityRatio": 0,
+      "payoutRatio": 35.9,
+      "continuousDividendYears": 25,
+      "isFinancial": false,
+      "history": {
+        "years": [
+          "2022",
+          "2023",
+          "2024",
+          "2025"
+        ],
+        "revenue": [
+          2461.3,
+          2726.5,
+          2784.9,
+          3037.3
+        ],
+        "operatingIncome": [
+          202.6,
+          127.7,
+          140.7,
+          211.9
+        ],
+        "eps": [
+          116.7,
+          -66.3,
+          31.6,
+          99.4
+        ],
+        "dividend": [
+          35.0,
+          36.0,
+          36.0,
+          40.0
+        ],
+        "roe": [
+          null,
+          null,
+          null,
+          null
+        ],
+        "equityRatio": [
+          50.4,
+          48.1,
+          49.5,
+          46.3
+        ]
+      },
       "score": 48
     },
     {
-      "code": "2432",
-      "name": "DENA CO LTD",
-      "sector": "産業機械",
-      "price": 2670,
-      "dividendYield": 2.47,
-      "annualDividend": 66.0,
-      "pbr": 1.23,
-      "per": 15.6,
-      "roe": 7.5,
+      "code": "4021",
+      "name": "NISSAN CHEMICAL CORP",
+      "sector": "素材・化学",
+      "price": 8106,
+      "dividendYield": 2.62,
+      "annualDividend": 212.0,
+      "pbr": 4.26,
+      "per": 22.0,
+      "roe": 20.4,
       "equityRatio": 0,
-      "payoutRatio": 38.6,
-      "continuousDividendYears": 20,
+      "payoutRatio": 54.9,
+      "continuousDividendYears": 25,
       "isFinancial": false,
       "history": {
         "years": [
@@ -5861,32 +5815,32 @@
           "2026"
         ],
         "revenue": [
-          130.9,
-          134.9,
-          136.7,
-          164.0,
+          208.0,
+          228.1,
+          226.7,
+          251.4,
           null
         ],
         "operatingIncome": [
-          11.5,
-          4.2,
-          -28.3,
-          29.0,
+          51.0,
+          52.3,
+          48.2,
+          56.8,
           null
         ],
         "eps": [
           null,
-          76.7,
-          -257.6,
-          216.9,
-          170.9
+          291.4,
+          272.8,
+          313.3,
+          368.3
         ],
         "dividend": [
-          39.0,
-          20.0,
-          20.0,
-          65.0,
-          66.0
+          142.0,
+          164.0,
+          164.0,
+          174.0,
+          132.0
         ],
         "roe": [
           null,
@@ -5896,10 +5850,324 @@
           null
         ],
         "equityRatio": [
-          70.7,
-          63.5,
-          62.3,
-          61.3,
+          73.6,
+          73.1,
+          70.3,
+          70.5,
+          null
+        ]
+      },
+      "score": 48
+    },
+    {
+      "code": "6471",
+      "name": "NSK",
+      "sector": "一般消費財",
+      "price": 1194,
+      "dividendYield": 2.85,
+      "annualDividend": 34.0,
+      "pbr": 0.87,
+      "per": 25.6,
+      "roe": 3.6,
+      "equityRatio": 0,
+      "payoutRatio": 73.1,
+      "continuousDividendYears": 25,
+      "isFinancial": false,
+      "history": {
+        "years": [
+          "2022",
+          "2023",
+          "2024",
+          "2025"
+        ],
+        "revenue": [
+          865.2,
+          776.8,
+          788.9,
+          796.7
+        ],
+        "operatingIncome": [
+          29.4,
+          43.8,
+          27.4,
+          28.5
+        ],
+        "eps": [
+          32.3,
+          35.8,
+          17.2,
+          21.7
+        ],
+        "dividend": [
+          30.0,
+          30.0,
+          32.0,
+          34.0
+        ],
+        "roe": [
+          null,
+          null,
+          null,
+          null
+        ],
+        "equityRatio": [
+          50.0,
+          50.0,
+          50.8,
+          53.4
+        ]
+      },
+      "score": 48
+    },
+    {
+      "code": "8801",
+      "name": "MITSUI FUDOSAN",
+      "sector": "不動産",
+      "price": 1510,
+      "dividendYield": 2.45,
+      "annualDividend": 37.0,
+      "pbr": 1.25,
+      "per": 14.9,
+      "roe": 8.2,
+      "equityRatio": 0,
+      "payoutRatio": 34.6,
+      "continuousDividendYears": 25,
+      "isFinancial": false,
+      "history": {
+        "years": [
+          "2022",
+          "2023",
+          "2024",
+          "2025",
+          "2026"
+        ],
+        "revenue": [
+          2100.9,
+          2269.1,
+          2383.3,
+          2625.4,
+          null
+        ],
+        "operatingIncome": [
+          245.0,
+          305.4,
+          339.7,
+          372.7,
+          null
+        ],
+        "eps": [
+          null,
+          69.2,
+          80.1,
+          89.2,
+          101.0
+        ],
+        "dividend": [
+          21.0,
+          22.3,
+          31.3,
+          33.0,
+          18.0
+        ],
+        "roe": [
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        "equityRatio": [
+          34.1,
+          32.8,
+          32.8,
+          31.9,
+          null
+        ]
+      },
+      "score": 48
+    },
+    {
+      "code": "9020",
+      "name": "EAST JAPAN RAILWAY C",
+      "sector": "産業機械",
+      "price": 3415,
+      "dividendYield": 2.46,
+      "annualDividend": 84.0,
+      "pbr": 1.27,
+      "per": 15.6,
+      "roe": 8.4,
+      "equityRatio": 0,
+      "payoutRatio": 33.7,
+      "continuousDividendYears": 25,
+      "isFinancial": false,
+      "history": {
+        "years": [
+          "2023",
+          "2024",
+          "2025",
+          "2026"
+        ],
+        "revenue": [
+          2405.5,
+          2730.1,
+          2887.6,
+          3084.7
+        ],
+        "operatingIncome": [
+          140.6,
+          345.2,
+          376.8,
+          414.3
+        ],
+        "eps": [
+          87.8,
+          173.8,
+          198.3,
+          219.4
+        ],
+        "dividend": [
+          35.0,
+          54.3,
+          69.0,
+          39.0
+        ],
+        "roe": [
+          null,
+          null,
+          null,
+          null
+        ],
+        "equityRatio": [
+          26.4,
+          27.8,
+          28.1,
+          28.2
+        ]
+      },
+      "score": 48
+    },
+    {
+      "code": "2730",
+      "name": "EDION CORP",
+      "sector": "一般消費財",
+      "price": 2327,
+      "dividendYield": 2.15,
+      "annualDividend": 50.0,
+      "pbr": 1.05,
+      "per": 15.9,
+      "roe": 6.8,
+      "equityRatio": 0,
+      "payoutRatio": 32.9,
+      "continuousDividendYears": 25,
+      "isFinancial": false,
+      "history": {
+        "years": [
+          "2022",
+          "2023",
+          "2024",
+          "2025"
+        ],
+        "revenue": [
+          713.8,
+          720.6,
+          721.1,
+          768.1
+        ],
+        "operatingIncome": [
+          18.8,
+          19.2,
+          16.9,
+          23.4
+        ],
+        "eps": [
+          112.6,
+          100.3,
+          85.9,
+          128.8
+        ],
+        "dividend": [
+          44.0,
+          44.0,
+          46.0,
+          47.0
+        ],
+        "roe": [
+          null,
+          null,
+          null,
+          null
+        ],
+        "equityRatio": [
+          52.8,
+          54.6,
+          49.7,
+          51.2
+        ]
+      },
+      "score": 47
+    },
+    {
+      "code": "3087",
+      "name": "DOUTOR NICHIRES HOLD",
+      "sector": "一般消費財",
+      "price": 2647,
+      "dividendYield": 2.27,
+      "annualDividend": 60.0,
+      "pbr": 1.06,
+      "per": 15.5,
+      "roe": 6.9,
+      "equityRatio": 0,
+      "payoutRatio": 33.4,
+      "continuousDividendYears": 19,
+      "isFinancial": false,
+      "history": {
+        "years": [
+          "2022",
+          "2023",
+          "2024",
+          "2025",
+          "2026"
+        ],
+        "revenue": [
+          109.4,
+          126.9,
+          140.6,
+          148.8,
+          null
+        ],
+        "operatingIncome": [
+          -1.8,
+          3.0,
+          7.3,
+          9.6,
+          null
+        ],
+        "eps": [
+          27.6,
+          77.6,
+          124.9,
+          null,
+          170.7
+        ],
+        "dividend": [
+          28.0,
+          36.0,
+          43.0,
+          54.0,
+          30.0
+        ],
+        "roe": [
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        "equityRatio": [
+          79.4,
+          79.3,
+          77.6,
+          77.5,
           null
         ]
       },
@@ -5909,7 +6177,7 @@
       "code": "8002",
       "name": "MARUBENI CORP",
       "sector": "産業機械",
-      "price": 4899,
+      "price": 4895,
       "dividendYield": 2.35,
       "annualDividend": 115.0,
       "pbr": 1.84,
@@ -5973,81 +6241,14 @@
       "score": 47
     },
     {
-      "code": "8801",
-      "name": "MITSUI FUDOSAN",
-      "sector": "不動産",
-      "price": 1558,
-      "dividendYield": 2.37,
-      "annualDividend": 37.0,
-      "pbr": 1.29,
-      "per": 15.4,
-      "roe": 8.2,
-      "equityRatio": 0,
-      "payoutRatio": 34.6,
-      "continuousDividendYears": 25,
-      "isFinancial": false,
-      "history": {
-        "years": [
-          "2022",
-          "2023",
-          "2024",
-          "2025",
-          "2026"
-        ],
-        "revenue": [
-          2100.9,
-          2269.1,
-          2383.3,
-          2625.4,
-          null
-        ],
-        "operatingIncome": [
-          245.0,
-          305.4,
-          339.7,
-          372.7,
-          null
-        ],
-        "eps": [
-          null,
-          69.2,
-          80.1,
-          89.2,
-          101.0
-        ],
-        "dividend": [
-          21.0,
-          22.3,
-          31.3,
-          33.0,
-          18.0
-        ],
-        "roe": [
-          null,
-          null,
-          null,
-          null,
-          null
-        ],
-        "equityRatio": [
-          34.1,
-          32.8,
-          32.8,
-          31.9,
-          null
-        ]
-      },
-      "score": 47
-    },
-    {
       "code": "9434",
       "name": "SOFTBANK CORP.",
       "sector": "通信・メディア",
-      "price": 214,
-      "dividendYield": 4.12,
+      "price": 211,
+      "dividendYield": 4.18,
       "annualDividend": 8.8,
-      "pbr": 3.45,
-      "per": 18.9,
+      "pbr": 3.4,
+      "per": 18.7,
       "roe": 16.3,
       "equityRatio": 0,
       "payoutRatio": 76.3,
@@ -6062,18 +6263,18 @@
           "2026"
         ],
         "revenue": [
-          5690.6,
+          null,
           5912.0,
           6084.0,
           6544.3,
-          null
+          7038.7
         ],
         "operatingIncome": [
-          965.6,
+          null,
           1060.2,
           876.1,
           989.0,
-          null
+          1042.6
         ],
         "eps": [
           null,
@@ -6097,204 +6298,24 @@
           null
         ],
         "equityRatio": [
-          15.0,
+          null,
           15.2,
           15.3,
           17.0,
-          null
+          16.0
         ]
       },
       "score": 47
     },
     {
-      "code": "1721",
-      "name": "COMSYS HOLDINGS CORP",
-      "sector": "産業機械",
-      "price": 5307,
-      "dividendYield": 2.54,
-      "annualDividend": 135.0,
-      "pbr": 1.53,
-      "per": 17.1,
-      "roe": 9.4,
-      "equityRatio": 0,
-      "payoutRatio": 42.0,
-      "continuousDividendYears": 23,
-      "isFinancial": false,
-      "history": {
-        "years": [
-          "2022",
-          "2023",
-          "2024",
-          "2025"
-        ],
-        "revenue": [
-          589.0,
-          563.3,
-          571.2,
-          614.6
-        ],
-        "operatingIncome": [
-          43.0,
-          32.1,
-          39.2,
-          46.0
-        ],
-        "eps": [
-          235.2,
-          158.7,
-          228.2,
-          253.0
-        ],
-        "dividend": [
-          100.0,
-          100.0,
-          110.0,
-          120.0
-        ],
-        "roe": [
-          null,
-          null,
-          null,
-          null
-        ],
-        "equityRatio": [
-          64.7,
-          68.1,
-          70.5,
-          69.5
-        ]
-      },
-      "score": 46
-    },
-    {
-      "code": "1942",
-      "name": "KANDENKO CO LTD",
-      "sector": "産業機械",
-      "price": 5773,
-      "dividendYield": 2.25,
-      "annualDividend": 130.0,
-      "pbr": 2.94,
-      "per": 22.9,
-      "roe": 16.8,
-      "equityRatio": 0,
-      "payoutRatio": 40.1,
-      "continuousDividendYears": 25,
-      "isFinancial": false,
-      "history": {
-        "years": [
-          "2022",
-          "2023",
-          "2024",
-          "2025"
-        ],
-        "revenue": [
-          495.6,
-          541.6,
-          598.4,
-          671.9
-        ],
-        "operatingIncome": [
-          30.6,
-          32.7,
-          40.9,
-          58.3
-        ],
-        "eps": [
-          99.5,
-          103.6,
-          133.8,
-          207.3
-        ],
-        "dividend": [
-          29.0,
-          34.0,
-          50.0,
-          101.0
-        ],
-        "roe": [
-          null,
-          null,
-          null,
-          null
-        ],
-        "equityRatio": [
-          60.3,
-          61.2,
-          58.9,
-          61.0
-        ]
-      },
-      "score": 46
-    },
-    {
-      "code": "1963",
-      "name": "JGC HOLDINGS CORPORA",
-      "sector": "産業機械",
-      "price": 2538,
-      "dividendYield": 2.05,
-      "annualDividend": 52.0,
-      "pbr": 1.43,
-      "per": 14.7,
-      "roe": 10.2,
-      "equityRatio": 0,
-      "payoutRatio": 30.0,
-      "continuousDividendYears": 25,
-      "isFinancial": false,
-      "history": {
-        "years": [
-          "2022",
-          "2023",
-          "2024",
-          "2025"
-        ],
-        "revenue": [
-          428.4,
-          606.9,
-          832.6,
-          858.1
-        ],
-        "operatingIncome": [
-          20.7,
-          36.7,
-          -19.0,
-          -11.5
-        ],
-        "eps": [
-          -140.8,
-          122.3,
-          -32.5,
-          -1.6
-        ],
-        "dividend": [
-          15.0,
-          38.0,
-          40.0,
-          40.0
-        ],
-        "roe": [
-          null,
-          null,
-          null,
-          null
-        ],
-        "equityRatio": [
-          55.8,
-          55.7,
-          48.7,
-          49.8
-        ]
-      },
-      "score": 46
-    },
-    {
       "code": "2281",
       "name": "PRIMA MEAT PACKERS",
       "sector": "生活必需品",
-      "price": 2357,
-      "dividendYield": 3.39,
+      "price": 2319,
+      "dividendYield": 3.45,
       "annualDividend": 80.0,
-      "pbr": 0.97,
-      "per": 25.8,
+      "pbr": 0.96,
+      "per": 25.4,
       "roe": 1.9,
       "equityRatio": 0,
       "payoutRatio": 87.6,
@@ -6354,18 +6375,18 @@
       "score": 46
     },
     {
-      "code": "3087",
-      "name": "DOUTOR NICHIRES HOLD",
-      "sector": "一般消費財",
-      "price": 2677,
-      "dividendYield": 2.24,
-      "annualDividend": 60.0,
-      "pbr": 1.07,
-      "per": 15.7,
-      "roe": 6.9,
+      "code": "8001",
+      "name": "ITOCHU CORP",
+      "sector": "産業機械",
+      "price": 1848,
+      "dividendYield": 2.38,
+      "annualDividend": 44.0,
+      "pbr": 1.96,
+      "per": 14.4,
+      "roe": 13.9,
       "equityRatio": 0,
-      "payoutRatio": 33.4,
-      "continuousDividendYears": 19,
+      "payoutRatio": 32.8,
+      "continuousDividendYears": 22,
       "isFinancial": false,
       "history": {
         "years": [
@@ -6376,179 +6397,119 @@
           "2026"
         ],
         "revenue": [
-          109.4,
-          126.9,
-          140.6,
-          148.8,
-          null
+          null,
+          13945.6,
+          14029.9,
+          14724.2,
+          14823.1
         ],
         "operatingIncome": [
-          -1.8,
-          3.0,
-          7.3,
-          9.6,
-          null
-        ],
-        "eps": [
-          27.6,
-          77.6,
-          124.9,
           null,
-          170.7
-        ],
-        "dividend": [
-          28.0,
-          36.0,
-          43.0,
-          54.0,
-          30.0
-        ],
-        "roe": [
-          null,
-          null,
-          null,
-          null,
-          null
-        ],
-        "equityRatio": [
-          79.4,
-          79.3,
-          77.6,
-          77.5,
-          null
-        ]
-      },
-      "score": 46
-    },
-    {
-      "code": "5401",
-      "name": "NIPPON STEEL CORPORA",
-      "sector": "素材・化学",
-      "price": 552,
-      "dividendYield": 4.35,
-      "annualDividend": 24.0,
-      "pbr": 0.52,
-      "per": 169.7,
-      "roe": 0.8,
-      "equityRatio": 0,
-      "payoutRatio": 2195.1,
-      "continuousDividendYears": 6,
-      "isFinancial": false,
-      "history": {
-        "years": [
-          "2022",
-          "2023",
-          "2024",
-          "2025"
-        ],
-        "revenue": [
-          6808.9,
-          7975.6,
-          8868.1,
-          8695.5
-        ],
-        "operatingIncome": [
-          840.9,
-          883.6,
-          778.7,
-          548.0
-        ],
-        "eps": [
-          131.5,
-          134.4,
-          105.6,
-          67.0
-        ],
-        "dividend": [
-          36.0,
-          33.0,
-          33.0,
-          76.0
-        ],
-        "roe": [
-          null,
-          null,
-          null,
-          null
-        ],
-        "equityRatio": [
-          39.6,
-          43.7,
-          44.6,
-          49.2
-        ]
-      },
-      "score": 46
-    },
-    {
-      "code": "7004",
-      "name": "KANADEVIA CORPORATIO",
-      "sector": "産業機械",
-      "price": 1286,
-      "dividendYield": 2.95,
-      "annualDividend": 38.0,
-      "pbr": 1.1,
-      "per": 19.4,
-      "roe": 5.7,
-      "equityRatio": 0,
-      "payoutRatio": 37.8,
-      "continuousDividendYears": 17,
-      "isFinancial": false,
-      "history": {
-        "years": [
-          "2022",
-          "2023",
-          "2024",
-          "2025"
-        ],
-        "revenue": [
-          441.8,
-          492.7,
-          555.8,
-          610.5
-        ],
-        "operatingIncome": [
-          15.5,
-          20.1,
-          24.3,
-          26.9
-        ],
-        "eps": [
-          46.9,
-          92.4,
-          112.7,
-          131.3
-        ],
-        "dividend": [
-          12.0,
-          18.0,
-          23.0,
-          25.0
-        ],
-        "roe": [
-          null,
-          null,
-          null,
-          null
-        ],
-        "equityRatio": [
+          15.1,
+          13.2,
           28.5,
-          29.1,
-          30.5,
-          31.1
+          8.8
+        ],
+        "eps": [
+          null,
+          109.2,
+          110.6,
+          123.1,
+          128.0
+        ],
+        "dividend": [
+          25.6,
+          31.0,
+          36.0,
+          40.0,
+          22.0
+        ],
+        "roe": [
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        "equityRatio": [
+          null,
+          36.8,
+          37.5,
+          38.0,
+          39.4
         ]
       },
       "score": 46
+    },
+    {
+      "code": "1721",
+      "name": "COMSYS HOLDINGS CORP",
+      "sector": "産業機械",
+      "price": 5421,
+      "dividendYield": 2.49,
+      "annualDividend": 135.0,
+      "pbr": 1.56,
+      "per": 17.5,
+      "roe": 9.4,
+      "equityRatio": 0,
+      "payoutRatio": 42.0,
+      "continuousDividendYears": 23,
+      "isFinancial": false,
+      "history": {
+        "years": [
+          "2022",
+          "2023",
+          "2024",
+          "2025"
+        ],
+        "revenue": [
+          589.0,
+          563.3,
+          571.2,
+          614.6
+        ],
+        "operatingIncome": [
+          43.0,
+          32.1,
+          39.2,
+          46.0
+        ],
+        "eps": [
+          235.2,
+          158.7,
+          228.2,
+          253.0
+        ],
+        "dividend": [
+          100.0,
+          100.0,
+          110.0,
+          120.0
+        ],
+        "roe": [
+          null,
+          null,
+          null,
+          null
+        ],
+        "equityRatio": [
+          64.7,
+          68.1,
+          70.5,
+          69.5
+        ]
+      },
+      "score": 45
     },
     {
       "code": "2685",
       "name": "AND ST HD CO LTD",
       "sector": "一般消費財",
-      "price": 3440,
-      "dividendYield": 2.62,
+      "price": 3375,
+      "dividendYield": 2.67,
       "annualDividend": 90.0,
-      "pbr": 1.95,
-      "per": 16.7,
+      "pbr": 1.91,
+      "per": 16.4,
       "roe": 11.9,
       "equityRatio": 0,
       "payoutRatio": 43.7,
@@ -6608,85 +6569,18 @@
       "score": 45
     },
     {
-      "code": "8001",
-      "name": "ITOCHU CORP",
-      "sector": "産業機械",
-      "price": 1876,
-      "dividendYield": 2.34,
-      "annualDividend": 44.0,
-      "pbr": 1.99,
-      "per": 14.7,
-      "roe": 13.9,
+      "code": "5401",
+      "name": "NIPPON STEEL CORPORA",
+      "sector": "素材・化学",
+      "price": 560,
+      "dividendYield": 4.29,
+      "annualDividend": 24.0,
+      "pbr": 0.53,
+      "per": 169.6,
+      "roe": 0.8,
       "equityRatio": 0,
-      "payoutRatio": 32.8,
-      "continuousDividendYears": 22,
-      "isFinancial": false,
-      "history": {
-        "years": [
-          "2022",
-          "2023",
-          "2024",
-          "2025",
-          "2026"
-        ],
-        "revenue": [
-          null,
-          13945.6,
-          14029.9,
-          14724.2,
-          14823.1
-        ],
-        "operatingIncome": [
-          null,
-          15.1,
-          13.2,
-          28.5,
-          8.8
-        ],
-        "eps": [
-          null,
-          109.2,
-          110.6,
-          123.1,
-          128.0
-        ],
-        "dividend": [
-          25.6,
-          31.0,
-          36.0,
-          40.0,
-          22.0
-        ],
-        "roe": [
-          null,
-          null,
-          null,
-          null,
-          null
-        ],
-        "equityRatio": [
-          null,
-          36.8,
-          37.5,
-          38.0,
-          39.4
-        ]
-      },
-      "score": 45
-    },
-    {
-      "code": "3088",
-      "name": "MATSUKIYOCOCOKARA & ",
-      "sector": "医薬品・医療",
-      "price": 2334,
-      "dividendYield": 2.4,
-      "annualDividend": 56.0,
-      "pbr": 1.71,
-      "per": 16.7,
-      "roe": 10.5,
-      "equityRatio": 0,
-      "payoutRatio": 33.6,
-      "continuousDividendYears": 19,
+      "payoutRatio": 2195.1,
+      "continuousDividendYears": 6,
       "isFinancial": false,
       "history": {
         "years": [
@@ -6696,28 +6590,28 @@
           "2025"
         ],
         "revenue": [
-          730.0,
-          951.2,
-          1022.5,
-          1061.6
+          6808.9,
+          7975.6,
+          8868.1,
+          8695.5
         ],
         "operatingIncome": [
-          41.1,
-          62.3,
-          75.7,
-          82.1
+          840.9,
+          883.6,
+          778.7,
+          548.0
         ],
         "eps": [
-          93.8,
-          96.0,
-          125.3,
-          133.8
+          131.5,
+          134.4,
+          105.6,
+          67.0
         ],
         "dividend": [
-          25.0,
-          30.0,
-          41.0,
-          47.0
+          36.0,
+          33.0,
+          33.0,
+          76.0
         ],
         "roe": [
           null,
@@ -6726,83 +6620,23 @@
           null
         ],
         "equityRatio": [
-          70.5,
-          70.1,
-          71.0,
-          73.1
+          39.6,
+          43.7,
+          44.6,
+          49.2
         ]
       },
-      "score": 44
-    },
-    {
-      "code": "9064",
-      "name": "YAMATO HOLDINGS CO L",
-      "sector": "産業機械",
-      "price": 1785,
-      "dividendYield": 2.58,
-      "annualDividend": 46.0,
-      "pbr": 0.99,
-      "per": 41.5,
-      "roe": 2.3,
-      "equityRatio": 0,
-      "payoutRatio": 106.8,
-      "continuousDividendYears": 25,
-      "isFinancial": false,
-      "history": {
-        "years": [
-          "2023",
-          "2024",
-          "2025",
-          "2026"
-        ],
-        "revenue": [
-          1800.7,
-          1758.6,
-          1762.7,
-          1865.7
-        ],
-        "operatingIncome": [
-          60.1,
-          40.1,
-          14.2,
-          28.3
-        ],
-        "eps": [
-          126.6,
-          107.2,
-          111.9,
-          43.1
-        ],
-        "dividend": [
-          46.0,
-          46.0,
-          46.0,
-          23.0
-        ],
-        "roe": [
-          null,
-          null,
-          null,
-          null
-        ],
-        "equityRatio": [
-          55.1,
-          49.6,
-          46.5,
-          44.6
-        ]
-      },
-      "score": 44
+      "score": 45
     },
     {
       "code": "2269",
       "name": "MEIJI HOLDINGS CO LT",
       "sector": "生活必需品",
-      "price": 3727,
-      "dividendYield": 2.95,
+      "price": 3581,
+      "dividendYield": 3.07,
       "annualDividend": 110.0,
-      "pbr": 1.31,
-      "per": 28.8,
+      "pbr": 1.26,
+      "per": 27.7,
       "roe": 4.8,
       "equityRatio": 0,
       "payoutRatio": 81.1,
@@ -6859,16 +6693,383 @@
           null
         ]
       },
+      "score": 44
+    },
+    {
+      "code": "3088",
+      "name": "MATSUKIYOCOCOKARA & ",
+      "sector": "医薬品・医療",
+      "price": 2332,
+      "dividendYield": 2.4,
+      "annualDividend": 56.0,
+      "pbr": 1.71,
+      "per": 16.7,
+      "roe": 10.5,
+      "equityRatio": 0,
+      "payoutRatio": 35.7,
+      "continuousDividendYears": 19,
+      "isFinancial": false,
+      "history": {
+        "years": [
+          "2022",
+          "2023",
+          "2024",
+          "2025",
+          "2026"
+        ],
+        "revenue": [
+          null,
+          951.2,
+          1022.5,
+          1061.6,
+          1117.4
+        ],
+        "operatingIncome": [
+          null,
+          62.3,
+          75.7,
+          82.1,
+          84.9
+        ],
+        "eps": [
+          null,
+          96.0,
+          125.3,
+          133.8,
+          139.9
+        ],
+        "dividend": [
+          25.0,
+          30.0,
+          41.0,
+          47.0,
+          26.0
+        ],
+        "roe": [
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        "equityRatio": [
+          null,
+          70.1,
+          71.0,
+          73.1,
+          71.9
+        ]
+      },
+      "score": 44
+    },
+    {
+      "code": "8058",
+      "name": "MITSUBISHI CORP",
+      "sector": "産業機械",
+      "price": 4540,
+      "dividendYield": 2.75,
+      "annualDividend": 125.0,
+      "pbr": 1.76,
+      "per": 21.6,
+      "roe": 9.0,
+      "equityRatio": 0,
+      "payoutRatio": 52.4,
+      "continuousDividendYears": 25,
+      "isFinancial": false,
+      "history": {
+        "years": [
+          "2023",
+          "2024",
+          "2025",
+          "2026"
+        ],
+        "revenue": [
+          21572.0,
+          19567.6,
+          18617.6,
+          18916.0
+        ],
+        "operatingIncome": [
+          -25.4,
+          -104.1,
+          76.5,
+          36.1
+        ],
+        "eps": [
+          268.6,
+          222.4,
+          235.8,
+          209.8
+        ],
+        "dividend": [
+          69.3,
+          85.0,
+          105.0,
+          55.0
+        ],
+        "roe": [
+          null,
+          null,
+          null,
+          null
+        ],
+        "equityRatio": [
+          36.4,
+          38.6,
+          43.6,
+          39.1
+        ]
+      },
+      "score": 44
+    },
+    {
+      "code": "8282",
+      "name": "K'S HOLDINGS CORPORA",
+      "sector": "一般消費財",
+      "price": 1998,
+      "dividendYield": 2.4,
+      "annualDividend": 48.0,
+      "pbr": 1.24,
+      "per": 21.9,
+      "roe": 5.7,
+      "equityRatio": 0,
+      "payoutRatio": 50.4,
+      "continuousDividendYears": 21,
+      "isFinancial": false,
+      "history": {
+        "years": [
+          "2022",
+          "2023",
+          "2024",
+          "2025"
+        ],
+        "revenue": [
+          747.2,
+          737.3,
+          718.4,
+          738.0
+        ],
+        "operatingIncome": [
+          41.8,
+          30.1,
+          18.7,
+          21.8
+        ],
+        "eps": [
+          141.4,
+          110.0,
+          41.6,
+          59.1
+        ],
+        "dividend": [
+          45.0,
+          44.0,
+          44.0,
+          44.0
+        ],
+        "roe": [
+          null,
+          null,
+          null,
+          null
+        ],
+        "equityRatio": [
+          62.6,
+          61.8,
+          61.4,
+          59.4
+        ]
+      },
+      "score": 44
+    },
+    {
+      "code": "9064",
+      "name": "YAMATO HOLDINGS CO L",
+      "sector": "産業機械",
+      "price": 1770,
+      "dividendYield": 2.6,
+      "annualDividend": 46.0,
+      "pbr": 0.98,
+      "per": 41.2,
+      "roe": 2.3,
+      "equityRatio": 0,
+      "payoutRatio": 106.8,
+      "continuousDividendYears": 25,
+      "isFinancial": false,
+      "history": {
+        "years": [
+          "2023",
+          "2024",
+          "2025",
+          "2026"
+        ],
+        "revenue": [
+          1800.7,
+          1758.6,
+          1762.7,
+          1865.7
+        ],
+        "operatingIncome": [
+          60.1,
+          40.1,
+          14.2,
+          28.3
+        ],
+        "eps": [
+          126.6,
+          107.2,
+          111.9,
+          43.1
+        ],
+        "dividend": [
+          46.0,
+          46.0,
+          46.0,
+          23.0
+        ],
+        "roe": [
+          null,
+          null,
+          null,
+          null
+        ],
+        "equityRatio": [
+          55.1,
+          49.6,
+          46.5,
+          44.6
+        ]
+      },
+      "score": 44
+    },
+    {
+      "code": "2871",
+      "name": "NICHIREI CORP",
+      "sector": "生活必需品",
+      "price": 2047,
+      "dividendYield": 2.44,
+      "annualDividend": 50.0,
+      "pbr": 1.79,
+      "per": 18.8,
+      "roe": 9.9,
+      "equityRatio": 0,
+      "payoutRatio": 43.1,
+      "continuousDividendYears": 25,
+      "isFinancial": false,
+      "history": {
+        "years": [
+          "2023",
+          "2024",
+          "2025",
+          "2026"
+        ],
+        "revenue": [
+          662.2,
+          680.1,
+          702.1,
+          716.1
+        ],
+        "operatingIncome": [
+          32.9,
+          36.9,
+          38.3,
+          39.0
+        ],
+        "eps": [
+          83.6,
+          83.6,
+          97.3,
+          109.1
+        ],
+        "dividend": [
+          31.5,
+          39.0,
+          23.0,
+          24.0
+        ],
+        "roe": [
+          null,
+          null,
+          null,
+          null
+        ],
+        "equityRatio": [
+          49.1,
+          52.2,
+          52.1,
+          51.4
+        ]
+      },
+      "score": 43
+    },
+    {
+      "code": "7004",
+      "name": "KANADEVIA CORPORATIO",
+      "sector": "産業機械",
+      "price": 1435,
+      "dividendYield": 2.65,
+      "annualDividend": 38.0,
+      "pbr": 1.23,
+      "per": 21.7,
+      "roe": 5.7,
+      "equityRatio": 0,
+      "payoutRatio": 37.8,
+      "continuousDividendYears": 17,
+      "isFinancial": false,
+      "history": {
+        "years": [
+          "2022",
+          "2023",
+          "2024",
+          "2025"
+        ],
+        "revenue": [
+          441.8,
+          492.7,
+          555.8,
+          610.5
+        ],
+        "operatingIncome": [
+          15.5,
+          20.1,
+          24.3,
+          26.9
+        ],
+        "eps": [
+          46.9,
+          92.4,
+          112.7,
+          131.3
+        ],
+        "dividend": [
+          12.0,
+          18.0,
+          23.0,
+          25.0
+        ],
+        "roe": [
+          null,
+          null,
+          null,
+          null
+        ],
+        "equityRatio": [
+          28.5,
+          29.1,
+          30.5,
+          31.1
+        ]
+      },
       "score": 43
     },
     {
       "code": "8015",
       "name": "TOYOTA TSUSHO CORP",
       "sector": "産業機械",
-      "price": 6174,
+      "price": 6191,
       "dividendYield": 2.04,
       "annualDividend": 126.0,
-      "pbr": 2.06,
+      "pbr": 2.07,
       "per": 17.6,
       "roe": 13.2,
       "equityRatio": 0,
@@ -6922,78 +7123,85 @@
       "score": 43
     },
     {
-      "code": "8058",
-      "name": "MITSUBISHI CORP",
-      "sector": "産業機械",
-      "price": 4683,
-      "dividendYield": 2.67,
-      "annualDividend": 125.0,
-      "pbr": 1.82,
-      "per": 22.3,
-      "roe": 9.0,
+      "code": "7211",
+      "name": "MITSUBISHI MOTOR COR",
+      "sector": "一般消費財",
+      "price": 320,
+      "dividendYield": 3.13,
+      "annualDividend": 10.0,
+      "pbr": 0.47,
+      "per": 42.7,
+      "roe": 2.2,
       "equityRatio": 0,
-      "payoutRatio": 52.4,
-      "continuousDividendYears": 25,
+      "payoutRatio": 133.7,
+      "continuousDividendYears": 4,
       "isFinancial": false,
       "history": {
         "years": [
+          "2022",
           "2023",
           "2024",
           "2025",
           "2026"
         ],
         "revenue": [
-          21572.0,
-          19567.6,
-          18617.6,
-          18916.0
+          null,
+          2458.1,
+          2789.6,
+          2788.2,
+          2896.5
         ],
         "operatingIncome": [
-          -25.4,
-          -104.1,
-          76.5,
-          36.1
+          null,
+          190.5,
+          191.0,
+          138.8,
+          75.5
         ],
         "eps": [
-          268.6,
-          222.4,
-          235.8,
-          209.8
+          49.7,
+          113.4,
+          113.4,
+          null,
+          7.5
         ],
         "dividend": [
-          69.3,
-          85.0,
-          105.0,
-          55.0
+          0.0,
+          10.0,
+          12.5,
+          12.5,
+          5.0
         ],
         "roe": [
+          null,
           null,
           null,
           null,
           null
         ],
         "equityRatio": [
+          null,
           36.4,
-          38.6,
-          43.6,
-          39.1
+          41.2,
+          41.6,
+          38.0
         ]
       },
-      "score": 43
+      "score": 41
     },
     {
-      "code": "8282",
-      "name": "K'S HOLDINGS CORPORA",
-      "sector": "一般消費財",
-      "price": 2040,
-      "dividendYield": 2.35,
-      "annualDividend": 48.0,
-      "pbr": 1.27,
-      "per": 22.4,
-      "roe": 5.7,
+      "code": "9048",
+      "name": "NAGOYA RAILROAD CO",
+      "sector": "産業機械",
+      "price": 1794,
+      "dividendYield": 3.34,
+      "annualDividend": 60.0,
+      "pbr": 0.73,
+      "per": 17.2,
+      "roe": 3.7,
       "equityRatio": 0,
-      "payoutRatio": 50.4,
-      "continuousDividendYears": 21,
+      "payoutRatio": 38.5,
+      "continuousDividendYears": 5,
       "isFinancial": false,
       "history": {
         "years": [
@@ -7003,28 +7211,28 @@
           "2025"
         ],
         "revenue": [
-          747.2,
-          737.3,
-          718.4,
-          738.0
+          490.9,
+          551.5,
+          601.1,
+          690.7
         ],
         "operatingIncome": [
-          41.8,
-          30.1,
-          18.7,
-          21.8
+          2.9,
+          22.7,
+          34.8,
+          42.1
         ],
         "eps": [
-          141.4,
-          110.0,
-          41.6,
-          59.1
+          44.5,
+          89.6,
+          116.0,
+          167.7
         ],
         "dividend": [
-          45.0,
-          44.0,
-          44.0,
-          44.0
+          12.5,
+          20.0,
+          27.5,
+          38.5
         ],
         "roe": [
           null,
@@ -7033,90 +7241,23 @@
           null
         ],
         "equityRatio": [
-          62.6,
-          61.8,
-          61.4,
-          59.4
+          32.3,
+          32.8,
+          33.6,
+          31.9
         ]
       },
-      "score": 43
-    },
-    {
-      "code": "2871",
-      "name": "NICHIREI CORP",
-      "sector": "生活必需品",
-      "price": 2130,
-      "dividendYield": 2.35,
-      "annualDividend": 50.0,
-      "pbr": 1.86,
-      "per": 19.5,
-      "roe": 9.9,
-      "equityRatio": 0,
-      "payoutRatio": 43.1,
-      "continuousDividendYears": 25,
-      "isFinancial": false,
-      "history": {
-        "years": [
-          "2022",
-          "2023",
-          "2024",
-          "2025",
-          "2026"
-        ],
-        "revenue": [
-          602.7,
-          662.2,
-          680.1,
-          702.1,
-          null
-        ],
-        "operatingIncome": [
-          31.4,
-          32.9,
-          36.9,
-          38.3,
-          null
-        ],
-        "eps": [
-          null,
-          83.6,
-          83.6,
-          97.3,
-          109.1
-        ],
-        "dividend": [
-          25.5,
-          31.5,
-          39.0,
-          23.0,
-          24.0
-        ],
-        "roe": [
-          null,
-          null,
-          null,
-          null,
-          null
-        ],
-        "equityRatio": [
-          49.4,
-          49.1,
-          52.2,
-          52.1,
-          null
-        ]
-      },
-      "score": 42
+      "score": 41
     },
     {
       "code": "3086",
       "name": "J FRONT RETAILING CO",
       "sector": "一般消費財",
-      "price": 2394,
-      "dividendYield": 2.34,
+      "price": 2506,
+      "dividendYield": 2.23,
       "annualDividend": 56.0,
-      "pbr": 1.43,
-      "per": 21.2,
+      "pbr": 1.5,
+      "per": 22.2,
       "roe": 6.6,
       "equityRatio": 0,
       "payoutRatio": 47.9,
@@ -7166,17 +7307,204 @@
           36.4
         ]
       },
-      "score": 42
+      "score": 40
+    },
+    {
+      "code": "3099",
+      "name": "ISETAN MITSUKOSHI HO",
+      "sector": "一般消費財",
+      "price": 3871,
+      "dividendYield": 2.07,
+      "annualDividend": 80.0,
+      "pbr": 2.19,
+      "per": 18.1,
+      "roe": 12.4,
+      "equityRatio": 0,
+      "payoutRatio": 32.7,
+      "continuousDividendYears": 18,
+      "isFinancial": false,
+      "history": {
+        "years": [
+          "2023",
+          "2024",
+          "2025",
+          "2026"
+        ],
+        "revenue": [
+          487.4,
+          536.4,
+          555.5,
+          545.6
+        ],
+        "operatingIncome": [
+          29.6,
+          54.4,
+          76.3,
+          80.0
+        ],
+        "eps": [
+          84.6,
+          145.5,
+          142.3,
+          213.8
+        ],
+        "dividend": [
+          20.0,
+          46.0,
+          60.0,
+          40.0
+        ],
+        "roe": [
+          null,
+          null,
+          null,
+          null
+        ],
+        "equityRatio": [
+          44.9,
+          48.5,
+          49.9,
+          50.8
+        ]
+      },
+      "score": 40
+    },
+    {
+      "code": "5741",
+      "name": "UACJ CORPORATION",
+      "sector": "素材・化学",
+      "price": 2808,
+      "dividendYield": 2.07,
+      "annualDividend": 58.0,
+      "pbr": 1.47,
+      "per": Infinity,
+      "roe": 13.5,
+      "equityRatio": 0,
+      "payoutRatio": 25.6,
+      "continuousDividendYears": 5,
+      "isFinancial": false,
+      "history": {
+        "years": [
+          "2022",
+          "2023",
+          "2024",
+          "2025",
+          "2026"
+        ],
+        "revenue": [
+          null,
+          955.7,
+          892.8,
+          998.8,
+          1181.7
+        ],
+        "operatingIncome": [
+          null,
+          11.3,
+          31.4,
+          57.4,
+          76.9
+        ],
+        "eps": [
+          null,
+          -6.8,
+          71.8,
+          null,
+          214.8
+        ],
+        "dividend": [
+          21.2,
+          32.5,
+          28.8,
+          40.0,
+          35.0
+        ],
+        "roe": [
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        "equityRatio": [
+          null,
+          27.5,
+          30.3,
+          30.0,
+          30.9
+        ]
+      },
+      "score": 39
+    },
+    {
+      "code": "6472",
+      "name": "NTN CORP",
+      "sector": "産業機械",
+      "price": 439,
+      "dividendYield": 2.96,
+      "annualDividend": 13.0,
+      "pbr": 0.88,
+      "per": 18.8,
+      "roe": 5.0,
+      "equityRatio": 0,
+      "payoutRatio": 47.0,
+      "continuousDividendYears": 5,
+      "isFinancial": false,
+      "history": {
+        "years": [
+          "2023",
+          "2024",
+          "2025",
+          "2026"
+        ],
+        "revenue": [
+          774.0,
+          836.3,
+          825.6,
+          826.3
+        ],
+        "operatingIncome": [
+          17.1,
+          28.1,
+          23.0,
+          31.0
+        ],
+        "eps": [
+          19.5,
+          18.6,
+          -44.9,
+          23.4
+        ],
+        "dividend": [
+          7.5,
+          10.5,
+          11.0,
+          5.5
+        ],
+        "roe": [
+          null,
+          null,
+          null,
+          null
+        ],
+        "equityRatio": [
+          25.4,
+          29.0,
+          27.2,
+          33.8
+        ]
+      },
+      "score": 39
     },
     {
       "code": "6952",
       "name": "CASIO COMPUTER CO",
       "sector": "テクノロジー",
-      "price": 1750,
-      "dividendYield": 2.57,
+      "price": 1906,
+      "dividendYield": 2.36,
       "annualDividend": 45.0,
-      "pbr": 1.69,
-      "per": 21.9,
+      "pbr": 1.84,
+      "per": 23.8,
       "roe": 8.0,
       "equityRatio": 0,
       "payoutRatio": 56.2,
@@ -7233,80 +7561,20 @@
           null
         ]
       },
-      "score": 42
+      "score": 39
     },
     {
-      "code": "3099",
-      "name": "ISETAN MITSUKOSHI HO",
-      "sector": "一般消費財",
-      "price": 3755,
-      "dividendYield": 2.13,
-      "annualDividend": 80.0,
-      "pbr": 2.13,
-      "per": 24.0,
-      "roe": 12.4,
-      "equityRatio": 0,
-      "payoutRatio": 38.4,
-      "continuousDividendYears": 18,
-      "isFinancial": false,
-      "history": {
-        "years": [
-          "2022",
-          "2023",
-          "2024",
-          "2025"
-        ],
-        "revenue": [
-          418.3,
-          487.4,
-          536.4,
-          555.5
-        ],
-        "operatingIncome": [
-          5.9,
-          29.6,
-          54.4,
-          76.3
-        ],
-        "eps": [
-          32.3,
-          84.6,
-          145.5,
-          142.3
-        ],
-        "dividend": [
-          11.0,
-          20.0,
-          46.0,
-          60.0
-        ],
-        "roe": [
-          null,
-          null,
-          null,
-          null
-        ],
-        "equityRatio": [
-          43.9,
-          44.9,
-          48.5,
-          49.9
-        ]
-      },
-      "score": 41
-    },
-    {
-      "code": "6472",
-      "name": "NTN CORP",
+      "code": "9041",
+      "name": "KINTETSU GROUP HOLDI",
       "sector": "産業機械",
-      "price": 412,
-      "dividendYield": 3.16,
-      "annualDividend": 13.0,
-      "pbr": 0.82,
-      "per": 17.6,
-      "roe": 5.0,
+      "price": 3406,
+      "dividendYield": 2.06,
+      "annualDividend": 70.0,
+      "pbr": 1.06,
+      "per": 12.0,
+      "roe": 9.6,
       "equityRatio": 0,
-      "payoutRatio": 47.0,
+      "payoutRatio": 21.2,
       "continuousDividendYears": 5,
       "isFinancial": false,
       "history": {
@@ -7318,32 +7586,32 @@
           "2026"
         ],
         "revenue": [
-          642.0,
-          774.0,
-          836.3,
-          825.6,
-          null
+          null,
+          1561.0,
+          1629.5,
+          1741.8,
+          1750.3
         ],
         "operatingIncome": [
-          6.9,
-          17.1,
-          28.1,
-          23.0,
-          null
+          null,
+          67.1,
+          87.4,
+          84.4,
+          89.4
         ],
         "eps": [
           null,
-          19.5,
-          18.6,
-          -44.9,
-          23.4
+          466.8,
+          251.4,
+          245.7,
+          282.8
         ],
         "dividend": [
-          2.5,
-          7.5,
-          10.5,
-          11.0,
-          5.5
+          25.0,
+          50.0,
+          75.0,
+          55.0,
+          30.0
         ],
         "roe": [
           null,
@@ -7353,218 +7621,84 @@
           null
         ],
         "equityRatio": [
-          23.1,
-          25.4,
-          29.0,
-          27.2,
-          null
+          null,
+          18.2,
+          21.3,
+          21.7,
+          23.6
         ]
       },
-      "score": 41
+      "score": 39
     },
     {
-      "code": "7211",
-      "name": "MITSUBISHI MOTOR COR",
-      "sector": "一般消費財",
-      "price": 323,
-      "dividendYield": 3.1,
-      "annualDividend": 10.0,
-      "pbr": 0.47,
-      "per": 43.1,
-      "roe": 2.2,
-      "equityRatio": 0,
-      "payoutRatio": 133.7,
-      "continuousDividendYears": 4,
-      "isFinancial": false,
-      "history": {
-        "years": [
-          "2022",
-          "2023",
-          "2024",
-          "2025",
-          "2026"
-        ],
-        "revenue": [
-          2038.9,
-          2458.1,
-          2789.6,
-          2788.2,
-          null
-        ],
-        "operatingIncome": [
-          87.3,
-          190.5,
-          191.0,
-          138.8,
-          null
-        ],
-        "eps": [
-          49.7,
-          113.4,
-          113.4,
-          null,
-          7.5
-        ],
-        "dividend": [
-          0.0,
-          10.0,
-          12.5,
-          12.5,
-          5.0
-        ],
-        "roe": [
-          null,
-          null,
-          null,
-          null,
-          null
-        ],
-        "equityRatio": [
-          31.5,
-          36.4,
-          41.2,
-          41.6,
-          null
-        ]
-      },
-      "score": 41
-    },
-    {
-      "code": "9048",
-      "name": "NAGOYA RAILROAD CO",
+      "code": "1801",
+      "name": "TAISEI CORP",
       "sector": "産業機械",
-      "price": 1838,
-      "dividendYield": 3.26,
-      "annualDividend": 60.0,
-      "pbr": 0.74,
-      "per": 17.7,
-      "roe": 3.7,
+      "price": 14785,
+      "dividendYield": 2.57,
+      "annualDividend": 380.0,
+      "pbr": 2.54,
+      "per": 14.4,
+      "roe": 0.0,
       "equityRatio": 0,
-      "payoutRatio": 38.5,
-      "continuousDividendYears": 5,
+      "payoutRatio": 30.2,
+      "continuousDividendYears": 25,
       "isFinancial": false,
       "history": {
         "years": [
-          "2022",
-          "2023",
-          "2024",
-          "2025"
-        ],
-        "revenue": [
-          490.9,
-          551.5,
-          601.1,
-          690.7
-        ],
-        "operatingIncome": [
-          2.9,
-          22.7,
-          34.8,
-          42.1
-        ],
-        "eps": [
-          44.5,
-          89.6,
-          116.0,
-          167.7
-        ],
-        "dividend": [
-          12.5,
-          20.0,
-          27.5,
-          38.5
-        ],
-        "roe": [
-          null,
-          null,
-          null,
-          null
-        ],
-        "equityRatio": [
-          32.3,
-          32.8,
-          33.6,
-          31.9
-        ]
-      },
-      "score": 41
-    },
-    {
-      "code": "5741",
-      "name": "UACJ CORPORATION",
-      "sector": "素材・化学",
-      "price": 2894,
-      "dividendYield": 2.0,
-      "annualDividend": 58.0,
-      "pbr": 1.51,
-      "per": 13.5,
-      "roe": 13.5,
-      "equityRatio": 0,
-      "payoutRatio": 25.6,
-      "continuousDividendYears": 5,
-      "isFinancial": false,
-      "history": {
-        "years": [
-          "2022",
           "2023",
           "2024",
           "2025",
           "2026"
         ],
         "revenue": [
-          782.9,
-          955.7,
-          892.8,
-          998.8,
-          null
+          1642.7,
+          1765.0,
+          2154.2,
+          2089.1
         ],
         "operatingIncome": [
-          59.5,
-          11.3,
-          31.4,
-          57.4,
-          null
+          54.7,
+          26.5,
+          120.2,
+          188.0
         ],
         "eps": [
-          null,
-          -6.8,
-          71.8,
-          146.5,
-          214.8
+          241.2,
+          215.8,
+          682.8,
+          1025.5
         ],
         "dividend": [
-          21.2,
-          32.5,
-          28.8,
-          40.0,
-          35.0
+          130.0,
+          130.0,
+          270.0,
+          185.0
         ],
         "roe": [
-          null,
           null,
           null,
           null,
           null
         ],
         "equityRatio": [
-          26.3,
-          27.5,
-          30.3,
-          30.0,
-          null
+          41.1,
+          36.0,
+          35.7,
+          34.9
         ]
       },
-      "score": 38
+      "score": 33
     },
     {
       "code": "1812",
       "name": "KAJIMA CORP",
       "sector": "産業機械",
-      "price": 5521,
-      "dividendYield": 2.64,
+      "price": 5961,
+      "dividendYield": 2.45,
       "annualDividend": 146.0,
-      "pbr": 1.82,
-      "per": 14.5,
+      "pbr": 1.96,
+      "per": 15.7,
       "roe": 0.0,
       "equityRatio": 0,
       "payoutRatio": 38.4,
@@ -7621,17 +7755,17 @@
           null
         ]
       },
-      "score": 35
+      "score": 33
     },
     {
       "code": "6113",
       "name": "AMADA CO LTD",
       "sector": "産業機械",
-      "price": 2906,
-      "dividendYield": 2.2,
+      "price": 3074,
+      "dividendYield": 2.08,
       "annualDividend": 64.0,
-      "pbr": 1.69,
-      "per": 30.0,
+      "pbr": 1.78,
+      "per": 31.8,
       "roe": 0.0,
       "equityRatio": 0,
       "payoutRatio": 64.1,
@@ -7681,84 +7815,17 @@
           79.9
         ]
       },
-      "score": 35
-    },
-    {
-      "code": "1801",
-      "name": "TAISEI CORP",
-      "sector": "産業機械",
-      "price": 13375,
-      "dividendYield": 2.84,
-      "annualDividend": 380.0,
-      "pbr": 2.3,
-      "per": 13.0,
-      "roe": 0.0,
-      "equityRatio": 0,
-      "payoutRatio": 30.2,
-      "continuousDividendYears": 25,
-      "isFinancial": false,
-      "history": {
-        "years": [
-          "2022",
-          "2023",
-          "2024",
-          "2025",
-          "2026"
-        ],
-        "revenue": [
-          1543.2,
-          1642.7,
-          1765.0,
-          2154.2,
-          null
-        ],
-        "operatingIncome": [
-          96.1,
-          54.7,
-          26.5,
-          120.2,
-          null
-        ],
-        "eps": [
-          null,
-          241.2,
-          215.8,
-          682.8,
-          1025.5
-        ],
-        "dividend": [
-          130.0,
-          130.0,
-          130.0,
-          270.0,
-          185.0
-        ],
-        "roe": [
-          null,
-          null,
-          null,
-          null,
-          null
-        ],
-        "equityRatio": [
-          44.4,
-          41.1,
-          36.0,
-          35.7,
-          null
-        ]
-      },
-      "score": 34
+      "score": 33
     },
     {
       "code": "9706",
       "name": "JAPAN AIRPORT TERMIN",
       "sector": "産業機械",
-      "price": 4701,
-      "dividendYield": 2.02,
+      "price": 4657,
+      "dividendYield": 2.04,
       "annualDividend": 95.0,
-      "pbr": 2.07,
-      "per": 15.0,
+      "pbr": 2.06,
+      "per": 14.8,
       "roe": 17.6,
       "equityRatio": 0,
       "payoutRatio": 30.3,
